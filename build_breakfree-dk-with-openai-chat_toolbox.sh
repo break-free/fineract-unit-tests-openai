@@ -40,15 +40,16 @@ for app in ${APPLICATIONS[@]}; do
   echo -e "\n--- $app installed ---\n";
 done
 
-## Link `podman` to local host binaries
+## Add API secrets to profile.d directory
+
 $RUN sudo bash -c 'echo -e "\
-export OPENAI_API_KEY=$1 \n\
-export API_SECRET=$2 "\
-> /etc/profile.d/aws_profile.sh'
+export OPENAI_API_KEY='$1' \n\
+export API_SECRET='$2' "\
+> /etc/profile.d/api_secrets.sh'
 
 # Exit after installation
 
 echo -e "\n## Completed installation of:\n"
-for app in $APPLICATIONS; do
+for app in ${APPLICATIONS[@]}; do
   echo "--- $app";
 done
