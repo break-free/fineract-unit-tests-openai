@@ -40,6 +40,17 @@ for app in ${APPLICATIONS[@]}; do
   echo -e "\n--- $app installed ---\n";
 done
 
+## Install Python packages
+
+PACKAGES=( langchain openai tiktoken )
+
+echo "### Installing Python packages:"
+for app in ${PACKAGES[@]}; do
+  echo -e "\n--- Installing $app ---\n";
+  $RUN sudo pip install $app;
+  echo -e "\n--- $app installed ---\n";
+done
+
 ## Add API secrets to profile.d directory
 
 $RUN sudo bash -c 'echo -e "\
