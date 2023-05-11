@@ -27,7 +27,7 @@ RUN="toolbox run --container $NAME"
 
 ## List of applications to be installed
 
-APPLICATIONS=( pandoc \ 
+APPLICATIONS=( pandoc poppler-utils \ 
                python3-pandas \
                cmake gcc-c++ blas-devel lapack-devel swig )
 
