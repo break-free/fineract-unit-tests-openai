@@ -1,1 +1,4 @@
+__pycache__/
 training/facts/
+*.pkl
+*.index
