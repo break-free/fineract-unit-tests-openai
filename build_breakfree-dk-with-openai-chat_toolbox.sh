@@ -51,6 +51,17 @@ for app in ${PACKAGES[@]}; do
   echo -e "\n--- $app installed ---\n";
 done
 
+## Install FAISS
+
+$RUN bash -c 'cd /tmp; \
+      git clone https://github.com/facebookresearch/faiss.git; \
+      cd ./faiss; \
+      cmake -DFAISS_ENABLE_GPU=OFF -DBUILD_TESTING=OFF -B build . ;\
+      make -C build -j faiss;\
+      make -C build -j swigfaiss; \
+      sudo make -C build install; \
+      (cd build/faiss/python && sudo python3 setup.py install) '
+
 ## Add API secrets to profile.d directory
 
 $RUN sudo bash -c 'echo -e "\
