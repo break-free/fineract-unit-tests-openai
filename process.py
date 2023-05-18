@@ -9,12 +9,12 @@ from langchain.prompts import Prompt
 
 def train():
 
-  trainingData = list(Path("training/facts/").glob("**/*.md"))
+  trainingData = list(Path("training/facts/").glob("**/*.txt"))
 
   #check there is data in the trainingData folder
 
   if len(trainingData) < 1:
-    print("The folder training/facts should be populated with at least one .txt or .md file.", file=sys.stderr)
+    print("The folder training/facts should be populated with at least one .txt file.", file=sys.stderr)
     return
   
   data = []
