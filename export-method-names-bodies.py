@@ -48,7 +48,7 @@ def get_method_text(startpos, endpos, startline, endline, last_endline_index):
         return meth_text, (startline_index + 1), (last_endline_index + 1), last_endline_index
 
 if __name__ == "__main__":
-    trainingData = list(Path("files/").glob("**/*.java"))
+    trainingData = list(Path("training/facts/").glob("**/*.java"))
 
     if len(trainingData) < 1:
         print("The folder training/facts should be populated with at least one .java file", file=sys.stderr)
