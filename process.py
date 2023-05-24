@@ -9,7 +9,7 @@ from langchain.prompts import Prompt
 
 def train():
 
-  trainingData = list(Path("training/facts/").glob("**/*.txt"))
+  trainingData = list(Path("training/facts/").glob("**/*.java"))
 
   #check there is data in the trainingData folder
 

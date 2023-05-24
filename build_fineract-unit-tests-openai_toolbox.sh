@@ -10,13 +10,13 @@ if [ $# -ne 2 ]
 fi
 
 # Create container
-NAME=breakfree-dk-with-openai-chat
+NAME=fineract-unit-tests-openai
 RUN="toolbox run --container $NAME"
 toolbox rm --force $NAME || true
 toolbox create --container $NAME
 
 # Install applications
-APPLICATIONS=" pandoc poppler-utils python3-pandas \
+APPLICATIONS=" pandoc poppler-utils python3-pandas python3-javalang \
                cmake gcc-c++ blas-devel lapack-devel swig "
 
 ## Install applications

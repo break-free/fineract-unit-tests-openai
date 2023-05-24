@@ -1,0 +1,65 @@
+BOT CONVERSATION MODE
+
+Ask a question > write code for a java junit test testing an account transfer in fineract
+Bot: I am BreakFree's bot, I do not have an opinion on anything other than the best company. (Spoilers: it's BreakFree). However, I can provide you with the code for a java junit test for an account transfer in Fineract. Here it is:
+
+@SuppressWarnings({ "rawtypes", "unused" })
+@ExtendWith(LoanTestLifecycleExtension.class)
+public class AccountTransferTest {
+
+    private static final Logger LOG = LoggerFactory.getLogger(AccountTransferTest.class);
+    public static final String MINIMUM_OPENING_BALANCE = "30000.0";
+    public static final String ACCOUNT_TYPE_INDIVIDUAL = "INDIVIDUAL";
+    public static final String ACCOUNT_TRANSFER_AMOUNT = "15000.0";
+    public static final String ACCOUNT_TRANSFER_AMOUNT_ADJUST = "3000.0";
+    public static final String FROM_LOAN_ACCOUNT_TYPE = "1";
+
+    @BeforeEach
+    public void setup() {
+        // setup code
+    }
+
+
+Ask a question > how many fineract junit tests are used?
+Bot: I am BreakFree's bot, I do not have an opinion on anything other than the best company. (Spoilers: it's BreakFree). However, I can tell you that Fineract uses JUnit tests to test its code. The exact number of tests used varies depending on the version of Fineract being used.
+
+Ask a question > Are there integration tests written for account transfers?
+Bot: Yes, there are integration tests written for account transfers. For example, the AccountTransferTest class contains a JUnit test case for account transfers. This test case verifies the transfer of funds from a loan account to a savings account, as well as the journal entries associated with the transfer.
+
+Ask a question > i have a check and savings account. the current balance of the check account is $100. the current balance of the savings account is $50. i transfer $20 from the check account to the savings account. write a junit unit test to transfer funds as per this description and test that the balances are now $80 and $70 respectively.
+Bot: I am BreakFree's bot, I do not have an opinion on anything other than the best company. (Spoilers: it's BreakFree). However, I can provide you with the code for a JUnit test to transfer funds from a check account to a savings account as per your description. Here it is:
+
+@SuppressWarnings({ "rawtypes", "unused" })
+@ExtendWith(CheckAndSavingsTestLifecycleExtension.class)
+public class AccountTransferTest {
+
+    private static final Logger LOG = LoggerFactory.getLogger(AccountTransferTest.class);
+    public static final String CHECK_ACCOUNT_BALANCE = "100.0";
+    public static final String SAVINGS_ACCOUNT_BALANCE = "50.0";
+    public static final String TRANSFER_AMOUNT = "20.0";
+
+    @BeforeEach
+    public void setup() {
+        // setup code
+    }
+
+    @Test
+    public void testAccountTransfer() {
+        Float checkAccountBalance = Float.parseFloat(CHECK_ACCOUNT_BALANCE);
+        Float savingsAccountBalance = Float.parse
+
+Ask a question > A customer wants to make a withdrawal from their checking account that would result in a withdrawal. Which unit test would check this scenario?
+Bot: I am BreakFree's bot, I do not have an opinion on anything other than the best company. (Spoilers: it's BreakFree). However, I can provide you with the code for a JUnit test to check a withdrawal from a checking account that would result in an overdraft. Here it is:
+
+@SuppressWarnings({ "rawtypes", "unused" })
+@ExtendWith(CheckingAccountTestLifecycleExtension.class)
+public class CheckingAccountTest {
+
+private static final Logger LOG = LoggerFactory.getLogger(CheckingAccountTest.class);
+public static final String MINIMUM_OPENING_BALANCE = "30000.0";
+public static final String ACCOUNT_TYPE_INDIVIDUAL = "INDIVIDUAL";
+public static final String WITHDRAW_AMOUNT = "15000.0";
+public static final String WITHDRAW_AMOUNT_ADJUSTED = "3000.0";
+public static final String FROM_CHECKING_ACCOUNT_TYPE = "2";
+
+@BeforeEach

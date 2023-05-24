@@ -1,0 +1,2236 @@
+accounting/AccountingRuleIntegrationTest.java:61:    @Test
+accounting/AccountingRuleIntegrationTest.java-62-    public void testAccountingRuleCreation() {
+--
+AccountingScenarioIntegrationTest.java:141:    @Test
+AccountingScenarioIntegrationTest.java-142-    public void checkUpfrontAccrualAccountingFlow() {
+--
+AccountingScenarioIntegrationTest.java:275:    @Test
+AccountingScenarioIntegrationTest.java-276-    public void checkAccountingWithSavingsFlow() {
+--
+AccountingScenarioIntegrationTest.java:369:    @Test
+AccountingScenarioIntegrationTest.java-370-    public void testFixedDepositAccountingFlow() {
+--
+AccountingScenarioIntegrationTest.java:443:    @Test
+AccountingScenarioIntegrationTest.java-444-    public void testRecurringDepositAccountingFlow() {
+--
+AccountingScenarioIntegrationTest.java:569:    @Test
+AccountingScenarioIntegrationTest.java-570-    public void checkPeriodicAccrualAccountingFlow() throws InterruptedException, ParseException {
+--
+AccountingScenarioIntegrationTest.java:693:    @Test
+AccountingScenarioIntegrationTest.java-694-    public void checkPeriodicAccrualAccountingFlow_OVER_PAYMENT() throws InterruptedException, ParseException {
+--
+AccountingScenarioIntegrationTest.java:770:    @Test
+AccountingScenarioIntegrationTest.java-771-    public void checkPeriodicAccrualAccountingTillCurrentDateFlow() throws InterruptedException, ParseException {
+--
+AccountingScenarioIntegrationTest.java:864:    @Test
+AccountingScenarioIntegrationTest.java-865-    public void checkPeriodicAccrualAccountingAPIFlow() throws ParseException {
+--
+AccountingScenarioIntegrationTest.java:994:    @Test
+AccountingScenarioIntegrationTest.java-995-    public void checkCashBasedAccountingFlow() {
+--
+AccountNumberPreferencesTest.java:111:    @Test
+AccountNumberPreferencesTest.java-112-    public void testAccountNumberPreferences() {
+--
+AccountTransferTest.java:143:    @Test
+AccountTransferTest.java-144-    public void testFromSavingsToSavingsAccountTransfer() {
+--
+AccountTransferTest.java:236:    @Test
+AccountTransferTest.java-237-    public void testFromSavingsToLoanAccountTransfer() {
+--
+AccountTransferTest.java:334:    @Test
+AccountTransferTest.java-335-    public void testFromLoanToSavingsAccountTransfer() {
+--
+ActuatorIntegrationTest.java:34:    @Test
+ActuatorIntegrationTest.java-35-    public void testActuatorGitBuildInfo() {
+--
+ApiDocsTest.java:42:    @Test
+ApiDocsTest.java-43-    public void testApiDocsAccess() {
+--
+AuditIntegrationTest.java:70:    @Test
+AuditIntegrationTest.java-71-    public void testAuditSearchTemplate() {
+--
+AuditIntegrationTest.java:87:    @Test
+AuditIntegrationTest.java-88-    public void auditShouldbeCreated() {
+--
+AuditIntegrationTest.java:126:    @Test
+AuditIntegrationTest.java-127-    @SuppressFBWarnings(value = {
+--
+AuditIntegrationTest.java:148:    @Test
+AuditIntegrationTest.java-149-    public void checkIfOrderBySupported() {
+--
+BatchApiTest.java:128:    @Test
+BatchApiTest.java-129-    public void shouldReturnStatusNotImplementedUnknownCommand() {
+--
+BatchApiTest.java:150:    @Test
+BatchApiTest.java-151-    public void shouldReturnOkStatusForCreateClientCommand() {
+--
+BatchApiTest.java:172:    @Test
+BatchApiTest.java-173-    public void shouldRollBackAllTransactionsOnFailure() {
+--
+BatchApiTest.java:211:    @Test
+BatchApiTest.java-212-    public void shouldReflectChangesOnClientUpdate() {
+--
+BatchApiTest.java:244:    @Test
+BatchApiTest.java-245-    public void shouldReturnOkStatusForApplyLoanCommand() {
+--
+BatchApiTest.java:302:    @Test
+BatchApiTest.java-303-    public void shouldReturnOkStatusForApplySavingsCommand() {
+--
+BatchApiTest.java:345:    @Test
+BatchApiTest.java-346-    public void shouldReturnOkStatusForCollectChargesCommand() {
+--
+BatchApiTest.java:405:    @Test
+BatchApiTest.java-406-    public void shouldReturnOkStatusForCreateAndGetChargeByIdCommand() {
+--
+BatchApiTest.java:466:    @Test
+BatchApiTest.java-467-    public void shouldReturnOkStatusOnSuccessfulChargeAdjustment() {
+--
+BatchApiTest.java:541:    @Test
+BatchApiTest.java-542-    public void shouldReturnOkStatusForCreateAndGetChargeByExternalIdCommand() {
+--
+BatchApiTest.java:645:    @Test
+BatchApiTest.java-646-    public void shouldReturnOkStatusForBatchRepayment() {
+--
+BatchApiTest.java:717:    @Test
+BatchApiTest.java-718-    public void shouldReturnOkStatusForBatchCreditBalanceRefund() {
+--
+BatchApiTest.java:787:    @Test
+BatchApiTest.java-788-    public void partialFailTestForBatchRequest() {
+--
+BatchApiTest.java:854:    @Test
+BatchApiTest.java-855-    public void shouldReturnOkStatusForBatchGoodwillCredit() {
+--
+BatchApiTest.java:923:    @Test
+BatchApiTest.java-924-    public void shouldReturnOkStatusOnSuccessfulClientActivation() {
+--
+BatchApiTest.java:953:    @Test
+BatchApiTest.java-954-    public void shouldReturnOkStatusOnSuccessfulLoanApprovalAndDisburse() {
+--
+BatchApiTest.java:1016:    @Test
+BatchApiTest.java-1017-    public void shouldReturnOkStatusOnSuccessfulLoanApprovalAndDisburseWithTransaction() {
+--
+BatchApiTest.java:1071:    @Test
+BatchApiTest.java-1072-    public void shouldReturnOkStatusOnSuccessfulDisbursementAndGetTransaction() {
+--
+BatchApiTest.java:1126:    @Test
+BatchApiTest.java-1127-    public void shouldReturnOkStatusOnSuccessfulDisbursementAndRescheduleLoan() {
+--
+BatchApiTest.java:1203:    @Test
+BatchApiTest.java-1204-    public void shouldReturnOkStatusOnSuccessfulCreateClientCreateApproveAndGetLoan() {
+--
+BatchApiTest.java:1264:    @Test
+BatchApiTest.java-1265-    public void shouldReturnOkStatusOnSuccessfulCreateApproveAndGetLoan() {
+--
+BatchApiTest.java:1339:    @Test
+BatchApiTest.java-1340-    public void shouldReturnOkStatusOnSuccessfulGetDataTableEntry() {
+--
+BatchApiTest.java:1392:    @Test
+BatchApiTest.java-1393-    public void shouldReturnOkStatusOnSuccessfulCreateDataTableEntry() {
+--
+BatchApiTest.java:1482:    @Test
+BatchApiTest.java-1483-    public void shouldReturnOkStatusOnSuccessfulGetDatatableEntryWithNoQueryParam() {
+--
+BatchApiTest.java:1525:    @Test
+BatchApiTest.java-1526-    public void shouldReturnOkStatusOnSuccessfulTransactionMerchantIssuedAndPayoutRefund() {
+--
+BatchApiTest.java:1586:    @Test
+BatchApiTest.java-1587-    public void shouldReturnOkStatusForBatchRepaymentReversal() {
+--
+BatchApiTest.java:1659:    @Test
+BatchApiTest.java-1660-    public void shouldReturnOkStatusForBatchRepaymentReversalUsingExternalId() {
+--
+BatchApiTest.java:1764:    @Test
+BatchApiTest.java-1765-    public void shouldReturnOkStatusForBatchRepaymentChargeback() {
+--
+BatchApiTest.java:1835:    @Test
+BatchApiTest.java-1836-    public void shouldReturnOkStatusForBatchGoodwillCreditReversal() {
+--
+BatchApiTest.java:1909:    @Test
+BatchApiTest.java-1910-    public void shouldReturnOkStatusOnSuccessfulTransactionMerchantIssuedAndPayoutRefundReversal() {
+--
+BatchApiTest.java:1998:    @Test
+BatchApiTest.java-1999-    public void shouldReturnOkStatusOnModifyingSavingAccount() {
+--
+BatchApiTest.java:2048:    @Test
+BatchApiTest.java-2049-    public void shouldFindOneToOneDatatableEntryByQueryAPIAndUpdateOneOfItsColumn() {
+--
+BatchApiTest.java:2115:    @Test
+BatchApiTest.java-2116-    public void shouldFindOneToManyDatatableEntryByQueryAPIAndUpdateOneOfItsColumn() {
+--
+BatchApiTest.java:2219:    @Test
+BatchApiTest.java-2220-    public void shouldReflectChangesOnLoanUpdate() {
+--
+BatchApiTest.java:2276:    @Test
+BatchApiTest.java-2277-    public void shouldReflectChangesOnLoanUpdateByExternalId() {
+--
+BatchApiTest.java:2342:    @Test
+BatchApiTest.java-2343-    public void shoulRetrieveTheProperErrorDuringLockedLoan_OldRelativePath() {
+--
+BatchApiTest.java:2423:    @Test
+BatchApiTest.java-2424-    public void shoulRetrieveTheProperErrorDuringLockedLoan() {
+--
+BatchRequestsIntegrationTest.java:78:    @Test
+BatchRequestsIntegrationTest.java-79-    /**
+--
+BatchRequestsIntegrationTest.java:154:    @Test
+BatchRequestsIntegrationTest.java-155-    public void shouldReturnOkStatusWithIdempotencySupport() {
+--
+bulkimport/importhandler/client/ClientEntityImportHandlerTest.java:70:    @Test
+bulkimport/importhandler/client/ClientEntityImportHandlerTest.java-71-    public void testClientImport() throws InterruptedException, IOException, ParseException {
+--
+bulkimport/importhandler/loan/LoanImportHandlerTest.java:87:    @Test
+bulkimport/importhandler/loan/LoanImportHandlerTest.java-88-    public void testLoanImport() throws InterruptedException, IOException, ParseException {
+--
+bulkimport/importhandler/office/OfficeImportHandlerTest.java:63:    @Test
+bulkimport/importhandler/office/OfficeImportHandlerTest.java-64-    public void testOfficeImport() throws IOException, InterruptedException, NoSuchFieldException, ParseException {
+--
+bulkimport/importhandler/savings/SavingsImportHandlerTest.java:78:    @Test
+bulkimport/importhandler/savings/SavingsImportHandlerTest.java-79-    public void testSavingsImport() throws InterruptedException, IOException, ParseException {
+--
+bulkimport/populator/client/ClientEntityWorkbookPopulatorTest.java:55:    @Test
+bulkimport/populator/client/ClientEntityWorkbookPopulatorTest.java-56-    public void testClientEntityWorkbookPopulate() throws IOException {
+--
+bulkimport/populator/loan/LoanWorkbookPopulatorTest.java:59:    @Test
+bulkimport/populator/loan/LoanWorkbookPopulatorTest.java-60-    public void testLoanWorkbookPopulate() throws IOException {
+--
+bulkimport/populator/office/OfficeWorkBookPopulatorTest.java:50:    @Test
+bulkimport/populator/office/OfficeWorkBookPopulatorTest.java-51-    public void testOfficeWorkbookPopulate() throws IOException {
+--
+bulkimport/populator/savings/SavingsWorkbookPopulateTest.java:58:    @Test
+bulkimport/populator/savings/SavingsWorkbookPopulateTest.java-59-    public void testSavingsWorkbookPopulate() throws IOException {
+--
+BusinessConfigurationApiTest.java:60:    @Test
+BusinessConfigurationApiTest.java-61-    public void shouldReturnApplyChargeToOverdueLoanStepConfig() {
+--
+BusinessConfigurationApiTest.java:72:    @Test
+BusinessConfigurationApiTest.java-73-    public void shouldReturnApplyChargeToOverdueLoanStepConfigByJobCategory() {
+--
+BusinessConfigurationApiTest.java:84:    @Test
+BusinessConfigurationApiTest.java-85-    public void shouldUpdateStepOrder() {
+--
+BusinessConfigurationApiTest.java:129:    @Test
+BusinessConfigurationApiTest.java-130-    public void shouldThrowErrorWhenABusinessStepDoesNotBelongToTheGivenJob() {
+--
+BusinessConfigurationApiTest.java:139:    @Test
+BusinessConfigurationApiTest.java-140-    public void shouldThrowErrorWhenBusinessStepListIsEmpty() {
+--
+CenterIntegrationTest.java:60:    @Test
+CenterIntegrationTest.java-61-    public void testBasicCenterCreation() {
+--
+CenterIntegrationTest.java:85:    @Test
+CenterIntegrationTest.java-86-    public void testFullCenterCreation() {
+--
+CenterIntegrationTest.java:105:    @Test
+CenterIntegrationTest.java-106-    public void testListCenters() {
+--
+CenterIntegrationTest.java:116:    @Test
+CenterIntegrationTest.java-117-    public void testVoidCenterRetrieval() {
+--
+CenterIntegrationTest.java:126:    @Test
+CenterIntegrationTest.java-127-    public void testCenterUpdate() {
+--
+CenterIntegrationTest.java:172:    @Test
+CenterIntegrationTest.java-173-    public void testCenterDeletion() {
+--
+CenterIntegrationTest.java:202:    @Test
+CenterIntegrationTest.java-203-    public void testStaffAssignmentDuringCenterCreation() {
+--
+CenterIntegrationTest.java:217:    @Test
+CenterIntegrationTest.java-218-    public void testAssignStaffToCenter() {
+--
+CenterIntegrationTest.java:237:    @Test
+CenterIntegrationTest.java-238-    public void testUnassignStaffToCenter() {
+--
+CenterIntegrationTest.java:264:    @Test
+CenterIntegrationTest.java-265-    public void testCentersOrphanGroups() {
+--
+ChargesTest.java:48:    @Test
+ChargesTest.java-49-    public void testChargesForLoans() {
+--
+ChargesTest.java:231:    @Test
+ChargesTest.java-232-    public void testChargesForSavings() {
+--
+client/ClientSearchTest.java:53:    @Test
+client/ClientSearchTest.java-54-    public void testClientSearchWorks_WithLastnameText_WithPaging() {
+--
+client/ClientSearchTest.java:76:    @Test
+client/ClientSearchTest.java-77-    public void testClientSearchWorks_WithLastnameTextOnDefaultOrdering() {
+--
+client/ClientSearchTest.java:100:    @Test
+client/ClientSearchTest.java-101-    public void testClientSearchWorks_WithLastnameText_OrderedByIdAsc() {
+--
+client/ClientSearchTest.java:126:    @Test
+client/ClientSearchTest.java-127-    public void testClientSearchWorks_ByExternalId() {
+--
+client/ClientSearchTest.java:144:    @Test
+client/ClientSearchTest.java-145-    public void testClientSearchWorks_ByAccountNumber() {
+--
+client/ClientSearchTest.java:164:    @Test
+client/ClientSearchTest.java-165-    public void testClientSearchWorks_ByDisplayName() {
+--
+client/ClientSearchTest.java:183:    @Test
+client/ClientSearchTest.java-184-    public void testClientSearchWorks_ByMobileNo() {
+--
+client/ClientSearchTest.java:202:    @Test
+client/ClientSearchTest.java-203-    public void testClientSearchDoesntReturnAnything_ByMobileNo() {
+--
+client/ClientTest.java:34:    @Test
+client/ClientTest.java-35-    @Order(1)
+--
+client/ClientTest.java:40:    @Test
+client/ClientTest.java-41-    @Order(2)
+--
+client/DocumentTest.java:44:    @Test
+client/DocumentTest.java-45-    @Order(1)
+--
+client/DocumentTest.java:50:    @Test
+client/DocumentTest.java-51-    @Order(2)
+--
+client/DocumentTest.java:62:    @Test
+client/DocumentTest.java-63-    @Order(3)
+--
+client/DocumentTest.java:79:    @Test
+client/DocumentTest.java-80-    @Order(4)
+--
+client/DocumentTest.java:91:    @Test
+client/DocumentTest.java-92-    @Order(10)
+--
+client/DocumentTest.java:106:    @Test
+client/DocumentTest.java-107-    @Order(99)
+--
+client/DocumentTest.java:114:    @Test // FINERACT-1036
+client/DocumentTest.java-115-    void createDocumentBadArgs() {
+--
+client/ImageTest.java:52:    @Test
+client/ImageTest.java-53-    @Order(1)
+--
+client/ImageTest.java:59:    @Test
+client/ImageTest.java-60-    @Order(2)
+--
+client/ImageTest.java:70:    @Test
+client/ImageTest.java-71-    @Order(3)
+--
+client/ImageTest.java:77:    @Test
+client/ImageTest.java-78-    @Order(4)
+--
+client/ImageTest.java:84:    @Test
+client/ImageTest.java-85-    @Order(5)
+--
+client/ImageTest.java:100:    @Test
+client/ImageTest.java-101-    @Order(6)
+--
+client/ImageTest.java:109:    @Test
+client/ImageTest.java-110-    @Order(7)
+--
+client/ImageTest.java:117:    @Test
+client/ImageTest.java-118-    @Order(8)
+--
+client/ImageTest.java:125:    @Test
+client/ImageTest.java-126-    @Order(9)
+--
+client/ImageTest.java:133:    @Test
+client/ImageTest.java-134-    @Order(50)
+--
+client/ImageTest.java:139:    @Test
+client/ImageTest.java-140-    @Order(99)
+--
+client/ImageTest.java:146:    @Test
+client/ImageTest.java-147-    @Order(100)
+--
+client/ImageTest.java:163:    @Test
+client/ImageTest.java-164-    @Order(101)
+--
+client/ImageTest.java:179:    @Test
+client/ImageTest.java-180-    @Order(102)
+--
+client/ImageTest.java:195:    @Test
+client/ImageTest.java-196-    @Order(103)
+--
+client/ImageTest.java:212:    @Test
+client/ImageTest.java-213-    @Order(104)
+--
+client/ImageTest.java:228:    @Test
+client/ImageTest.java-229-    @Order(105)
+--
+client/IntegrationTest.java:54:@TestInstance(Lifecycle.PER_CLASS)
+client/IntegrationTest.java:55:// TODO Remove @TestMethodOrder when https://github.com/junit-team/junit5/issues/1919 is available
+client/IntegrationTest.java:56:@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+client/IntegrationTest.java-57-public abstract class IntegrationTest {
+--
+client/OfficeTest.java:36:    @Test
+client/OfficeTest.java-37-    @Order(1)
+--
+client/OfficeTest.java:46:    @Test
+client/OfficeTest.java-47-    @Order(2)
+--
+client/ReportExportTest.java:43:    @Test
+client/ReportExportTest.java-44-    void runClientListingTableReportCSV() throws IOException {
+--
+client/ReportExportTest.java:51:    @Test
+client/ReportExportTest.java-52-    @CIOnly
+--
+client/ReportsTest.java:44:    @Test
+client/ReportsTest.java-45-    void listReports() {
+--
+client/ReportsTest.java:49:    @Test
+client/ReportsTest.java-50-    void runClientListingTableReport() {
+--
+client/ReportsTest.java:55:    @Test
+client/ReportsTest.java-56-    void runClientListingTableReportCSV() throws IOException {
+--
+client/ReportsTest.java:63:    @Test // see FINERACT-1306
+client/ReportsTest.java-64-    void runReportCategory() throws IOException {
+--
+client/ReportsTest.java:75:    @Test
+client/ReportsTest.java-76-    void runExpectedPaymentsPentahoReportWithoutPlugin() {
+--
+client/ReportsTest.java:81:    @Test
+client/ReportsTest.java-82-    @Disabled
+--
+client/ReportsTest.java:89:    @Test
+client/ReportsTest.java-90-    void testTrialBalanceTableReportRunsSuccessfully() {
+--
+client/ReportsTest.java:95:    @Test
+client/ReportsTest.java-96-    void testIncomeStatementTableReportRunsSuccessfully() {
+--
+client/ReportsTest.java:101:    @Test
+client/ReportsTest.java-102-    void testGeneralLedgerReportTableReportRunsSuccessfully() {
+--
+client/ReportsTest.java:108:    @Test
+client/ReportsTest.java-109-    void testBalanceSheetTableReportRunsSuccessfully() {
+--
+client/StaffTest.java:35:    @Test
+client/StaffTest.java-36-    @Order(1)
+--
+client/StaffTest.java:41:    @Test
+client/StaffTest.java-42-    @Order(2)
+--
+ClientAuditingIntegrationTest.java:62:    @Test
+ClientAuditingIntegrationTest.java-63-    public void checkAuditDates() throws InterruptedException {
+--
+ClientCollateralIntegrationTest.java:50:    @Test
+ClientCollateralIntegrationTest.java-51-    public void createClientCollateralTest() {
+--
+ClientCollateralIntegrationTest.java:63:    @Test
+ClientCollateralIntegrationTest.java-64-    public void updateClientCollateral() {
+--
+ClientExternalIdTest.java:62:    @Test
+ClientExternalIdTest.java-63-    public void whenAutoExternalIdConfigIsOffCreateClient() {
+--
+ClientExternalIdTest.java:76:    @Test
+ClientExternalIdTest.java-77-    public void whenAutoExternalIdConfigIsOffCreateClientWithValue() {
+--
+ClientExternalIdTest.java:92:    @Test
+ClientExternalIdTest.java-93-    public void whenAutoExternalIdConfigIsOnCreateClient() {
+--
+ClientExternalIdTest.java:112:    @Test
+ClientExternalIdTest.java-113-    public void whenAutoExternalIdConfigIsOnCreateClientWithValue() {
+--
+ClientExternalIdTest.java:133:    @Test
+ClientExternalIdTest.java-134-    public void testClientStatusUsingExternalId() {
+--
+ClientExternalIdTest.java:209:    @Test
+ClientExternalIdTest.java-210-    public void testUpdateClientUsingExternalId() {
+--
+ClientExternalIdTest.java:230:    @Test
+ClientExternalIdTest.java-231-    public void testDeleteClientUsingExternalId() {
+--
+ClientExternalIdTest.java:257:    @Test
+ClientExternalIdTest.java-258-    public void testGetClientAccountsUsingExternalId() {
+--
+ClientExternalIdTest.java:278:    @Test
+ClientExternalIdTest.java-279-    public void testGetClientTransferProposalDate() {
+--
+ClientExternalIdTest.java:299:    @Test
+ClientExternalIdTest.java-300-    public void testGetClientObligeeData() {
+--
+ClientLoanChargeExternalIntegrationTest.java:69:    @Test
+ClientLoanChargeExternalIntegrationTest.java-70-    public void checkNewClientLoanChargeSavesExternalId() {
+--
+ClientLoanChargeExternalIntegrationTest.java:99:    @Test
+ClientLoanChargeExternalIntegrationTest.java-100-    public void checkNewClientLoanChargeFindsDuplicateExternalId() {
+--
+ClientLoanChargeRefundIntegrationTest.java:113:    @Test
+ClientLoanChargeRefundIntegrationTest.java-114-    public void fullRefundAndReverseOfPaidChargeSucceedsTest_Active_Active() {
+--
+ClientLoanChargeRefundIntegrationTest.java:118:    @Test
+ClientLoanChargeRefundIntegrationTest.java-119-    public void fullRefundAndReverseOfPaidChargeSucceedsTest_Active_Com() {
+--
+ClientLoanChargeRefundIntegrationTest.java:123:    @Test
+ClientLoanChargeRefundIntegrationTest.java-124-    public void fullRefundAndReverseOfPaidChargeSucceedsTest_Active_Overpaid() {
+--
+ClientLoanChargeRefundIntegrationTest.java:128:    @Test
+ClientLoanChargeRefundIntegrationTest.java-129-    public void fullRefundAndReverseOfPaidChargeSucceedsTest_Com_Overpaid() {
+--
+ClientLoanChargeRefundIntegrationTest.java:134:    @Test
+ClientLoanChargeRefundIntegrationTest.java-135-    public void fullRefundAndReverseOfPaidChargeSucceedsTest_Overpaid_Overpaid() {
+--
+ClientLoanChargeRefundIntegrationTest.java:139:    @Test
+ClientLoanChargeRefundIntegrationTest.java-140-    public void partialRefundAndReverseOfPaidChargeSucceedsTest_Active_Active() {
+--
+ClientLoanChargeRefundIntegrationTest.java:144:    @Test
+ClientLoanChargeRefundIntegrationTest.java-145-    public void partialRefundAndReverseOfPaidChargeSucceedsTest_Active_Com() {
+--
+ClientLoanChargeRefundIntegrationTest.java:150:    @Test
+ClientLoanChargeRefundIntegrationTest.java-151-    public void partialRefundAndReverseOfPaidChargeSucceedsTest_Active_Overpaid() {
+--
+ClientLoanChargeRefundIntegrationTest.java:212:    @Test
+ClientLoanChargeRefundIntegrationTest.java-213-    public void refundOfUnpaidChargeFailsTest() {
+--
+ClientLoanChargeRefundIntegrationTest.java:228:    @Test
+ClientLoanChargeRefundIntegrationTest.java-229-    public void refundingMoreThanPaidFailsTest() {
+--
+ClientLoanChargeRefundIntegrationTest.java:246:    @Test
+ClientLoanChargeRefundIntegrationTest.java-247-    public void onyRefundElementNotRepaymentElementUsedToCalculateRefundableAmountTest() {
+--
+ClientLoanChargeRefundIntegrationTest.java:271:    @Test
+ClientLoanChargeRefundIntegrationTest.java-272-    public void refundOfPartiallyPaidChargeCanRepayMoreOfSameChargeTest() {
+--
+ClientLoanChargeRefundIntegrationTest.java:316:    @Test
+ClientLoanChargeRefundIntegrationTest.java-317-    public void chargeRefundCreatesCorrectJournalEntriesForPeriodicAccruals_Fee_Test() {
+--
+ClientLoanChargeRefundIntegrationTest.java:321:    @Test
+ClientLoanChargeRefundIntegrationTest.java-322-    public void chargeRefundCreatesCorrectJournalEntriesForCashAccounting_Fee_Test() {
+--
+ClientLoanChargeRefundIntegrationTest.java:326:    @Test
+ClientLoanChargeRefundIntegrationTest.java-327-    public void chargeRefundCreatesCorrectJournalEntriesForPeriodicAccruals_Penalty_Test() {
+--
+ClientLoanChargeRefundIntegrationTest.java:331:    @Test
+ClientLoanChargeRefundIntegrationTest.java-332-    public void chargeRefundCreatesCorrectJournalEntriesForCashAccounting_Penalty_Test() {
+--
+ClientLoanChargeRefundIntegrationTest.java:375:    @Test
+ClientLoanChargeRefundIntegrationTest.java-376-    public void repaymentReversalDisallowedIfLaterChargeRefundTest() {
+--
+ClientLoanChargeRefundIntegrationTest.java:404:    @Test
+ClientLoanChargeRefundIntegrationTest.java-405-    public void repaymentNotAllowedIfLaterChargeRefundTest() {
+--
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java:176:    @Test
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java-177-    public void creditBalanceRefundCanOnlyBeAppliedWhereLoanStatusIsOverpaidTest() {
+--
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java:193:    @Test
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java-194-    public void cantRefundMoreThanOverpaidTest() {
+--
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java:216:    @Test
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java-217-    public void fullRefundChangesStatusToClosedObligationMetTest() {
+--
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java:242:    @Test
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java-243-    public void partialRefundKeepsOverpaidStatusTest() {
+--
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java:259:    @Test
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java-260-    public void newCreditBalanceRefundSavesExternalIdTest() {
+--
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java:279:    @Test
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java-280-    public void newCreditBalanceRefundFindsDuplicateExternalIdTest() {
+--
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java:302:    @Test
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java-303-    public void newCreditBalanceRefundCreatesCorrectJournalEntriesForPeriodicAccrualsTest() {
+--
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java:323:    @Test
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java-324-    public void newCreditBalanceRefundCreatesCorrectJournalEntriesForCashAccountingTest() {
+--
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java:344:    @Test
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java-345-    public void repaymentTransactionTypeMatchesTest() {
+--
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java:364:    @Test
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java-365-    public void repaymentTransactionTypeWhenPaidTest() {
+--
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java:385:    @Test
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java-386-    public void goodWillCreditWillCloseTheLoanCorrectly() {
+--
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java:404:    @Test
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java-405-    public void paymentRefundWillCloseTheLoanCorrectly() {
+--
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java:423:    @Test
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java-424-    public void newGoodwillCreditCreatesCorrectJournalEntriesForPeriodicAccrualsTest() {
+--
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java:450:    @Test
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java-451-    public void newGoodwillCreditCreatesCorrectJournalEntriesForCashAccountingTest() {
+--
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java:479:    @Test
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java-480-    public void undoGoodWillCreditTransactionTest() {
+--
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java:502:    @Test
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java-503-    public void undoPayoutRefundTransactionTest() {
+--
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java:525:    @Test
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java-526-    public void undoMerchantIssuedRefundTransactionTest() {
+--
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java:548:    @Test
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java-549-    public void adjustGoodWillCreditTransactionTest() {
+--
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java:571:    @Test
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java-572-    public void adjustPayoutRefundTransactionTest() {
+--
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java:594:    @Test
+ClientLoanCreditBalanceRefundandRepaymentTypeIntegrationTest.java-595-    public void adjustMerchantIssuedRefundTransactionTest() {
+--
+ClientLoanIntegrationTest.java:161:    @Test
+ClientLoanIntegrationTest.java-162-    public void checkClientLoanCreateAndDisburseFlow() {
+--
+ClientLoanIntegrationTest.java:182:    @Test
+ClientLoanIntegrationTest.java-183-    public void validateClientLoanWithUniqueExternalId() {
+--
+ClientLoanIntegrationTest.java:202:    @Test
+ClientLoanIntegrationTest.java-203-    public void testAddingLoanChargeIncludesLoanIdInTheResponse() {
+--
+ClientLoanIntegrationTest.java:225:    @Test
+ClientLoanIntegrationTest.java-226-    public void testLoanCharges_DISBURSEMENT_FEE() {
+--
+ClientLoanIntegrationTest.java:340:    @Test
+ClientLoanIntegrationTest.java-341-    public void testLoanCharges_DISBURSEMENT_FEE_WITH_AMOUNT_CHANGE() {
+--
+ClientLoanIntegrationTest.java:407:    @Test
+ClientLoanIntegrationTest.java-408-    public void testLoanDisbursedTodayIsRetrieved() {
+--
+ClientLoanIntegrationTest.java:444:    @Test
+ClientLoanIntegrationTest.java-445-    public void testLoanCharges_SPECIFIED_DUE_DATE_FEE() {
+--
+ClientLoanIntegrationTest.java:616:    @Test
+ClientLoanIntegrationTest.java-617-    public void testLoanCharges_INSTALMENT_FEE() {
+--
+ClientLoanIntegrationTest.java:979:    @Test
+ClientLoanIntegrationTest.java-980-    public void testLoanCharges_DISBURSEMENT_TO_SAVINGS() {
+--
+ClientLoanIntegrationTest.java:1035:    @Test
+ClientLoanIntegrationTest.java-1036-    public void testLoanCharges_DISBURSEMENT_WITH_TRANCHES() {
+--
+ClientLoanIntegrationTest.java:1085:    @Test
+ClientLoanIntegrationTest.java-1086-    public void testLoanCharges_DISBURSEMENT_TO_SAVINGS_WITH_TRANCHES() {
+--
+ClientLoanIntegrationTest.java:1602:    @Test
+ClientLoanIntegrationTest.java-1603-    public void loanWithFlatCahargesAndCashBasedAccountingEnabled() {
+--
+ClientLoanIntegrationTest.java:1789:    @Test
+ClientLoanIntegrationTest.java-1790-    public void loanWithCahargesOfTypeAmountPercentageAndCashBasedAccountingEnabled() {
+--
+ClientLoanIntegrationTest.java:1979:    @Test
+ClientLoanIntegrationTest.java-1980-    public void loanWithCahargesOfTypeAmountPlusInterestPercentageAndCashBasedAccountingEnabled() {
+--
+ClientLoanIntegrationTest.java:2171:    @Test
+ClientLoanIntegrationTest.java-2172-    public void loanWithFlatCahargesAndUpfrontAccrualAccountingEnabled() {
+--
+ClientLoanIntegrationTest.java:2376:    @Test
+ClientLoanIntegrationTest.java-2377-    public void loanWithCahargesAndUpfrontAccrualAccountingEnabled() {
+--
+ClientLoanIntegrationTest.java:2577:    @Test
+ClientLoanIntegrationTest.java-2578-    public void loanWithCahargesOfTypeAmountPlusInterestPercentageAndUpfrontAccrualAccountingEnabled() {
+--
+ClientLoanIntegrationTest.java:2783:    @Test
+ClientLoanIntegrationTest.java-2784-    public void loanWithFlatChargesAndPeriodicAccrualAccountingEnabled() throws InterruptedException {
+--
+ClientLoanIntegrationTest.java:2982:    @Test
+ClientLoanIntegrationTest.java-2983-    public void loanWithChargesOfTypeAmountPercentageAndPeriodicAccrualAccountingEnabled() throws InterruptedException {
+--
+ClientLoanIntegrationTest.java:3187:    @Test
+ClientLoanIntegrationTest.java-3188-    public void loanWithChargesOfTypeAmountPlusInterestPercentageAndPeriodicAccrualAccountingEnabled() throws InterruptedException {
+--
+ClientLoanIntegrationTest.java:3388:    @Test
+ClientLoanIntegrationTest.java-3389-    public void testClientLoanScheduleWithCurrencyDetails() {
+--
+ClientLoanIntegrationTest.java:3411:    @Test
+ClientLoanIntegrationTest.java-3412-    public void testClientLoanScheduleWithCurrencyDetails_with_grace() {
+--
+ClientLoanIntegrationTest.java:3437:    @Test
+ClientLoanIntegrationTest.java-3438-    public void testRBIPaymentStrategy() {
+--
+ClientLoanIntegrationTest.java:3586:    @Test
+ClientLoanIntegrationTest.java-3587-    public void testLoanScheduleWithInterestRecalculation_WITH_REST_SAME_AS_REPAYMENT_INTEREST_COMPOUND_NONE_STRATEGY_REDUCE_EMI() {
+--
+ClientLoanIntegrationTest.java:3681:    @Test
+ClientLoanIntegrationTest.java-3682-    public void testLoanScheduleWithInterestRecalculation_WITH_REST_SAME_AS_REPAYMENT_INTEREST_COMPOUND_NONE_STRATEGY_REDUCE_EMI_PRE_CLOSE_INTEREST_PRE_CLOSE_DATE() {
+--
+ClientLoanIntegrationTest.java:3689:    @Test
+ClientLoanIntegrationTest.java-3690-    public void testLoanScheduleWithInterestRecalculation_WITH_REST_SAME_AS_REPAYMENT_INTEREST_COMPOUND_NONE_STRATEGY_REDUCE_EMI_PRE_CLOSE_INTEREST_REST_DATE() {
+--
+ClientLoanIntegrationTest.java:3777:    @Test
+ClientLoanIntegrationTest.java-3778-    public void testLoanScheduleWithInterestRecalculation_WITH_REST_SAME_AS_REPAYMENT_INTEREST_COMPOUND_NONE_STRATEGY_REDUCE_EMI_WITH_INSTALLMENT_CHARGE() {
+--
+ClientLoanIntegrationTest.java:3875:    @Test
+ClientLoanIntegrationTest.java-3876-    public void testLoanScheduleWithInterestRecalculation_WITH_REST_DAILY_INTEREST_COMPOUND_INTEREST_STRATEGY_REDUCE_NUMBER_OF_INSTALLMENTS() {
+--
+ClientLoanIntegrationTest.java:3989:    @Test
+ClientLoanIntegrationTest.java-3990-    public void testInteroperationLoanRepaymentAPI() {
+--
+ClientLoanIntegrationTest.java:4044:    @Test
+ClientLoanIntegrationTest.java-4045-    public void testLoanScheduleWithInterestRecalculation_WITH_REST_WEEKLY_INTEREST_COMPOUND_INTEREST_FEE_STRATEGY_REDUCE_NEXT_INSTALLMENTS() {
+--
+ClientLoanIntegrationTest.java:4163:    @Test
+ClientLoanIntegrationTest.java-4164-    public void testLoanScheduleWithInterestRecalculation_WITH_REST_WEEKLY_INTEREST_COMPOUND_INTEREST_FEE_STRATEGY_REDUCE_NEXT_INSTALLMENTS_PRE_CLOSE_INTEREST_PRE_CLOSE_DATE() {
+--
+ClientLoanIntegrationTest.java:4172:    @Test
+ClientLoanIntegrationTest.java-4173-    public void testLoanScheduleWithInterestRecalculation_WITH_REST_WEEKLY_INTEREST_COMPOUND_INTEREST_FEE_STRATEGY_REDUCE_NEXT_INSTALLMENTS_PRE_CLOSE_INTEREST_REST_DATE() {
+--
+ClientLoanIntegrationTest.java:4282:    @Test
+ClientLoanIntegrationTest.java-4283-    public void testLoanScheduleWithInterestRecalculation_WITH_REST_DAILY_INTEREST_COMPOUND_INTEREST_FEE_STRATEGY_WITH_OVERDUE_CHARGE()
+--
+ClientLoanIntegrationTest.java:4397:    @Test
+ClientLoanIntegrationTest.java-4398-    public void testLoanScheduleWithInterestRecalculation_WITH_PERIODIC_ACCOUNTING() {
+--
+ClientLoanIntegrationTest.java:4505:    @Test
+ClientLoanIntegrationTest.java-4506-    public void testLoanScheduleWithInterestRecalculation_WITH_CURRENT_REPAYMENT_BASED_ARREARS_AGEING() {
+--
+ClientLoanIntegrationTest.java:4587:    @Test
+ClientLoanIntegrationTest.java-4588-    public void testLoanScheduleWithInterestRecalculation_WITH_ORIGINAL_REPAYMENT_BASED_ARREARS_AGEING() {
+--
+ClientLoanIntegrationTest.java:4670:    @Test
+ClientLoanIntegrationTest.java-4671-    public void testLoanScheduleWithInterestRecalculation_FOR_PRE_CLOSE_WITH_MORATORIUM_INTEREST_APPLICABLE_STRATEGY_ON_PRE_CLOSE_DATE() {
+--
+ClientLoanIntegrationTest.java:4676:    @Test
+ClientLoanIntegrationTest.java-4677-    public void testLoanScheduleWithInterestRecalculation_FOR_PRE_CLOSE_WITH_MORATORIUM_INTEREST_APPLICABLE_STRATEGY_REST_DATE() {
+--
+ClientLoanIntegrationTest.java:5008:    @Test
+ClientLoanIntegrationTest.java-5009-    public void testLoanRefundByCashCashBasedAccounting() {
+--
+ClientLoanIntegrationTest.java:5190:    @Test
+ClientLoanIntegrationTest.java-5191-    public void testLoanRefundByCashAccrualBasedAccounting() {
+--
+ClientLoanIntegrationTest.java:5367:    @Test
+ClientLoanIntegrationTest.java-5368-    public void testLoanRefundByTransferCashBasedAccounting() {
+--
+ClientLoanIntegrationTest.java:5615:    @Test
+ClientLoanIntegrationTest.java-5616-    public void testLoanProductConfiguration() {
+--
+ClientLoanIntegrationTest.java:5652:    @Test
+ClientLoanIntegrationTest.java-5653-    public void testLoanForeclosure() {
+--
+ClientLoanIntegrationTest.java:5712:    @Test
+ClientLoanIntegrationTest.java-5713-    public void testLoanScheduleWithInterestRecalculation_WITH_INTEREST_FIRST_STRATEGY_AND_REST_DAILY_INTEREST_COMPOUND_INTEREST_STRATEGY_REDUCE_NUMBER_OF_INSTALLMENTS() {
+--
+ClientLoanIntegrationTest.java:5827:    @Test
+ClientLoanIntegrationTest.java-5828-    public void testLoanScheduleWithInterestRecalculation_WITH_INTEREST_FIRST_STRATEGY_AND_REST_DAILY_INTEREST_COMPOUND_INTEREST_STRATEGY_REDUCE_NUMBER_OF_INSTALLMENTS_EARLY_REPAYMENT() {
+--
+ClientLoanIntegrationTest.java:5939:    @Test
+ClientLoanIntegrationTest.java-5940-    public void testLoanScheduleWithInterestRecalculationMakePrepaymentAfterRepayment() {
+--
+ClientLoanIntegrationTest.java:5999:    @Test
+ClientLoanIntegrationTest.java-6000-    public void testLoanScheduleWithInterestRecalculationMakeAdvancePaymentTillSettlement() {
+--
+ClientLoanIntegrationTest.java:6071:    @Test
+ClientLoanIntegrationTest.java-6072-    public void testCollateralDataIsAvailableWhenRequested() {
+--
+ClientLoanIntegrationTest.java:6096:    @Test
+ClientLoanIntegrationTest.java-6097-    public void undoWaivedChargeTransactionDoesNotExist() {
+--
+ClientLoanIntegrationTest.java:6107:    @Test
+ClientLoanIntegrationTest.java-6108-    public void chargeAdjustmentChargeWrongParams() {
+--
+ClientLoanIntegrationTest.java:6126:    @Test
+ClientLoanIntegrationTest.java-6127-    public void chargeAdjustmentChargeDoesNotExist() {
+--
+ClientLoanIntegrationTest.java:6146:    @Test
+ClientLoanIntegrationTest.java-6147-    public void chargeAdjustmentChargeDoesNotExistForLoan() {
+--
+ClientLoanIntegrationTest.java:6185:    @Test
+ClientLoanIntegrationTest.java-6186-    public void chargeAdjustmentForUnpaidCharge() {
+--
+ClientLoanIntegrationTest.java:6354:    @Test
+ClientLoanIntegrationTest.java-6355-    public void chargeAdjustmentAccountingValidation() {
+--
+ClientLoanIntegrationTest.java:6747:    @Test
+ClientLoanIntegrationTest.java-6748-    public void undoWaivedChargeWaiveTransactionDoesNotExist() {
+--
+ClientLoanIntegrationTest.java:6781:    @Test
+ClientLoanIntegrationTest.java-6782-    public void undoWaivedCharge() {
+--
+ClientLoanIntegrationTest.java:7031:    @Test
+ClientLoanIntegrationTest.java-7032-    public void chargeOff() {
+--
+ClientLoanIntegrationTest.java:7304:    @Test
+ClientLoanIntegrationTest.java-7305-    public void testCloseOpenMaturityDate() {
+--
+ClientLoanIntegrationTest.java:7362:    @Test
+ClientLoanIntegrationTest.java-7363-    public void testReverseReplay() {
+--
+ClientLoanIntegrationTest.java:7499:    @Test
+ClientLoanIntegrationTest.java-7500-    public void testCreditBalanceRefundAfterMaturityWithReverseReplayOfRepayments() {
+--
+ClientLoanIntegrationTest.java:7631:    @Test
+ClientLoanIntegrationTest.java-7632-    public void testCreditBalanceRefundBeforeMaturityWithReverseReplayOfRepaymentsAndRefund() {
+--
+ClientLoanIntegrationTest.java:7759:    @Test
+ClientLoanIntegrationTest.java-7760-    public void accrualIsCalculatedWhenTheLoanIsClosed() {
+--
+ClientLoanMultipleDisbursementsIntegrationTest.java:121:    @Test
+ClientLoanMultipleDisbursementsIntegrationTest.java-122-    public void checkThatAllMultiDisbursalsAppearOnLoanScheduleAndOutStandingBalanceIsZeroTest() {
+--
+ClientLoanMultipleDisbursementsIntegrationTest.java:220:    @Test
+ClientLoanMultipleDisbursementsIntegrationTest.java-221-    public void checkThatAllMultiDisbursalsAppearOnLoanScheduleAndOutStandingBalanceIsZeroButLoanGotReopenedTest() {
+--
+ClientLoanMultipleDisbursementsIntegrationTest.java:310:    @Test
+ClientLoanMultipleDisbursementsIntegrationTest.java-311-    public void checkThatAllMultiDisbursalsAppearOnLoanScheduleAndOutStandingBalanceIsZeroButLoanGotReopenedFromOverPaidTest() {
+--
+ClientLoanNonTrancheMultipleDisbursementsIntegrationTest.java:132:    @Test
+ClientLoanNonTrancheMultipleDisbursementsIntegrationTest.java-133-    public void checkThatNonTrancheMultiDisbursalsCreateAScheduleOnFirstDisbursalTest() {
+--
+ClientLoanNonTrancheMultipleDisbursementsIntegrationTest.java:216:    @Test
+ClientLoanNonTrancheMultipleDisbursementsIntegrationTest.java-217-    public void checkThatNonTrancheMultiDisbursalsCreateAScheduleOnSubmitAndApprovalTest() {
+--
+ClientSavingsIntegrationTest.java:93:    @Test
+ClientSavingsIntegrationTest.java-94-    public void testSavingsAccount() {
+--
+ClientSavingsIntegrationTest.java:137:    @Test
+ClientSavingsIntegrationTest.java-138-    public void testSavingsLastTransactionAndRunningBalanceUpdate() {
+--
+ClientSavingsIntegrationTest.java:181:    @Test
+ClientSavingsIntegrationTest.java-182-    public void testSavingsBackedDatedTransactionsNotAllowed() {
+--
+ClientSavingsIntegrationTest.java:246:    @Test
+ClientSavingsIntegrationTest.java-247-    public void testSavingsAccountWithMinBalanceForInterestCalculation() {
+--
+ClientSavingsIntegrationTest.java:296:    @Test
+ClientSavingsIntegrationTest.java-297-    public void testSavingsAccount_CLOSE_APPLICATION() {
+--
+ClientSavingsIntegrationTest.java:340:    @Test
+ClientSavingsIntegrationTest.java-341-    public void testSavingsAccount_WITH_ENFORCE_MIN_BALANCE() {
+--
+ClientSavingsIntegrationTest.java:407:    @Test
+ClientSavingsIntegrationTest.java-408-    public void testSavingsAccount_DELETE_APPLICATION() {
+--
+ClientSavingsIntegrationTest.java:450:    @Test
+ClientSavingsIntegrationTest.java-451-    public void testSavingsAccount_REJECT_APPLICATION() {
+--
+ClientSavingsIntegrationTest.java:499:    @Test
+ClientSavingsIntegrationTest.java-500-    public void testSavingsAccount_WITHDRAW_APPLICATION() {
+--
+ClientSavingsIntegrationTest.java:527:    @Test
+ClientSavingsIntegrationTest.java-528-    public void testSavingsAccountTransactions() {
+--
+ClientSavingsIntegrationTest.java:628:    @Test
+ClientSavingsIntegrationTest.java-629-    public void testSavingsAccountCharges() {
+--
+ClientSavingsIntegrationTest.java:792:    @Test
+ClientSavingsIntegrationTest.java-793-    public void testSavingsAccountWithOverdraft() {
+--
+ClientSavingsIntegrationTest.java:929:    @Test
+ClientSavingsIntegrationTest.java-930-    public void testSavingsAccountPostInterestOnLastDayWithOverdraft() {
+--
+ClientSavingsIntegrationTest.java:1178:    @Test
+ClientSavingsIntegrationTest.java-1179-    public void testSavingsAccountPostInterestOnLastDayWithdrawalWithOverdraft() {
+--
+ClientSavingsIntegrationTest.java:1439:    @Test
+ClientSavingsIntegrationTest.java-1440-    public void testSavingsAccountPostInterestWithOverdraft() {
+--
+ClientSavingsIntegrationTest.java:1604:    @Test
+ClientSavingsIntegrationTest.java-1605-    public void testPostInterestAsOnSavingsAccountWithOverdraft() {
+--
+ClientSavingsIntegrationTest.java:1765:    @Test
+ClientSavingsIntegrationTest.java-1766-    public void testSavingsAccount_WITH_WITHHOLD_TAX() {
+--
+ClientSavingsIntegrationTest.java:1815:    @Test
+ClientSavingsIntegrationTest.java-1816-    public void testSavingsAccount_WITH_WITHHOLD_TAX_DISABLE_AT_ACCOUNT_LEVEL() {
+--
+ClientSavingsIntegrationTest.java:1867:    @Test
+ClientSavingsIntegrationTest.java-1868-    public void testSavingsAccount_DormancyTracking() throws InterruptedException {
+--
+ClientSavingsIntegrationTest.java:2129:    @Test
+ClientSavingsIntegrationTest.java-2130-    public void testSavingsAccountBlockStatus() {
+--
+ClientSavingsIntegrationTest.java:2245:    @Test
+ClientSavingsIntegrationTest.java-2246-    public void testSavingsAccountLienAllowedAtProductLevelWithEnforceBalance() {
+--
+ClientSavingsIntegrationTest.java:2308:    @Test
+ClientSavingsIntegrationTest.java-2309-    public void testSavingsAccountLienAllowedAtProductLevelWithOverDraftLimit() {
+--
+ClientSavingsIntegrationTest.java:2372:    @Test
+ClientSavingsIntegrationTest.java-2373-    public void testSavingsAccountLienAllowedAtProductLevelWithNoConfig() {
+--
+ClientSavingsIntegrationTest.java:2437:    @Test
+ClientSavingsIntegrationTest.java-2438-    public void testSavingsAccountWithoutLienAllowed() {
+--
+ClientSavingsIntegrationTest.java:2514:    @Test
+ClientSavingsIntegrationTest.java-2515-    public void testSavingsAccountLienAllowedAtProductLevelWithOverDraftLimitGreaterThanLienLimit() {
+--
+ClientSavingsIntegrationTest.java:2540:    @Test
+ClientSavingsIntegrationTest.java-2541-    public void testAccountBalanceAfterTransactionReversal() {
+--
+ClientSavingsIntegrationTest.java:2603:    @Test
+ClientSavingsIntegrationTest.java-2604-    public void testSavingsAccountWithdrawalChargesOnPaymentTypes() {
+--
+ClientSavingsIntegrationTest.java:2690:    @Test
+ClientSavingsIntegrationTest.java-2691-    public void testAccountBalanceAfterSavingsTransactionReversalPosting() {
+--
+ClientSavingsIntegrationTest.java:2739:    @Test
+ClientSavingsIntegrationTest.java-2740-    public void testReversalWhenIsBulkIsTrue() {
+--
+ClientSavingsIntegrationTest.java:2781:    @Test
+ClientSavingsIntegrationTest.java-2782-    public void testReversalWhenIsBulkIsFalse() {
+--
+ClientSavingsIntegrationTest.java:2823:    @Test
+ClientSavingsIntegrationTest.java-2824-    public void testAccountBalanceAndTransactionRunningBalanceWithConfigOn() {
+--
+ClientSavingsIntegrationTest.java:2872:    @Test
+ClientSavingsIntegrationTest.java-2873-    public void testSavingsAccountChargesBackDate() {
+--
+ClientSavingsIntegrationTest.java:2930:    @Test
+ClientSavingsIntegrationTest.java-2931-    public void testRunningBalanceAfterWithdrawalWithBackdateConfigurationOn() {
+--
+ClientSavingsIntegrationTest.java:2953:    @Test
+ClientSavingsIntegrationTest.java-2954-    public void testRunningBalanceAfterDepositWithBackdateConfigurationOn() {
+--
+ClientSavingsIntegrationTest.java:2975:    @Test
+ClientSavingsIntegrationTest.java-2976-    public void testRunningBalanceAfterWithdrawalReversalWithBackdateConfigurationOn() {
+--
+ClientSavingsIntegrationTest.java:3001:    @Test
+ClientSavingsIntegrationTest.java-3002-    public void testRunningBalanceAfterDepositReversalWithBackdateConfigurationOn() {
+--
+ClientSavingsIntegrationTest.java:3026:    @Test
+ClientSavingsIntegrationTest.java-3027-    public void testToPerformTransactionBeforePivotDate() {
+--
+ClientSavingsIntegrationTest.java:3053:    @Test
+ClientSavingsIntegrationTest.java-3054-    public void testReversalEntriesAfterSystemReversingTransactionWithReversalConfigOn() {
+--
+ClientSavingsIntegrationTest.java:3085:    @Test
+ClientSavingsIntegrationTest.java-3086-    public void testReversalEntriesAfterSystemReversingTransactionWithReversalConfigOff() {
+--
+ClientSavingsIntegrationTest.java:3117:    @Test
+ClientSavingsIntegrationTest.java-3118-    public void testSavingsAccountDepositAfterHoldAmount() {
+--
+ClientTest.java:71:    @Test
+ClientTest.java-72-    public void testClientStatus() {
+--
+ClientTest.java:102:    @Test
+ClientTest.java-103-    public void testClientAsPersonStatus() {
+--
+ClientTest.java:133:    @Test
+ClientTest.java-134-    public void testClientAsEntityStatus() {
+--
+ClientTest.java:165:    @Test
+ClientTest.java-166-    @SuppressFBWarnings(value = {
+--
+ClientTest.java:197:    @Test
+ClientTest.java-198-    public void testClientAddressCreationWorks() {
+--
+ClientTest.java:236:    @Test
+ClientTest.java-237-    public void testClientAddressCreationWorksAfterClientIsCreated() {
+--
+ClientUndoRejectAndWithdrawalIntegrationTest.java:60:    @Test
+ClientUndoRejectAndWithdrawalIntegrationTest.java-61-    public void clientUndoRejectIntegrationTest() {
+--
+ClientUndoRejectAndWithdrawalIntegrationTest.java:82:    @Test
+ClientUndoRejectAndWithdrawalIntegrationTest.java-83-    public void testClientUndoRejectWithDateBeforeRejectDate() {
+--
+ClientUndoRejectAndWithdrawalIntegrationTest.java:110:    @Test
+ClientUndoRejectAndWithdrawalIntegrationTest.java-111-    public void testClientUndoRejectWithoutReject() {
+--
+ClientUndoRejectAndWithdrawalIntegrationTest.java:137:    @Test
+ClientUndoRejectAndWithdrawalIntegrationTest.java-138-    public void testClientUndoRejectWithFutureDate() {
+--
+ClientUndoRejectAndWithdrawalIntegrationTest.java:167:    @Test
+ClientUndoRejectAndWithdrawalIntegrationTest.java-168-    public void clientUndoWithDrawnIntegrationTest() {
+--
+ClientUndoRejectAndWithdrawalIntegrationTest.java:188:    @Test
+ClientUndoRejectAndWithdrawalIntegrationTest.java-189-    public void testClientUndoWithDrawnWithDateBeforeWithdrawal() {
+--
+ClientUndoRejectAndWithdrawalIntegrationTest.java:218:    @Test
+ClientUndoRejectAndWithdrawalIntegrationTest.java-219-    public void testClientUndoWithDrawnWithoutWithdrawal() {
+--
+ClientUndoRejectAndWithdrawalIntegrationTest.java:243:    @Test
+ClientUndoRejectAndWithdrawalIntegrationTest.java-244-    public void testClientUndoWithDrawnWithFutureDate() {
+--
+ClientUndoRejectAndWithdrawalIntegrationTest.java:273:    @Test
+ClientUndoRejectAndWithdrawalIntegrationTest.java-274-    public void testValidateReopenedDate() {
+--
+ClientUndoRejectAndWithdrawalIntegrationTest.java:296:    @Test
+ClientUndoRejectAndWithdrawalIntegrationTest.java-297-    public void testReopenedDate() {
+--
+CollateralProductIntegrationTest.java:51:    @Test
+CollateralProductIntegrationTest.java-52-    public void createCollateralProductTest() {
+--
+CollateralProductIntegrationTest.java:58:    @Test
+CollateralProductIntegrationTest.java-59-    public void updateCollateralProductTest() {
+--
+common/ClientChargesTest.java:57:    @Test
+common/ClientChargesTest.java-58-    public void clientChargeTest() {
+--
+common/ProvisioningIntegrationTest.java:77:    @Test
+common/ProvisioningIntegrationTest.java-78-    public void testCreateProvisioningCriteria() {
+--
+common/organisation/CampaignsTest.java:94:    @Test
+common/organisation/CampaignsTest.java-95-    public void testSupportedActionsForCampaignWithTriggerTypeAsDirect() {
+--
+common/organisation/CampaignsTest.java:129:    @Test
+common/organisation/CampaignsTest.java-130-    public void testSupportedActionsForCampaignWithTriggerTypeAsScheduled() {
+--
+common/organisation/CampaignsTest.java:164:    @Test
+common/organisation/CampaignsTest.java-165-    public void testSupportedActionsForCampaignWithTriggerTypeAsTriggered() {
+--
+common/organisation/CampaignsTest.java:200:    @Test
+common/organisation/CampaignsTest.java-201-    public void testSupportedActionsForCampaignWithError() {
+--
+common/organisation/EntityDatatableChecksIntegrationTest.java:90:    @Test
+common/organisation/EntityDatatableChecksIntegrationTest.java-91-    public void validateCreateDeleteDatatableCheck() {
+--
+common/organisation/EntityDatatableChecksIntegrationTest.java:110:    @Test
+common/organisation/EntityDatatableChecksIntegrationTest.java-111-    public void validateCreateDeleteEntityDatatableCheck() {
+--
+common/organisation/EntityDatatableChecksIntegrationTest.java:130:    @Test
+common/organisation/EntityDatatableChecksIntegrationTest.java-131-    public void validateRetriveEntityDatatableChecksList() {
+--
+common/organisation/EntityDatatableChecksIntegrationTest.java:137:    @Test
+common/organisation/EntityDatatableChecksIntegrationTest.java-138-    public void validateCreateClientWithEntityDatatableCheck() {
+--
+common/organisation/EntityDatatableChecksIntegrationTest.java:167:    @Test
+common/organisation/EntityDatatableChecksIntegrationTest.java-168-    public void validateCreateClientWithEntityDatatableCheckWithFailure() {
+--
+common/organisation/EntityDatatableChecksIntegrationTest.java:197:    @Test
+common/organisation/EntityDatatableChecksIntegrationTest.java-198-    public void validateCreateGroupWithEntityDatatableCheck() {
+--
+common/organisation/EntityDatatableChecksIntegrationTest.java:227:    @Test
+common/organisation/EntityDatatableChecksIntegrationTest.java-228-    public void validateCreateGroupWithEntityDatatableCheckWithFailure() {
+--
+common/organisation/EntityDatatableChecksIntegrationTest.java:257:    @Test
+common/organisation/EntityDatatableChecksIntegrationTest.java-258-    public void validateCreateSavingsWithEntityDatatableCheck() {
+--
+common/organisation/EntityDatatableChecksIntegrationTest.java:302:    @Test
+common/organisation/EntityDatatableChecksIntegrationTest.java-303-    public void validateCreateSavingsWithEntityDatatableCheckWithFailure() {
+--
+common/organisation/EntityDatatableChecksIntegrationTest.java:345:    @Test
+common/organisation/EntityDatatableChecksIntegrationTest.java-346-    public void validateCreateLoanWithEntityDatatableCheck() {
+--
+common/organisation/EntityDatatableChecksIntegrationTest.java:384:    @Test
+common/organisation/EntityDatatableChecksIntegrationTest.java-385-    public void validateCreateLoanWithEntityDatatableCheckWithFailure() {
+--
+common/organisation/EntityDatatableChecksIntegrationTest.java:559:    @Test
+common/organisation/EntityDatatableChecksIntegrationTest.java-560-    public void createClientWithDatatableUsingEntitySubtype() {
+--
+common/shares/DividendsIntegrationTests.java:59:    @Test
+common/shares/DividendsIntegrationTests.java-60-    public void testCreateDividends() {
+--
+common/shares/ShareAccountIntegrationTests.java:62:    @Test
+common/shares/ShareAccountIntegrationTests.java-63-    public void testCreateShareProduct() {
+--
+common/shares/ShareAccountIntegrationTests.java:102:    @Test
+common/shares/ShareAccountIntegrationTests.java-103-    public void testCreateShareAccount() {
+--
+common/shares/ShareAccountIntegrationTests.java:140:    @Test
+common/shares/ShareAccountIntegrationTests.java-141-    @SuppressWarnings("unchecked")
+--
+common/shares/ShareAccountIntegrationTests.java:209:    @Test
+common/shares/ShareAccountIntegrationTests.java-210-    @SuppressWarnings("unchecked")
+--
+common/shares/ShareAccountIntegrationTests.java:277:    @Test
+common/shares/ShareAccountIntegrationTests.java-278-    @SuppressWarnings("unchecked")
+--
+common/shares/ShareAccountIntegrationTests.java:359:    @Test
+common/shares/ShareAccountIntegrationTests.java-360-    public void testCreateShareAccountWithCharges() {
+--
+ConcurrencyIntegrationTest.java:73:    @Test
+ConcurrencyIntegrationTest.java-74-    public void verifyConcurrentLoanRepayments() {
+--
+CreditBureauConfigurationTest.java:55:    @Test
+CreditBureauConfigurationTest.java-56-    public void creditBureauConfigurationTest() {
+--
+CreditBureauTest.java:115:    @Test
+CreditBureauTest.java-116-    public void creditBureauIntegrationTest() throws JsonProcessingException {
+--
+CreditBureauTest.java:153:    @Test
+CreditBureauTest.java-154-    public void creditBureauNoLoanTest() throws JsonProcessingException {
+--
+CurrenciesTest.java:49:    @Test
+CurrenciesTest.java-50-    public void testCurrencyElements() {
+--
+CurrenciesTest.java:64:    @Test
+CurrenciesTest.java-65-    public void testUpdateCurrencySelection() {
+--
+datatable/DatatableIntegrationTest.java:100:    @Test
+datatable/DatatableIntegrationTest.java-101-    public void validateCreateReadDeleteDatatable() throws ParseException {
+--
+datatable/DatatableIntegrationTest.java:312:    @Test
+datatable/DatatableIntegrationTest.java-313-    public void validateCreateReadDeleteDatatableWithCaseSensitive() throws ParseException {
+--
+datatable/DatatableIntegrationTest.java:414:    @Test
+datatable/DatatableIntegrationTest.java-415-    public void validateInsertNullValues() {
+--
+datatable/DatatableIntegrationTest.java:538:    @Test
+datatable/DatatableIntegrationTest.java-539-    public void validateCreateAndEditDatatable() {
+--
+datatable/DatatableIntegrationTest.java:627:    @Test
+datatable/DatatableIntegrationTest.java-628-    public void validateReadDatatableMultirow() {
+--
+datatable/DatatableUniqueAndIndexColumnTest.java:54:    @Test
+datatable/DatatableUniqueAndIndexColumnTest.java-55-    public void testDatableCreationWithUniqueAndIndexedColumns() {
+--
+datatable/DatatableUniqueAndIndexColumnTest.java:108:    @Test
+datatable/DatatableUniqueAndIndexColumnTest.java-109-    public void testDatableModificationWithUniqueAndIndexedColumns() {
+--
+datatable/DatatableUniqueAndIndexColumnTest.java:202:    @Test
+datatable/DatatableUniqueAndIndexColumnTest.java-203-    public void testDatableCreationMakesFkColumnIndexedIfMultirow() {
+--
+datatable/DatatableUniqueAndIndexColumnTest.java:245:    @Test
+datatable/DatatableUniqueAndIndexColumnTest.java-246-    public void testDatableCreationMakesFkColumnIndexedIfNotMultirow() {
+--
+DelinquencyAndChargebackIntegrationTest.java:80:    @Test
+DelinquencyAndChargebackIntegrationTest.java-81-    public void testLoanClassificationStepAsPartOfCOB() {
+--
+DelinquencyAndChargebackIntegrationTest.java:198:    @Test
+DelinquencyAndChargebackIntegrationTest.java-199-    public void testLoanClassificationStepAsPartOfCOBRepeated() {
+--
+DelinquencyBucketsIntegrationTest.java:91:    @Test
+DelinquencyBucketsIntegrationTest.java-92-    public void testCreateDelinquencyRanges() {
+--
+DelinquencyBucketsIntegrationTest.java:108:    @Test
+DelinquencyBucketsIntegrationTest.java-109-    public void testUpdateDelinquencyRanges() {
+--
+DelinquencyBucketsIntegrationTest.java:134:    @Test
+DelinquencyBucketsIntegrationTest.java-135-    public void testDelinquencyBuckets() {
+--
+DelinquencyBucketsIntegrationTest.java:173:    @Test
+DelinquencyBucketsIntegrationTest.java-174-    public void testDelinquencyBucketDelete() {
+--
+DelinquencyBucketsIntegrationTest.java:202:    @Test
+DelinquencyBucketsIntegrationTest.java-203-    public void testDelinquencyBucketsRangeAgeOverlaped() {
+--
+DelinquencyBucketsIntegrationTest.java:221:    @Test
+DelinquencyBucketsIntegrationTest.java-222-    public void testDelinquencyBucketsNameDuplication() {
+--
+DelinquencyBucketsIntegrationTest.java:243:    @Test
+DelinquencyBucketsIntegrationTest.java-244-    public void testLoanClassificationRealtime() {
+--
+DelinquencyBucketsIntegrationTest.java:340:    @Test
+DelinquencyBucketsIntegrationTest.java-341-    public void testLoanClassificationRealtimeWithCharges() {
+--
+DelinquencyBucketsIntegrationTest.java:435:    @Test
+DelinquencyBucketsIntegrationTest.java-436-    public void testLoanClassificationRealtimeOlderLoan() {
+--
+DelinquencyBucketsIntegrationTest.java:545:    @Test
+DelinquencyBucketsIntegrationTest.java-546-    public void testLoanClassificationRealtimeWithReversedRepayment() {
+--
+DelinquencyBucketsIntegrationTest.java:642:    @Test
+DelinquencyBucketsIntegrationTest.java-643-    public void testLoanClassificationJob() {
+--
+DelinquencyBucketsIntegrationTest.java:732:    @Test
+DelinquencyBucketsIntegrationTest.java-733-    public void testLoanClassificationStepAsPartOfCOB() {
+--
+DisbursalAndRepaymentScheduleTest.java:83:    @Test
+DisbursalAndRepaymentScheduleTest.java-84-    public void testRescheduleJLGLoanSynk() {
+--
+DisbursalAndRepaymentScheduleTest.java:244:    @Test
+DisbursalAndRepaymentScheduleTest.java-245-    public void testChangeGroupMeetingMaturedOnDate() {
+--
+DueDateRespectiveLoanRepaymentScheduleTest.java:93:    @Test
+DueDateRespectiveLoanRepaymentScheduleTest.java-94-    public void scenario1() {
+--
+DueDateRespectiveLoanRepaymentScheduleTest.java:202:    @Test
+DueDateRespectiveLoanRepaymentScheduleTest.java-203-    public void scenario2() {
+--
+DueDateRespectiveLoanRepaymentScheduleTest.java:313:    @Test
+DueDateRespectiveLoanRepaymentScheduleTest.java-314-    public void scenario3() {
+--
+DueDateRespectiveLoanRepaymentScheduleTest.java:430:    @Test
+DueDateRespectiveLoanRepaymentScheduleTest.java-431-    public void scenario4() {
+--
+DueDateRespectiveLoanRepaymentScheduleTest.java:519:    @Test
+DueDateRespectiveLoanRepaymentScheduleTest.java-520-    public void scenario5() {
+--
+DueDateRespectiveLoanRepaymentScheduleTest.java:667:    @Test
+DueDateRespectiveLoanRepaymentScheduleTest.java-668-    public void scenario6() {
+--
+DueDateRespectiveLoanRepaymentScheduleTest.java:742:    @Test
+DueDateRespectiveLoanRepaymentScheduleTest.java-743-    public void scenario7() {
+--
+DueDateRespectiveLoanRepaymentScheduleTest.java:877:    @Test
+DueDateRespectiveLoanRepaymentScheduleTest.java-878-    public void scenario8() {
+--
+DueDateRespectiveLoanRepaymentScheduleTest.java:1101:    @Test
+DueDateRespectiveLoanRepaymentScheduleTest.java-1102-    public void scenario9() {
+--
+ExternalEventConfigurationIntegrationTest.java:49:    @Test
+ExternalEventConfigurationIntegrationTest.java-50-    public void getExternalEventConfigurations() {
+--
+ExternalEventConfigurationIntegrationTest.java:69:    @Test
+ExternalEventConfigurationIntegrationTest.java-70-    public void updateExternalEventConfigurations() {
+--
+ExternalIdSupportIntegrationTest.java:112:    @Test
+ExternalIdSupportIntegrationTest.java-113-    public void test() {
+--
+ExternalIdSupportIntegrationTest.java:696:    @Test
+ExternalIdSupportIntegrationTest.java-697-    public void negativeTest() {
+--
+ExternalIdSupportIntegrationTest.java:853:    @Test
+ExternalIdSupportIntegrationTest.java-854-    public void loan() {
+--
+ExternalServicesConfigurationTest.java:54:    @Test
+ExternalServicesConfigurationTest.java-55-    public void testExternalServicesConfiguration() {
+--
+FinancialActivityAccountsTest.java:70:    @Test
+FinancialActivityAccountsTest.java-71-    public void testFinancialActivityAccounts() {
+--
+FixedDepositTest.java:135:    @Test
+FixedDepositTest.java-136-    public void testFixedDepositProductCreation() {
+--
+FixedDepositTest.java:175:    @Test
+FixedDepositTest.java-176-    public void testFixedDepositAccountWithPrematureClosureTypeWithdrawal() {
+--
+FixedDepositTest.java:306:    @Test
+FixedDepositTest.java-307-    public void testFixedDepositAccountWithPrematureClosureTypeWithdrawal_WITH_HOLD_TAX() {
+--
+FixedDepositTest.java:447:    @Test
+FixedDepositTest.java-448-    public void testFixedDepositAccountClosureTypeWithdrawal_WITH_HOLD_TAX() {
+--
+FixedDepositTest.java:565:    @Test
+FixedDepositTest.java-566-    public void testFixedDepositAccountWithPeriodInterestRateChart() {
+--
+FixedDepositTest.java:574:    @Test
+FixedDepositTest.java-575-    public void testFixedDepositAccountWithPeriodInterestRateChart_AMOUNT_VARIATION() {
+--
+FixedDepositTest.java:583:    @Test
+FixedDepositTest.java-584-    public void testFixedDepositAccountWithPeriodInterestRateChart_PERIOD_VARIATION() {
+--
+FixedDepositTest.java:592:    @Test
+FixedDepositTest.java-593-    public void testFixedDepositAccountWithAmountInterestRateChart() {
+--
+FixedDepositTest.java:601:    @Test
+FixedDepositTest.java-602-    public void testFixedDepositAccountWithAmountInterestRateChart_AMOUNT_VARIATION() {
+--
+FixedDepositTest.java:610:    @Test
+FixedDepositTest.java-611-    public void testFixedDepositAccountWithAmountInterestRateChart_PERIOD_VARIATION() {
+--
+FixedDepositTest.java:619:    @Test
+FixedDepositTest.java-620-    public void testFixedDepositAccountWithPeriodAndAmountInterestRateChart() {
+--
+FixedDepositTest.java:628:    @Test
+FixedDepositTest.java-629-    public void testFixedDepositAccountWithPeriodAndAmountInterestRateChart_AMOUNT_VARIATION() {
+--
+FixedDepositTest.java:637:    @Test
+FixedDepositTest.java-638-    public void testFixedDepositAccountWithPeriodAndAmountInterestRateChart_PERIOD_VARIATION() {
+--
+FixedDepositTest.java:646:    @Test
+FixedDepositTest.java-647-    public void testFixedDepositAccountWithAmountAndPeriodInterestRateChart() {
+--
+FixedDepositTest.java:655:    @Test
+FixedDepositTest.java-656-    public void testFixedDepositAccountWithAmountAndPeriodInterestRateChart_AMOUNT_VARIATION() {
+--
+FixedDepositTest.java:664:    @Test
+FixedDepositTest.java-665-    public void testFixedDepositAccountWithAmountAndPeriodInterestRateChart_PERIOD_VARIATION() {
+--
+FixedDepositTest.java:728:    @Test
+FixedDepositTest.java-729-    public void testFixedDepositAccountWithPrematureClosureTypeTransferToSavings() {
+--
+FixedDepositTest.java:895:    @Test
+FixedDepositTest.java-896-    public void testFixedDepositAccountWithPrematureClosureTypeReinvest() {
+--
+FixedDepositTest.java:1001:    @Test
+FixedDepositTest.java-1002-    public void testFixedDepositAccountUpdation() {
+--
+FixedDepositTest.java:1042:    @Test
+FixedDepositTest.java-1043-    public void testFixedDepositAccountUndoApproval() {
+--
+FixedDepositTest.java:1084:    @Test
+FixedDepositTest.java-1085-    public void testFixedDepositAccountRejectedAndClosed() {
+--
+FixedDepositTest.java:1125:    @Test
+FixedDepositTest.java-1126-    public void testFixedDepositAccountWithdrawnByClientAndClosed() {
+--
+FixedDepositTest.java:1166:    @Test
+FixedDepositTest.java-1167-    public void testFixedDepositAccountIsDeleted() {
+--
+FixedDepositTest.java:1204:    @Test
+FixedDepositTest.java-1205-    public void testMaturityAmountForMonthlyCompoundingAndMonthlyPosting_With_360_Days() {
+--
+FixedDepositTest.java:1274:    @Test
+FixedDepositTest.java-1275-    public void testPrematureClosureAmountWithPenalInterestForWholeTerm_With_360() {
+--
+FixedDepositTest.java:1371:    @Test
+FixedDepositTest.java-1372-    public void testMaturityAmountForMonthlyCompoundingAndMonthlyPosting_With_365_Days() {
+--
+FixedDepositTest.java:1437:    @Test
+FixedDepositTest.java-1438-    public void testPrematureClosureAmountWithPenalInterestForWholeTerm_With_365() {
+--
+FixedDepositTest.java:1526:    @Test
+FixedDepositTest.java-1527-    public void testPrematureClosureAmountWithPenalInterestTillPrematureWithdrawal_With_365_Days() {
+--
+FixedDepositTest.java:1618:    @Test
+FixedDepositTest.java-1619-    public void testPrematureClosureAmountWithPenalInterestTillPrematureWithdrawal_With_360_Days() {
+--
+FixedDepositTest.java:1714:    @Test
+FixedDepositTest.java-1715-    public void testMaturityAmountForDailyCompoundingAndMonthlyPosting_With_365_Days() {
+--
+FixedDepositTest.java:1786:    @Test
+FixedDepositTest.java-1787-    public void testMaturityAmountForDailyCompoundingAndMonthlyPosting_With_360_Days() {
+--
+FixedDepositTest.java:1862:    @Test
+FixedDepositTest.java-1863-    public void testMaturityAmountForDailyCompoundingAndAnnuallyPosting_With_365_Days() {
+--
+FixedDepositTest.java:1945:    @Test
+FixedDepositTest.java-1946-    public void testMaturityAmountDailyCompoundingAndAnnuallyPostingWith_360_Days() {
+--
+FixedDepositTest.java:2028:    @Test
+FixedDepositTest.java-2029-    public void testFixedDepositWithBi_AnnualCompoundingAndPosting_365_Days() {
+--
+FixedDepositTest.java:2109:    @Test
+FixedDepositTest.java-2110-    public void testFixedDepositWithBi_AnnualCompoundingAndPosting_360_Days() {
+--
+FixedDepositTest.java:2190:    @Test
+FixedDepositTest.java-2191-    public void testFixedDepositWithQuarterlyCompoundingAndQuarterlyPosting_365_Days() {
+--
+FixedDepositTest.java:2270:    @Test
+FixedDepositTest.java-2271-    public void testFixedDepositWithQuarterlyCompoundingAndQuarterlyPosting_360_Days() {
+--
+FixedDepositTest.java:2354:    @Test
+FixedDepositTest.java-2355-    public void testFixedDepositAccountWithRolloverMaturityAmount() {
+--
+FixedDepositTest.java:2434:    @Test
+FixedDepositTest.java-2435-    public void testFixedDepositAccountWithRolloverPrincipal() {
+--
+FlexibleSavingsInterestPostingIntegrationTest.java:66:    @Test
+FlexibleSavingsInterestPostingIntegrationTest.java-67-    public void testSavingsInterestPostingAtPeriodEnd() {
+--
+FundsIntegrationTest.java:59:    @Test
+FundsIntegrationTest.java-60-    public void testCreateFund() {
+--
+FundsIntegrationTest.java:68:    @Test
+FundsIntegrationTest.java-69-    public void testCreateFundWithEmptyName() {
+--
+FundsIntegrationTest.java:78:    @Test
+FundsIntegrationTest.java-79-    public void testCreateFundWithEmptyExternalId() {
+--
+FundsIntegrationTest.java:87:    @Test
+FundsIntegrationTest.java-88-    public void testCreateFundWithDuplicateName() {
+--
+FundsIntegrationTest.java:103:    @Test
+FundsIntegrationTest.java-104-    public void testCreateFundWithDuplicateExternalId() {
+--
+FundsIntegrationTest.java:119:    @Test
+FundsIntegrationTest.java-120-    public void testCreateFundWithInvalidName() {
+--
+FundsIntegrationTest.java:129:    @Test
+FundsIntegrationTest.java-130-    public void testCreateFundWithInvalidExternalId() {
+--
+FundsIntegrationTest.java:140:    @Test
+FundsIntegrationTest.java-141-    public void testRetrieveFund() {
+--
+FundsIntegrationTest.java:154:    @Test
+FundsIntegrationTest.java-155-    public void testRetrieveAllFunds() {
+--
+FundsIntegrationTest.java:169:    @Test
+FundsIntegrationTest.java-170-    public void testRetrieveUnknownFund() {
+--
+FundsIntegrationTest.java:177:    @Test
+FundsIntegrationTest.java-178-    public void testUpdateFund() {
+--
+FundsIntegrationTest.java:193:    @Test
+FundsIntegrationTest.java-194-    public void testUpdateUnknownFund() {
+--
+FundsIntegrationTest.java:202:    @Test
+FundsIntegrationTest.java-203-    public void testUpdateFundWithInvalidNewName() {
+--
+FundsIntegrationTest.java:218:    @Test
+FundsIntegrationTest.java-219-    public void testUpdateFundWithNewExternalId() {
+--
+FundsIntegrationTest.java:232:    @Test
+FundsIntegrationTest.java-233-    public void testUpdateFundWithInvalidNewExternalId() {
+--
+FundsIntegrationTest.java:248:    @Test
+FundsIntegrationTest.java-249-    public void testUpdateFundWithNewName() {
+--
+FundsIntegrationTest.java:262:    @Test
+FundsIntegrationTest.java-263-    public void testUpdateFundWithEmptyParams() {
+--
+GlobalConfigInterestChargedFromDateSameAsDisbursalDateTest.java:56:    @Test
+GlobalConfigInterestChargedFromDateSameAsDisbursalDateTest.java-57-    public void testInterestChargedFromDateSameAsDisbursalDate() {
+--
+GlobalConfigurationTest.java:60:    @Test
+GlobalConfigurationTest.java-61-    public void testGlobalConfigurations() {
+--
+GlobalConfigurationTest.java:114:    @Test
+GlobalConfigurationTest.java-115-    public void testGlobalConfigurationIsCacheEnabled() {
+--
+GlobalConfigurationTest.java:146:    @Test
+GlobalConfigurationTest.java-147-    public void testGlobalConfigForcePasswordResetDays() {
+--
+GroupLoanIntegrationTest.java:71:    @Test
+GroupLoanIntegrationTest.java-72-    public void checkGroupLoanCreateAndDisburseFlow() {
+--
+GroupLoanIntegrationTest.java:86:    @Test
+GroupLoanIntegrationTest.java-87-    public void checkGlimAccountCommands() {
+--
+GroupLoanIntegrationTest.java:128:    @Test
+GroupLoanIntegrationTest.java-129-    public void getGlimAccountByGroupId() {
+--
+GroupLoanIntegrationTest.java:157:    @Test
+GroupLoanIntegrationTest.java-158-    public void getGlimAccountByGlimId() {
+--
+GroupSavingsIntegrationTest.java:79:    @Test
+GroupSavingsIntegrationTest.java-80-    public void testSavingsAccount() {
+--
+GroupSavingsIntegrationTest.java:129:    @Test
+GroupSavingsIntegrationTest.java-130-    public void testSavingsAccount_CLOSE_APPLICATION() {
+--
+GroupSavingsIntegrationTest.java:179:    @Test
+GroupSavingsIntegrationTest.java-180-    public void testSavingsAccount_DELETE_APPLICATION() {
+--
+GroupSavingsIntegrationTest.java:228:    @Test
+GroupSavingsIntegrationTest.java-229-    public void testGsimSavingsAccount_REJECT_APPLICATION() {
+--
+GroupSavingsIntegrationTest.java:282:    @Test
+GroupSavingsIntegrationTest.java-283-    public void testGsimSavingsAccount_DEPOSIT_APPLICATION() {
+--
+GroupSavingsIntegrationTest.java:338:    @Test
+GroupSavingsIntegrationTest.java-339-    public void testGsimSavingsAccount_CLOSE_APPLICATION() {
+--
+GroupSavingsIntegrationTest.java:388:    @Test
+GroupSavingsIntegrationTest.java-389-    public void testGsimSavingsAccount_UPDATE_APPLICATION() {
+--
+GroupSavingsIntegrationTest.java:421:    @Test
+GroupSavingsIntegrationTest.java-422-    public void getGsimAccount() {
+--
+GroupSavingsIntegrationTest.java:453:    @Test
+GroupSavingsIntegrationTest.java-454-    public void testSavingsAccount_REJECT_APPLICATION() {
+--
+GroupSavingsIntegrationTest.java:508:    @Test
+GroupSavingsIntegrationTest.java-509-    public void testSavingsAccount_WITHDRAW_APPLICATION() {
+--
+GroupSavingsIntegrationTest.java:542:    @Test
+GroupSavingsIntegrationTest.java-543-    public void testSavingsAccountTransactions() {
+--
+GroupSavingsIntegrationTest.java:649:    @Test
+GroupSavingsIntegrationTest.java-650-    public void testSavingsAccountCharges() {
+--
+GroupTest.java:74:    @Test
+GroupTest.java-75-    public void checkGroupFunctions() {
+--
+GroupTest.java:103:    @Test
+GroupTest.java-104-    public void assignStaffToGroup() {
+--
+guarantor/GuarantorTest.java:84:    @Test
+guarantor/GuarantorTest.java-85-    public void testGuarantor() {
+--
+guarantor/GuarantorTest.java:242:    @Test
+guarantor/GuarantorTest.java-243-    public void testGuarantor_UNDO_DISBURSAL() {
+--
+guarantor/GuarantorTest.java:440:    @Test
+guarantor/GuarantorTest.java-441-    public void testGuarantor_RECOVER_GUARANTEES() {
+--
+guarantor/GuarantorTest.java:511:    @Test
+guarantor/GuarantorTest.java-512-    public void testGuarantor_RECOVER_GUARANTEES_WITH_MORE_GUARANTEE() {
+--
+guarantor/GuarantorTest.java:588:    @Test
+guarantor/GuarantorTest.java-589-    public void testGuarantor_WRITE_OFF_LOAN() {
+--
+HookIntegrationTest.java:61:    @Test
+HookIntegrationTest.java-62-    public void shouldSendOfficeCreationNotification() {
+--
+HookIntegrationTest.java:98:    @Test
+HookIntegrationTest.java-99-    public void createUpdateAndDeleteHook() {
+--
+IdempotencyTest.java:59:    @Test
+IdempotencyTest.java-60-    public void shouldUpdateStepOrder() {
+--
+IdempotencyTest.java:135:    @Test
+IdempotencyTest.java-136-    public void shoudTheSecondRequestWithSameIdempotencyKeyWillFailureToo() {
+--
+inlinecob/InlineLoanCOBTest.java:88:    @Test
+inlinecob/InlineLoanCOBTest.java-89-    public void testInlineCOB() {
+--
+inlinecob/InlineLoanCOBTest.java:148:    @Test
+inlinecob/InlineLoanCOBTest.java-149-    public void testInlineCOBCatchUpLoans() {
+--
+inlinecob/InlineLoanCOBTest.java:243:    @Test
+inlinecob/InlineLoanCOBTest.java-244-    public void testInlineCOBOnRepaymentWithSoftLockedLoan() {
+--
+inlinecob/InlineLoanCOBTest.java:303:    @Test
+inlinecob/InlineLoanCOBTest.java-304-    public void testInlineCOBCatchUpOnRepaymentWithNotLockedLoan() {
+--
+inlinecob/InlineLoanCOBTest.java:360:    @Test
+inlinecob/InlineLoanCOBTest.java-361-    public void testInlineCOBOnBatchAPIWithOldRelativeUrls() {
+--
+inlinecob/InlineLoanCOBTest.java:429:    @Test
+inlinecob/InlineLoanCOBTest.java-430-    public void testInlineCOBOnBatchAPI() {
+--
+inlinecob/InlineLoanCOBTest.java:498:    @Test
+inlinecob/InlineLoanCOBTest.java-499-    public void testInlineCOBRequestBodyItemLimitValidation() {
+--
+InstanceModeIntegrationTest.java:65:    @Test
+InstanceModeIntegrationTest.java-66-    public void testGetHeadOfficeWorks_WhenInstanceModeIsReadOnly() {
+--
+InstanceModeIntegrationTest.java:75:    @Test
+InstanceModeIntegrationTest.java-76-    public void testGetHeadOfficeWorks_WhenInstanceModeIsWriteOnly() {
+--
+InstanceModeIntegrationTest.java:85:    @Test
+InstanceModeIntegrationTest.java-86-    public void testGetHeadOfficeDoesntWork_WhenInstanceModeIsBatchOnly() {
+--
+InstanceModeIntegrationTest.java:94:    @Test
+InstanceModeIntegrationTest.java-95-    public void testCreateClientDoesntWork_WhenReadOnly() {
+--
+InstanceModeIntegrationTest.java:104:    @Test
+InstanceModeIntegrationTest.java-105-    public void testCreateClientWorks_WhenWriteOnly() {
+--
+InstanceModeIntegrationTest.java:115:    @Test
+InstanceModeIntegrationTest.java-116-    public void testCreateClientDoesntWork_WhenBatchOnly() {
+--
+InstanceModeIntegrationTest.java:125:    @Test
+InstanceModeIntegrationTest.java-126-    public void testRunSchedulerJobDoesntWork_WhenReadOnly() {
+--
+InstanceModeIntegrationTest.java:134:    @Test
+InstanceModeIntegrationTest.java-135-    public void testRunSchedulerJobDoesntWork_WhenWriteOnly() {
+--
+InstanceModeIntegrationTest.java:143:    @Test
+InstanceModeIntegrationTest.java-144-    public void testRunSchedulerJobWorks_WhenBatchOnly() {
+--
+interoperation/InteropTest.java:105:    @Test
+interoperation/InteropTest.java-106-    public void testValidateAction() {
+--
+interoperation/InteropTest.java:113:    @Test
+interoperation/InteropTest.java-114-    public void testInteroperation() {
+--
+investor/externalassetowner/InitiateExternalAssetOwnerTransferTest.java:75:    @Test
+investor/externalassetowner/InitiateExternalAssetOwnerTransferTest.java-76-    public void saleActiveLoanToExternalAssetOwner() {
+--
+investor/externalassetowner/InitiateExternalAssetOwnerTransferTest.java:131:    @Test
+investor/externalassetowner/InitiateExternalAssetOwnerTransferTest.java-132-    public void saleIsNotAllowedWhenTransferIsAlreadyPending() {
+--
+investor/externalassetowner/InitiateExternalAssetOwnerTransferTest.java:187:    @Test
+investor/externalassetowner/InitiateExternalAssetOwnerTransferTest.java-188-    public void saleAndBuybackOnTheSameDay() {
+--
+LoanAccountArrearsAgeingCOBBusinessStepTest.java:80:    @Test
+LoanAccountArrearsAgeingCOBBusinessStepTest.java-81-    public void loanArrearsAgeingCOBBusinessStepTest() {
+--
+LoanAccountCreditRefundPayoutWithChargebackTest.java:73:    @Test
+LoanAccountCreditRefundPayoutWithChargebackTest.java-74-    public void loanCreditRefundPayoutGetCreatedWithChargebackTest() {
+--
+LoanAccountFraudTest.java:73:    @Test
+LoanAccountFraudTest.java-74-    public void testMarkLoanAsFraud() {
+--
+LoanAccountOverpaidDateStatusTest.java:72:    @Test
+LoanAccountOverpaidDateStatusTest.java-73-    public void loanOverpaidDateStatusTest() {
+--
+LoanAccrualTransactionOnChargeSubmittedDateTest.java:77:    @Test
+LoanAccrualTransactionOnChargeSubmittedDateTest.java-78-    public void loanAccrualTransactionOnChargeSubmittedTest_Accrual_Accounting_Api() {
+--
+LoanAccrualTransactionOnChargeSubmittedDateTest.java:170:    @Test
+LoanAccrualTransactionOnChargeSubmittedDateTest.java-171-    public void loanAccrualTransactionOnChargeSubmittedTest_Add_Periodic_Accrual_Transactions_Job() {
+--
+LoanAccrualTransactionOnChargeSubmittedDateTest.java:264:    @Test
+LoanAccrualTransactionOnChargeSubmittedDateTest.java-265-    public void loanAccrualTransactionOnChargeSubmittedTest_Loan_COB_AddPeriodicAccrualEntriesBusinessStep() {
+--
+LoanAccrualTransactionOnChargeSubmittedDateTest.java:361:    @Test
+LoanAccrualTransactionOnChargeSubmittedDateTest.java-362-    public void loanAccrualTransactionOnChargeSubmittedTest_Add_Accrual_Transactions_Job() {
+--
+LoanAccrualTransactionOnChargeSubmittedDateTest.java:455:    @Test
+LoanAccrualTransactionOnChargeSubmittedDateTest.java-456-    public void loanAccrualTransactionOnChargeSubmitted_With_Multiple_Repayments_Test_Add_Periodic_Accrual_Transactions_Job() {
+--
+LoanAccrualTransactionOnChargeSubmittedDateTest.java:524:    @Test
+LoanAccrualTransactionOnChargeSubmittedDateTest.java-525-    public void loanAccrualTransactionOnChargeSubmitted_multiple_disbursement_reversal_test_Loan_COB() {
+--
+LoanAccrualTransactionReversalTest.java:81:    @Test
+LoanAccrualTransactionReversalTest.java-82-    public void testNoAccrualTransactionReversalForMultipleDisbursementWithChargeForLoanAccountWithNoInterestBearingSchedulePeriodicAccrual() {
+--
+LoanAccrualTransactionReversalTest.java:136:    @Test
+LoanAccrualTransactionReversalTest.java-137-    public void testLastAccrualTransactionReversalRecalculationForLoanAccountWithInterestBearingScheduleWithDecliningBalance() {
+--
+LoanApplicationApprovalTest.java:73:    @Test
+LoanApplicationApprovalTest.java-74-    public void loanApplicationApprovedAmountLessThanProposedAmount() {
+--
+LoanApplicationApprovalTest.java:98:    @Test
+LoanApplicationApprovalTest.java-99-    public void loanApplicationApprovedAmountGreaterThanProposedAmount() {
+--
+LoanApplicationApprovalTest.java:131:    @Test
+LoanApplicationApprovalTest.java-132-    public void loanApplicationApprovalAndValidationForMultiDisburseLoans() {
+--
+LoanApplicationRejectionForLoanProductWithPeriodicAccrualAccountingTest.java:64:    @Test
+LoanApplicationRejectionForLoanProductWithPeriodicAccrualAccountingTest.java-65-    public void loanApplicationRejectionForPeriodicAccrualAccountingLoanProductTest() {
+--
+LoanApplicationScheduleMonthlyTest.java:63:    @Test
+LoanApplicationScheduleMonthlyTest.java-64-    public void validateSeedDate31() {
+--
+LoanApplicationScheduleMonthlyTest.java:124:    @Test
+LoanApplicationScheduleMonthlyTest.java-125-    public void validateSeedDate30() {
+--
+LoanApplicationScheduleMonthlyTest.java:180:    @Test
+LoanApplicationScheduleMonthlyTest.java-181-    public void validateSeedDate28() {
+--
+LoanApplicationScheduleMonthlyTest.java:236:    @Test
+LoanApplicationScheduleMonthlyTest.java-237-    public void validateSeedDate25() {
+--
+LoanApplicationUndoLastTrancheTest.java:71:    @Test
+LoanApplicationUndoLastTrancheTest.java-72-    public void loanApplicationUndoLastTranche() {
+--
+LoanApplicationUndoLastTrancheTest.java:140:    @Test
+LoanApplicationUndoLastTrancheTest.java-141-    public void loanApplicationUndoLastTrancheToClose() {
+--
+LoanApplicationUndoLastTrancheTest.java:217:    @Test
+LoanApplicationUndoLastTrancheTest.java-218-    public void loanApplicationUndoLastTrancheWithSameDate() {
+--
+LoanAuditingIntegrationTest.java:77:    @Test
+LoanAuditingIntegrationTest.java-78-    public void checkAuditDates() throws InterruptedException {
+--
+LoanCatchUpIntegrationTest.java:80:    @Test
+LoanCatchUpIntegrationTest.java-81-    public void testCatchUpInLockedInstance() {
+--
+LoanChargebackOnPaymentTypeRepaymentTransactionsTest.java:72:    @Test
+LoanChargebackOnPaymentTypeRepaymentTransactionsTest.java-73-    public void loanTransactionChargebackForPaymentTypeRepaymentTransactionTest() {
+--
+LoanChargebackOnPaymentTypeRepaymentTransactionsTest.java:206:    @Test
+LoanChargebackOnPaymentTypeRepaymentTransactionsTest.java-207-    public void loanChargebackNotAllowedForReversedPaymentTypeRepaymentTest() {
+--
+LoanChargeOffAccountingTest.java:89:    @Test
+LoanChargeOffAccountingTest.java-90-    public void loanChargeOffAccountingTreatmentTestForPeriodicAccrualAccounting() {
+--
+LoanChargeOffAccountingTest.java:242:    @Test
+LoanChargeOffAccountingTest.java-243-    public void loanChargeOffFraudAccountingTreatmentTestForCashBasedAccounting() {
+--
+LoanChargeOffAccountingTest.java:414:    @Test
+LoanChargeOffAccountingTest.java-415-    public void loanAccountingTreatmentTestForGoodwillCreditPeriodicAccrualAccounting_NoChargeOff() {
+--
+LoanChargeOffAccountingTest.java:470:    @Test
+LoanChargeOffAccountingTest.java-471-    public void loanAccountingTreatmentTestForGoodwillCreditPeriodicAccrualAccounting_ChargeOff() {
+--
+LoanChargeOffAccountingTest.java:543:    @Test
+LoanChargeOffAccountingTest.java-544-    public void loanAccountingTreatmentTestForCashBasedAccounting_NoChargeOff() {
+--
+LoanChargeOffAccountingTest.java:603:    @Test
+LoanChargeOffAccountingTest.java-604-    public void loanAccountingTreatmentTestForCashBasedAccounting_ChargeOff() {
+--
+LoanChargeSpecificDueDateTest.java:88:    @Test
+LoanChargeSpecificDueDateTest.java-89-    public void testApplyLoanSpecificDueDateFeeWithDisbursementDate() {
+--
+LoanChargeSpecificDueDateTest.java:161:    @Test
+LoanChargeSpecificDueDateTest.java-162-    public void testApplyLoanSpecificDueDatePenaltyWithDisbursementDate() {
+--
+LoanChargeSpecificDueDateTest.java:236:    @Test
+LoanChargeSpecificDueDateTest.java-237-    public void testApplyAndWaiveLoanSpecificDueDatePenaltyWithDisbursementDate() {
+--
+LoanChargeSpecificDueDateTest.java:299:    @Test
+LoanChargeSpecificDueDateTest.java-300-    public void testApplyFeeAccrualOnClosedDate() {
+--
+LoanChargeSpecificDueDateTest.java:432:    @Test
+LoanChargeSpecificDueDateTest.java-433-    public void testApplyFeeAccrualWhenLoanOverpaid() {
+--
+LoanChargeSpecificDueDateTest.java:510:    @Test
+LoanChargeSpecificDueDateTest.java-511-    public void testApplyLoanSpecificDueDatePenaltyWithDisbursementDateWithMultipleDisbursement() {
+--
+LoanChargeSpecificDueDateTest.java:570:    @Test
+LoanChargeSpecificDueDateTest.java-571-    public void testApplyLoanSpecificDueDatePenaltyAccrualWithDisbursementDateWithMultipleDisbursement() {
+--
+LoanCOBCatchUpInstanceModeIntegrationTest.java:70:    @Test
+LoanCOBCatchUpInstanceModeIntegrationTest.java-71-    public void testLoanCOBCatchUpWorksWhenInBatchManagerMode() {
+--
+LoanCOBCatchUpInstanceModeIntegrationTest.java:76:    @Test
+LoanCOBCatchUpInstanceModeIntegrationTest.java-77-    public void testLoanCOBCatchUpDoesNotWorksWhenNotInBatchManagerMode() {
+--
+LoanCOBCatchUpInstanceModeIntegrationTest.java:84:    @Test
+LoanCOBCatchUpInstanceModeIntegrationTest.java-85-    public void testLoanCOBCatchUpGetStatusWorksWhenInBatchManagerMode() {
+--
+LoanCOBCatchUpInstanceModeIntegrationTest.java:90:    @Test
+LoanCOBCatchUpInstanceModeIntegrationTest.java-91-    public void testLoanCOBCatchUpGetStatusDoesNotWorksWhenNotInBatchManagerMode() {
+--
+LoanCOBCatchUpInstanceModeIntegrationTest.java:98:    @Test
+LoanCOBCatchUpInstanceModeIntegrationTest.java-99-    public void testLoanCOBCatchUpOtherGetApisWorksWhenInBatchManagerAndReadMode() {
+--
+LoanCOBCatchUpInstanceModeIntegrationTest.java:104:    @Test
+LoanCOBCatchUpInstanceModeIntegrationTest.java-105-    public void testLoanCOBCatchUpOtherGetApisWorksWhenInReadOnlyMode() {
+--
+LoanCOBCatchUpInstanceModeIntegrationTest.java:110:    @Test
+LoanCOBCatchUpInstanceModeIntegrationTest.java-111-    public void testSchedulerWorksWhenInBatchManagerMode() {
+--
+LoanCOBCatchUpInstanceModeIntegrationTest.java:116:    @Test
+LoanCOBCatchUpInstanceModeIntegrationTest.java-117-    public void testSchedulerDoesNotWorksWhenNotInBatchManagerMode() {
+--
+LoanDisbursalDateValidationTest.java:67:    @Test
+LoanDisbursalDateValidationTest.java-68-    public void loanApplicationValidateDisbursalDate() {
+--
+LoanDisbursementDetailsIntegrationTest.java:82:    @Test
+LoanDisbursementDetailsIntegrationTest.java-83-    public void createAndValidateMultiDisburseLoansBasedOnEmi() {
+--
+LoanDisbursementDetailsIntegrationTest.java:278:    @Test
+LoanDisbursementDetailsIntegrationTest.java-279-    public void validateEqualInstallmentsForMultiTrancheLoan() {
+--
+LoanDisbursementDetailsIntegrationTest.java:319:    @Test
+LoanDisbursementDetailsIntegrationTest.java-320-    public void createApproveAndValidateMultiDisburseLoan() throws ParseException {
+--
+LoanDisbursementDetailsIntegrationTest.java:354:    @Test
+LoanDisbursementDetailsIntegrationTest.java-355-    public void allowModifyLoanApplicationAfterUndoDisbursalWithTranches() throws ParseException {
+--
+LoanFixedPrincipalPercentageAmortizationTest.java:71:    @Test
+LoanFixedPrincipalPercentageAmortizationTest.java-72-    public void checkLoanCreateAndDisburseFlowWithFixedPrincipalPercentage() {
+--
+LoanFixedPrincipalPercentageAmortizationTest.java:84:    @Test
+LoanFixedPrincipalPercentageAmortizationTest.java-85-    public void checkLoanCreateAndDisburseFlowWithFixedPrincipalPercentageWithPrincipalGrace() {
+--
+LoanFixedPrincipalPercentageAmortizationTest.java:97:    @Test
+LoanFixedPrincipalPercentageAmortizationTest.java-98-    public void checkLoanCreateAndDisburseFlowWithFixedPrincipalPercentageAndFlatInterest() {
+--
+LoanLastRepaymentDetailsTest.java:71:    @Test
+LoanLastRepaymentDetailsTest.java-72-    public void loanLastRepaymentDetailsTestClosedLoan() {
+--
+LoanLastRepaymentDetailsTest.java:126:    @Test
+LoanLastRepaymentDetailsTest.java-127-    public void loanLastRepaymentDetailsTestOverpaidLoan() {
+--
+LoanPayOffAddChargeWithRefundTest.java:75:    @Test
+LoanPayOffAddChargeWithRefundTest.java-76-    public void loanAddChargeForPaidOffLoanWithRefundTest() {
+--
+LoanProductWithRepaymentDueEventConfigurationTest.java:60:    @Test
+LoanProductWithRepaymentDueEventConfigurationTest.java-61-    public void loanProductCreationWithDueDaysConfigurationForRepaymentEventTest() {
+--
+LoanProductWithRepaymentDueEventConfigurationTest.java:87:    @Test
+LoanProductWithRepaymentDueEventConfigurationTest.java-88-    public void loanProductUpdateWithDueDaysConfigurationForRepaymentEventTest() {
+--
+LoanRepaymentRescheduleAtDisbursementTest.java:74:    @Test
+LoanRepaymentRescheduleAtDisbursementTest.java-75-    public void testLoanRepaymentRescheduleAtDisbursement() {
+--
+LoanRescheduleOnDecliningBalanceLoanTest.java:298:    @Test
+LoanRescheduleOnDecliningBalanceLoanTest.java-299-    public void testCreateLoanRescheduleRequestWithInterestAppropriation() {
+--
+LoanRescheduleOnDecliningBalanceLoanTest.java:306:    @Test
+LoanRescheduleOnDecliningBalanceLoanTest.java-307-    public void testCreateLoanRescheduleRequestFailIfLoanIsChargedOff() {
+--
+LoanRescheduleOnDecliningBalanceLoanTest.java:376:    @Test
+LoanRescheduleOnDecliningBalanceLoanTest.java-377-    public void testCreateLoanRescheduleRequestWithRecalculationEnabled() {
+--
+LoanRescheduleOnDecliningBalanceLoanTest.java:424:    @Test
+LoanRescheduleOnDecliningBalanceLoanTest.java-425-    public void testCreateLoanRescheduleRequestForInterestAppropriationAndFixedEMI() {
+--
+LoanRescheduleOnDecliningBalanceLoanTest.java:476:    @Test
+LoanRescheduleOnDecliningBalanceLoanTest.java-477-    public void testCreateLoanRescheduleRequestWithMultpleInterestAppropriation() {
+--
+LoanRescheduleOnDecliningBalanceLoanTest.java:525:    @Test
+LoanRescheduleOnDecliningBalanceLoanTest.java-526-    public void testCreateLoanInterestGreaterThanEMIFromGapWithRecalculationEnabledAndPrincipalCompoundingOff() {
+--
+LoanRescheduleRequestTest.java:195:    @Test
+LoanRescheduleRequestTest.java-196-    public void testCreateLoanRescheduleRequest() {
+--
+LoanRescheduleRequestTest.java:200:    @Test
+LoanRescheduleRequestTest.java-201-    public void testRejectLoanRescheduleRequest() {
+--
+LoanRescheduleRequestTest.java:215:    @Test
+LoanRescheduleRequestTest.java-216-    public void testApproveLoanRescheduleRequest() {
+--
+LoanRescheduleRequestTest.java:254:    @Test
+LoanRescheduleRequestTest.java-255-    public void testCreateLoanRescheduleChangeEMIRequest() {
+--
+LoanRescheduleWithAdvancePaymentTest.java:139:    @Test
+LoanRescheduleWithAdvancePaymentTest.java-140-    public void testRescheduleAfterLatePayment() {
+--
+LoanRescheduleWithAdvancePaymentTest.java:262:    @Test
+LoanRescheduleWithAdvancePaymentTest.java-263-    public void testMultipleAdvancePaymentWithReschedule() {
+--
+LoanReschedulingWithinCenterTest.java:89:    @Test
+LoanReschedulingWithinCenterTest.java-90-    public void testCenterReschedulingLoansWithInterestRecalculationEnabled() {
+--
+LoanReschedulingWithinCenterTest.java:222:    @Test
+LoanReschedulingWithinCenterTest.java-223-    public void testCenterReschedulingMultiTrancheLoansWithInterestRecalculationEnabled() {
+--
+LoanSpecificDueDateChargeAfterMaturityTest.java:98:    @Test
+LoanSpecificDueDateChargeAfterMaturityTest.java-99-    public void checkPeriodicAccrualAccountingAPIFlow() {
+--
+LoanSpecificDueDateChargeAfterMaturityTest.java:231:    @Test
+LoanSpecificDueDateChargeAfterMaturityTest.java-232-    public void reopenClosedLoan() {
+--
+LoanTransactionAuditingIntegrationTest.java:76:    @Test
+LoanTransactionAuditingIntegrationTest.java-77-    public void checkAuditDates() throws InterruptedException {
+--
+LoanTransactionChargebackTest.java:95:    @Test
+LoanTransactionChargebackTest.java-96-    public void applyLoanTransactionChargeback() {
+--
+LoanTransactionChargebackTest.java:146:    @Test
+LoanTransactionChargebackTest.java-147-    public void applyAndAdjustLoanTransactionChargeback() {
+--
+LoanTransactionChargebackTest.java:164:    @Test
+LoanTransactionChargebackTest.java-165-    public void applyLoanTransactionChargebackWithAmountZero() {
+--
+LoanTransactionChargebackTest.java:188:    @Test
+LoanTransactionChargebackTest.java-189-    public void applyLoanTransactionChargebackInLongTermLoan() {
+--
+LoanTransactionChargebackTest.java:235:    @Test
+LoanTransactionChargebackTest.java-236-    public void applyLoanTransactionChargebackOverNoRepaymentType() {
+--
+LoanTransactionChargebackTest.java:254:    @Test
+LoanTransactionChargebackTest.java-255-    public void applyLoanTransactionChargebackAfterMature() {
+--
+LoanTransactionChargebackTest.java:359:    @Test
+LoanTransactionChargebackTest.java-360-    public void applyLoanTransactionChargebackWithLoanOverpaidToLoanActive() {
+--
+LoanTransactionChargebackTest.java:409:    @Test
+LoanTransactionChargebackTest.java-410-    public void applyLoanTransactionChargebackWithLoanOverpaidToLoanClose() {
+--
+LoanTransactionChargebackTest.java:444:    @Test
+LoanTransactionChargebackTest.java-445-    public void applyLoanTransactionChargebackWithLoanOverpaidToKeepAsLoanOverpaid() {
+--
+LoanTransactionChargebackTest.java:494:    @Test
+LoanTransactionChargebackTest.java-495-    public void applyMultipleLoanTransactionChargeback() {
+--
+LoanTransactionFullAmountChargebackForOverpaidLoanTest.java:72:    @Test
+LoanTransactionFullAmountChargebackForOverpaidLoanTest.java-73-    public void loanTransactionChargebackOfFullAmountForOverpaidLoanTest() {
+--
+LoanTransactionReverseReplayRelationTest.java:75:    @Test
+LoanTransactionReverseReplayRelationTest.java-76-    public void loanTransactionReverseReplayRelationTest() {
+--
+LoanTransactionSummaryTest.java:78:    @Test
+LoanTransactionSummaryTest.java-79-    public void loanTransactionSummaryTest() {
+--
+LoanTransactionSummaryTest.java:205:    @Test
+LoanTransactionSummaryTest.java-206-    public void lastRepaymentAmountTest() {
+--
+LoanWithdrawnByApplicantIntegrationTest.java:61:    @Test
+LoanWithdrawnByApplicantIntegrationTest.java-62-    public void loanWithdrawnByApplicant() {
+--
+LoanWithWaiveInterestAndWriteOffIntegrationTest.java:82:    @Test
+LoanWithWaiveInterestAndWriteOffIntegrationTest.java-83-    public void checkClientLoanCreateAndDisburseFlow() {
+--
+LoanWithWaiveInterestAndWriteOffIntegrationTest.java:153:    @Test
+LoanWithWaiveInterestAndWriteOffIntegrationTest.java-154-    public void checkClientLoan_WRITTEN_OFF() {
+--
+MakercheckerTest.java:51:    @Test
+MakercheckerTest.java-52-    public void testMakerchekerInboxList() {
+--
+MinimumDaysBetweenDisbursalAndFirstRepaymentTest.java:79:    @Test
+MinimumDaysBetweenDisbursalAndFirstRepaymentTest.java-80-    public void createLoanEntity_WITH_DAY_BETWEEN_DISB_DATE_AND_REPAY_START_DATE_GREATER_THAN_MIN_DAY_CRITERIA() {
+--
+MinimumDaysBetweenDisbursalAndFirstRepaymentTest.java:146:    @Test
+MinimumDaysBetweenDisbursalAndFirstRepaymentTest.java-147-    public void createLoanEntity_WITH_DAY_BETWEEN_DISB_DATE_AND_REPAY_START_DATE_LESS_THAN_MIN_DAY_CRITERIA() {
+--
+NotesTest.java:72:    @Test
+NotesTest.java-73-    public void testCreateClientNote() {
+--
+NotesTest.java:87:    @Test
+NotesTest.java-88-    public void testUpdateClientNote() {
+--
+NotesTest.java:110:    @Test
+NotesTest.java-111-    public void testDeleteClientNote() {
+--
+NotesTest.java:129:    @Test
+NotesTest.java-130-    public void testCreateGroupNote() {
+--
+NotesTest.java:144:    @Test
+NotesTest.java-145-    public void testUpdateGroupNote() {
+--
+NotesTest.java:167:    @Test
+NotesTest.java-168-    public void testDeleteGroupNote() {
+--
+NotesTest.java:186:    @Test
+NotesTest.java-187-    public void testCreateLoanNote() {
+--
+NotesTest.java:204:    @Test
+NotesTest.java-205-    public void testCreateSavingsNote() {
+--
+NotesTest.java:259:    @Test
+NotesTest.java-260-    public void testUpdateLoanNote() {
+--
+NotesTest.java:284:    @Test
+NotesTest.java-285-    public void testDeleteLoanNote() {
+--
+NotesTest.java:305:    @Test
+NotesTest.java-306-    public void testCreateLoanTransactionNote() {
+--
+NotesTest.java:330:    @Test
+NotesTest.java-331-    public void testUpdateLoanTransactionNote() {
+--
+NotesTest.java:364:    @Test
+NotesTest.java-365-    public void testDeleteLoanTransactionNote() {
+--
+NotificationApiTest.java:80:    @Test
+NotificationApiTest.java-81-    public void testNotificationRetrievalWorksWhenNoNotificationsAreAvailable() {
+--
+NotificationApiTest.java:89:    @Test
+NotificationApiTest.java-90-    public void testNotificationRetrievalWorksWhenOneNotificationIsAvailable() {
+--
+OfficeIntegrationTest.java:46:    @Test
+OfficeIntegrationTest.java-47-    public void testOfficeModification() {
+--
+PasswordPreferencesIntegrationTest.java:56:    @Test
+PasswordPreferencesIntegrationTest.java-57-    public void updatePasswordPreferences() {
+--
+PasswordPreferencesIntegrationTest.java:70:    @Test
+PasswordPreferencesIntegrationTest.java-71-    public void updateWithInvalidPolicyId() {
+--
+PaymentTypeIntegrationTest.java:49:    @Test
+PaymentTypeIntegrationTest.java-50-    public void testPaymentType() {
+--
+ProductMixIntegrationTest.java:50:    @Test
+ProductMixIntegrationTest.java-51-    public void getProductMixList() {
+--
+RatesTest.java:48:    @Test
+RatesTest.java-49-    public void testRatesForLoans() {
+--
+RecurringDepositTest.java:130:    @Test
+RecurringDepositTest.java-131-    public void testRecurringDepositAccountWithPrematureClosureTypeWithdrawal() {
+--
+RecurringDepositTest.java:279:    @Test
+RecurringDepositTest.java-280-    public void testRecurringDepositAccountWithPrematureClosureTypeTransferToSavings() {
+--
+RecurringDepositTest.java:480:    @Test
+RecurringDepositTest.java-481-    public void testRecurringDepositAccountWithPrematureClosureTypeTransferToSavings_WITH_HOLD_TAX() {
+--
+RecurringDepositTest.java:689:    @Test
+RecurringDepositTest.java-690-    @Disabled // TODO FINERACT-1248
+--
+RecurringDepositTest.java:850:    @Test
+RecurringDepositTest.java-851-    public void testRecurringDepositAccountWithPrematureClosureTypeReinvest() {
+--
+RecurringDepositTest.java:995:    @Test
+RecurringDepositTest.java-996-    public void testRecurringDepositAccountUpdation() {
+--
+RecurringDepositTest.java:1038:    @Test
+RecurringDepositTest.java-1039-    public void testRecurringDepositAccountUndoApproval() {
+--
+RecurringDepositTest.java:1085:    @Test
+RecurringDepositTest.java-1086-    public void testRecurringDepositAccountRejectedAndClosed() {
+--
+RecurringDepositTest.java:1131:    @Test
+RecurringDepositTest.java-1132-    public void testRecurringDepositAccountWithdrawnByClientAndClosed() {
+--
+RecurringDepositTest.java:1177:    @Test
+RecurringDepositTest.java-1178-    public void testRecurringDepositAccountIsDeleted() {
+--
+RecurringDepositTest.java:1220:    @Test
+RecurringDepositTest.java-1221-    public void testUpdateAndUndoTransactionForRecurringDepositAccount() {
+--
+RecurringDepositTest.java:1350:    @Test
+RecurringDepositTest.java-1351-    public void testMaturityAmountForMonthlyCompoundingAndMonthlyPosting_With_365_Days() {
+--
+RecurringDepositTest.java:1425:    @Test
+RecurringDepositTest.java-1426-    public void testMaturityAmountForMonthlyCompoundingAndMonthlyPosting_With_360_Days() {
+--
+RecurringDepositTest.java:1505:    @Test
+RecurringDepositTest.java-1506-    public void testPostInterestForRecurringDeposit() {
+--
+RecurringDepositTest.java:1600:    @Test
+RecurringDepositTest.java-1601-    public void testPrematureClosureAmountWithPenalInterestForWholeTerm_With_365_Days() {
+--
+RecurringDepositTest.java:1724:    @Test
+RecurringDepositTest.java-1725-    public void testPrematureClosureAmountWithPenalInterestForWholeTerm_With_360_Days() {
+--
+RecurringDepositTest.java:1853:    @Test
+RecurringDepositTest.java-1854-    public void testPrematureClosureAmountWithPenalInterestTillPrematureWithdrawal_With_365_Days() {
+--
+RecurringDepositTest.java:1989:    @Test
+RecurringDepositTest.java-1990-    public void testPrematureClosureAmountWithPenalInterestTillPrematureWithdrawal_With_360_Days() {
+--
+RecurringDepositTest.java:2129:    @Test
+RecurringDepositTest.java-2130-    public void testMaturityAmountForDailyCompoundingAndMonthlyPosting_With_365_Days() {
+--
+RecurringDepositTest.java:2208:    @Test
+RecurringDepositTest.java-2209-    public void testMaturityAmountForDailyCompoundingAndMonthlyPosting_With_360_Days() {
+--
+RecurringDepositTest.java:2289:    @Test
+RecurringDepositTest.java-2290-    public void testRecurringDepositWithBi_AnnualCompoundingAndPosting_365_Days() {
+--
+RecurringDepositTest.java:2379:    @Test
+RecurringDepositTest.java-2380-    public void testRecurringDepositWithBi_AnnualCompoundingAndPosting_360_Days() {
+--
+RecurringDepositTest.java:2469:    @Test
+RecurringDepositTest.java-2470-    public void testMaturityAmountForDailyCompoundingAndAnnuallyPosting_With_365_Days() {
+--
+RecurringDepositTest.java:2559:    @Test
+RecurringDepositTest.java-2560-    public void testMaturityAmountForDailyCompoundingAndAnnuallyPosting_With_360_Days() {
+--
+RecurringDepositTest.java:2649:    @Test
+RecurringDepositTest.java-2650-    public void testRecurringDepositQuarterlyCompoundingAndQuarterlyPosting_365_Days() {
+--
+RecurringDepositTest.java:2739:    @Test
+RecurringDepositTest.java-2740-    public void testRecurringDepositQuarterlyCompoundingAndQuarterlyPosting_360_Days() {
+--
+RecurringDepositTest.java:2825:    @Test
+RecurringDepositTest.java-2826-    public void testRecurringDepositAccountWithPeriodInterestRateChart() {
+--
+RecurringDepositTest.java:2834:    @Test
+RecurringDepositTest.java-2835-    public void testRecurringDepositAccountWithPeriodInterestRateChart_AMOUNT_VARIATION() {
+--
+RecurringDepositTest.java:2843:    @Test
+RecurringDepositTest.java-2844-    public void testRecurringDepositAccountWithPeriodInterestRateChart_PERIOD_VARIATION() {
+--
+RecurringDepositTest.java:2852:    @Test
+RecurringDepositTest.java-2853-    public void testRecurringDepositAccountWithAmountInterestRateChart() {
+--
+RecurringDepositTest.java:2861:    @Test
+RecurringDepositTest.java-2862-    public void testRecurringDepositAccountWithAmountInterestRateChart_AMOUNT_VARIATION() {
+--
+RecurringDepositTest.java:2870:    @Test
+RecurringDepositTest.java-2871-    public void testRecurringDepositAccountWithAmountInterestRateChart_PERIOD_VARIATION() {
+--
+RecurringDepositTest.java:2879:    @Test
+RecurringDepositTest.java-2880-    public void testRecurringDepositAccountWithPeriodAndAmountInterestRateChart() {
+--
+RecurringDepositTest.java:2888:    @Test
+RecurringDepositTest.java-2889-    public void testRecurringDepositAccountWithPeriodAndAmountInterestRateChart_AMOUNT_VARIATION() {
+--
+RecurringDepositTest.java:2897:    @Test
+RecurringDepositTest.java-2898-    public void testRecurringDepositAccountWithPeriodAndAmountInterestRateChart_PERIOD_VARIATION() {
+--
+RecurringDepositTest.java:2906:    @Test
+RecurringDepositTest.java-2907-    public void testRecurringDepositAccountWithAmountAndPeriodInterestRateChart() {
+--
+RecurringDepositTest.java:2915:    @Test
+RecurringDepositTest.java-2916-    public void testRecurringDepositAccountWithAmountAndPeriodInterestRateChart_AMOUNT_VARIATION() {
+--
+RecurringDepositTest.java:2924:    @Test
+RecurringDepositTest.java-2925-    public void testRecurringDepositAccountWithAmountAndPeriodInterestRateChart_PERIOD_VARIATION() {
+--
+RepaymentWithPostDatedChecksTest.java:68:    @Test
+RepaymentWithPostDatedChecksTest.java-69-    public void testRepaymentWithPostDatedChecks() {
+--
+RolesTest.java:55:    @Test
+RolesTest.java-56-    public void testCreateRolesStatus() {
+--
+RolesTest.java:69:    @Test
+RolesTest.java-70-    public void testDisableRolesStatus() {
+--
+RolesTest.java:90:    @Test
+RolesTest.java-91-    public void testEnableRolesStatus() {
+--
+RolesTest.java:118:    @Test
+RolesTest.java-119-    public void testDeleteRoleStatus() {
+--
+RolesTest.java:134:    @Test
+RolesTest.java-135-    public void testRoleShouldGetDeletedIfNoActiveUserExists() {
+--
+RolesTest.java:152:    @Test
+RolesTest.java-153-    public void testRoleShouldNotGetDeletedIfActiveUserExists() {
+--
+SavingsAccountBalanceCheckAfterReversalTest.java:63:    @Test
+SavingsAccountBalanceCheckAfterReversalTest.java-64-    public void testSavingsBalanceAfterWithdrawal() {
+--
+SavingsAccountBalanceCheckAfterReversalTest.java:84:    @Test
+SavingsAccountBalanceCheckAfterReversalTest.java-85-    public void testSavingsBalanceWithOverDraftAfterWithdrawal() {
+--
+SavingsAccountsTest.java:49:    @Test
+SavingsAccountsTest.java-50-    @Order(1)
+--
+SavingsAccountsTest.java:67:    @Test
+SavingsAccountsTest.java-68-    @Order(2)
+--
+SavingsAccountsTest.java:82:    @Test
+SavingsAccountsTest.java-83-    @Order(3)
+--
+SavingsInterestPostingIntegrationTest.java:66:    @Test
+SavingsInterestPostingIntegrationTest.java-67-    public void testSavingsDailyInterestPosting() {
+--
+SavingsInterestPostingJobIntegrationTest.java:75:    @Test
+SavingsInterestPostingJobIntegrationTest.java-76-    public void testSavingsBalanceCheckAfterDailyInterestPostingJob() {
+--
+SavingsInterestPostingJobIntegrationTest.java:101:    @Test
+SavingsInterestPostingJobIntegrationTest.java-102-    public void testSavingsDailyInterestPostingJobWithAccountingNone() {
+--
+SavingsInterestPostingJobIntegrationTest.java:118:    @Test
+SavingsInterestPostingJobIntegrationTest.java-119-    public void testDuplicateOverdraftInterestPostingJob() {
+--
+SavingsInterestPostingJobIntegrationTest.java:143:    @Test
+SavingsInterestPostingJobIntegrationTest.java-144-    public void testSavingsDailyInterestPostingJob() {
+--
+SavingsInterestPostingJobIntegrationTest.java:170:    @Test
+SavingsInterestPostingJobIntegrationTest.java-171-    public void testSavingsDailyOverdraftInterestPostingJob() {
+--
+SavingsInterestPostingJobIntegrationTest.java:198:    @Test
+SavingsInterestPostingJobIntegrationTest.java-199-    public void testAccountBalanceWithWithdrawalFeeAfterInterestPostingJob() {
+--
+SchedulerJobsTest.java:75:    @Test // FINERACT-926
+SchedulerJobsTest.java-76-    public void testDateFormat() {
+--
+SchedulerJobsTest.java:88:    @Test
+SchedulerJobsTest.java-89-    @Disabled // TODO FINERACT-1167
+--
+SchedulerJobsTest.java:106:    @Test
+SchedulerJobsTest.java-107-    public void testNumberOfJobs() {
+--
+SchedulerJobsTest.java:112:    @Test
+SchedulerJobsTest.java-113-    public void testFlippingJobsActiveStatus() throws InterruptedException {
+--
+SchedulerJobsTest.java:138:    @Test
+SchedulerJobsTest.java-139-    public void testTriggeringManualExecutionOfAllSchedulerJobs() {
+--
+SchedulerJobsTestResults.java:97:@TestMethodOrder(MethodName.class)
+SchedulerJobsTestResults.java-98-@ExtendWith(LoanTestLifecycleExtension.class)
+--
+SchedulerJobsTestResults.java:143:    @Test
+SchedulerJobsTestResults.java-144-    public void testApplyAnnualFeeForSavingsJobOutcome() throws InterruptedException {
+--
+SchedulerJobsTestResults.java:189:    @Test
+SchedulerJobsTestResults.java-190-    public void testInterestPostingForSavingsJobOutcome() throws InterruptedException {
+--
+SchedulerJobsTestResults.java:224:    @Test
+SchedulerJobsTestResults.java-225-    public void testTransferFeeForLoansFromSavingsJobOutcome() throws InterruptedException {
+--
+SchedulerJobsTestResults.java:291:    @Test
+SchedulerJobsTestResults.java-292-    public void testApplyHolidaysToLoansJobOutcome() throws InterruptedException {
+--
+SchedulerJobsTestResults.java:351:    @Test
+SchedulerJobsTestResults.java-352-    public void testApplyDueFeeChargesForSavingsJobOutcome() throws InterruptedException {
+--
+SchedulerJobsTestResults.java:400:    @Test
+SchedulerJobsTestResults.java-401-    public void testUpdateAccountingRunningBalancesJobOutcome() {
+--
+SchedulerJobsTestResults.java:443:    @Test
+SchedulerJobsTestResults.java-444-    public void testUpdateLoanArrearsAgingJobOutcome() {
+--
+SchedulerJobsTestResults.java:478:    @Test
+SchedulerJobsTestResults.java-479-    public void testExecuteStandingInstructionsJobOutcome() throws InterruptedException {
+--
+SchedulerJobsTestResults.java:569:    @Test
+SchedulerJobsTestResults.java-570-    public void testApplyPenaltyForOverdueLoansJobOutcome() throws InterruptedException {
+--
+SchedulerJobsTestResults.java:615:    @Test
+SchedulerJobsTestResults.java-616-    public void testApplyPenaltyForOverdueLoansJobOutcomeIfLoanChargedOff() throws InterruptedException {
+--
+SchedulerJobsTestResults.java:657:    @Test
+SchedulerJobsTestResults.java-658-    public void testLoanCOBJobOutcome() {
+--
+SchedulerJobsTestResults.java:718:    @Test
+SchedulerJobsTestResults.java-719-    public void testLoanCOBJobOutcomeWhileAddingFeeOnDisbursementDate() {
+--
+SchedulerJobsTestResults.java:784:    @Test
+SchedulerJobsTestResults.java-785-    public void testLoanCOBRunsOnlyOnLoansOneDayBehind() {
+--
+SchedulerJobsTestResults.java:839:    @Test
+SchedulerJobsTestResults.java-840-    public void testLoanCOBApplyPenaltyOnDue() {
+--
+SchedulerJobsTestResults.java:937:    @Test
+SchedulerJobsTestResults.java-938-    public void testAvoidUnncessaryPenaltyWhenAmountZeroForOverdueLoansJobOutcome() throws InterruptedException {
+--
+SchedulerJobsTestResults.java:994:    @Test
+SchedulerJobsTestResults.java-995-    public void testUpdateOverdueDaysForNPA() throws InterruptedException {
+--
+SchedulerJobsTestResults.java:1026:    @Test
+SchedulerJobsTestResults.java-1027-    public void testInterestTransferForSavings() throws InterruptedException {
+--
+SchedulerJobsTestResults.java:1104:    @Test
+SchedulerJobsTestResults.java-1105-    public void businessDateIsCorrectForCronJob() throws InterruptedException {
+--
+ShareProductDatatableIntegrationTest.java:62:    @Test
+ShareProductDatatableIntegrationTest.java-63-    public void testDatatableCreationForShareProduct() {
+--
+ShareProductDatatableIntegrationTest.java:111:    @Test
+ShareProductDatatableIntegrationTest.java-112-    public void testDatatableEntryForShareProduct() {
+--
+SkipRepaymentOnMonthFirstTest.java:77:    @Test
+SkipRepaymentOnMonthFirstTest.java-78-    public void testSkippingRepaymentOnFirstDayOfMonth() {
+--
+SkipRepaymentOnMonthFirstTest.java:100:    @Test
+SkipRepaymentOnMonthFirstTest.java-101-    public void checkRepaymentSkipOnFirstDayOfMonth() {
+--
+StaffTest.java:55:    @Test
+StaffTest.java-56-    public void testStaffCreate() {
+--
+StaffTest.java:64:    @Test
+StaffTest.java-65-    public void testStaffCreateValidationError() {
+--
+StaffTest.java:95:    @Test
+StaffTest.java-96-    public void testStaffCreateMaxNameLength() {
+--
+StaffTest.java:107:    @Test
+StaffTest.java-108-    public void testStaffCreateExternalIdValidationError() {
+--
+StaffTest.java:119:    @Test
+StaffTest.java-120-    public void testStaffFetch() {
+--
+StaffTest.java:127:    @Test
+StaffTest.java-128-    public void testStaffListFetch() {
+--
+StaffTest.java:132:    @Test
+StaffTest.java-133-    public void testStaffListStatusAll() {
+--
+StaffTest.java:137:    @Test
+StaffTest.java-138-    public void testStaffListStatusActive() {
+--
+StaffTest.java:146:    @Test
+StaffTest.java-147-    public void testStaffListStatusInactive() {
+--
+StaffTest.java:155:    @Test // because "xyz" will return an error, not a List
+StaffTest.java-156-    public void testStaffListFetchWrongState() throws ClassCastException {
+--
+StaffTest.java:162:    @Test
+StaffTest.java-163-    public void testStaffFetchNotFound() {
+--
+StaffTest.java:167:    @Test
+StaffTest.java-168-    public void testStaffUpdate() {
+--
+StaffTest.java:191:    @Test
+StaffTest.java-192-    public void testStaffUpdateLongExternalIdError() {
+--
+StaffTest.java:199:    @Test
+StaffTest.java-200-    public void testStaffUpdateWrongActiveState() {
+--
+StaffTest.java:207:    @Test
+StaffTest.java-208-    public void testStaffUpdateNotFoundError() {
+--
+StaffTest.java:215:    @Test
+StaffTest.java-216-    public void testStaffUpdateValidationError() {
+--
+StaffTest.java:246:    @Test
+StaffTest.java-247-    public void testStaffLoanOfficer() {
+--
+SwaggeruiTest.java:45:    @Test
+SwaggeruiTest.java-46-    public void testSwaggeruiAccess() {
+--
+SystemCodeTest.java:63:    @Test
+SystemCodeTest.java-64-    // scenario 57, 58, 59, 60
+--
+SystemCodeTest.java:104:    @Test
+SystemCodeTest.java-105-    // scenario 57, 60
+--
+SystemCodeTest.java:147:    @Test
+SystemCodeTest.java-148-    public void testUpdateDeleteSystemDefinedCode() {
+--
+SystemCodeTest.java:171:    @Test
+SystemCodeTest.java-172-    public void testCodeValuesNotAssignedToTable() {
+--
+SystemCodeTest.java:276:    @Test
+SystemCodeTest.java-277-    public void testCodeValuesAssignedToTable() {
+--
+TemplateIntegrationTest.java:54:    @Test
+TemplateIntegrationTest.java-55-    public void test() {
+--
+UserAdministrationTest.java:70:    @Test
+UserAdministrationTest.java-71-    public void testCreateNewUserBlocksDuplicateUsername() {
+--
+UserAdministrationTest.java:92:    @Test
+UserAdministrationTest.java-93-    public void testUpdateUserAcceptsNewOrSameUsername() {
+--
+UserAdministrationTest.java:112:    @Test
+UserAdministrationTest.java-113-    public void testUpdateUserBlockDuplicateUsername() {
+--
+UserAdministrationTest.java:136:    @Test
+UserAdministrationTest.java-137-    public void testCreateNewUserBlocksDuplicateClientId() {
+--
+UserAdministrationTest.java:159:    @Test
+UserAdministrationTest.java-160-    public void testDeleteSystemUser() {
+--
+UserAdministrationTest.java:167:    @Test
+UserAdministrationTest.java-168-    public void testModifySystemUser() {
+--
+variableinstallments/VariableInstallmentsIntegrationTest.java:63:    @Test
+variableinstallments/VariableInstallmentsIntegrationTest.java-64-    public void testVariableLoanProductCreation() {
+--
+variableinstallments/VariableInstallmentsIntegrationTest.java:74:    @Test
+variableinstallments/VariableInstallmentsIntegrationTest.java-75-    public void testLoanProductCreation() {
+--
+variableinstallments/VariableInstallmentsIntegrationTest.java:83:    @Test
+variableinstallments/VariableInstallmentsIntegrationTest.java-84-    public void testDeleteInstallmentsWithDecliningBalanceEqualInstallments() {
+--
+variableinstallments/VariableInstallmentsIntegrationTest.java:149:    @Test
+variableinstallments/VariableInstallmentsIntegrationTest.java-150-    public void testAddInstallmentsWithDecliningBalanceEqualInstallments() {
+--
+variableinstallments/VariableInstallmentsIntegrationTest.java:194:    @Test
+variableinstallments/VariableInstallmentsIntegrationTest.java-195-    public void testModifyInstallmentWithDecliningBalanceEqualInstallments() {
+--
+variableinstallments/VariableInstallmentsIntegrationTest.java:243:    @Test
+variableinstallments/VariableInstallmentsIntegrationTest.java-244-    public void testAllVariationsDecliningBalancewithEqualInstallments() {
+--
+variableinstallments/VariableInstallmentsIntegrationTest.java:292:    @Test
+variableinstallments/VariableInstallmentsIntegrationTest.java-293-    public void testAllVariationsDecliningBalancewithEqualPrincipal() {
+--
+variableinstallments/VariableInstallmentsIntegrationTest.java:342:    @Test
+variableinstallments/VariableInstallmentsIntegrationTest.java-343-    public void testModifyDatesWithDecliningBalanceEqualInstallments() {
+--
+variableinstallments/VariableInstallmentsIntegrationTest.java:393:    @Test
+variableinstallments/VariableInstallmentsIntegrationTest.java-394-    public void testDeleteInstallmentsWithInterestTypeFlat() {
+--
+variableinstallments/VariableInstallmentsIntegrationTest.java:434:    @Test
+variableinstallments/VariableInstallmentsIntegrationTest.java-435-    public void testAddInstallmentsWithInterestTypeFlat() {
+--
+variableinstallments/VariableInstallmentsIntegrationTest.java:478:    @Test
+variableinstallments/VariableInstallmentsIntegrationTest.java-479-    public void testModifyInstallmentsWithInterestTypeisFlat() {
+--
+variableinstallments/VariableInstallmentsIntegrationTest.java:524:    @Test
+variableinstallments/VariableInstallmentsIntegrationTest.java-525-    public void testAllVariationsWithInterestTypeFlat() {
+--
+variableinstallments/VariableInstallmentsIntegrationTest.java:573:    @Test
+variableinstallments/VariableInstallmentsIntegrationTest.java-574-    public void testModifyDatesWithInterestTypeFlat() {
+--
+WorkingDaysTest.java:54:    @Test
+WorkingDaysTest.java-55-    public void updateWorkingDays() {
+--
+WorkingDaysTest.java:60:    @Test
+WorkingDaysTest.java-61-    public void updateWorkingDaysWithWrongRecurrencePattern() {
+--
+XBRLIntegrationTest.java:54:    @Test
+XBRLIntegrationTest.java-55-    public void shouldRetrieveTaxonomyList() {
