@@ -1,4 +1,5 @@
 import javalang
+import json
 from pathlib import Path
 
 def get_method_start_end(method_node):
@@ -48,7 +49,9 @@ def get_method_text(startpos, endpos, startline, endline, last_endline_index):
         return meth_text, (startline_index + 1), (last_endline_index + 1), last_endline_index
 
 if __name__ == "__main__":
-    trainingData = list(Path("training/facts/").glob("**/*.java"))
+
+    trainingData = list(Path("training/facts/client/").glob("**/*.java"))
+    methods = {}
 
     if len(trainingData) < 1:
         print("The folder training/facts should be populated with at least one .java file", file=sys.stderr)
@@ -64,13 +67,22 @@ if __name__ == "__main__":
             tree = javalang.parse.parse(code_text)
         except javalang.parser.JavaSyntaxError as e:
             continue
-        methods = {}
         for _, method_node in tree.filter(javalang.tree.MethodDeclaration):
             startpos, endpos, startline, endline = get_method_start_end(method_node)
             method_text, startline, endline, lex = get_method_text(startpos, endpos, startline, endline, lex)
-            methods[method_node.name] = method_text
-
             if "@Test" in method_text:
-                print(method_node.name)
-#                print(method_text)
+                # print(method_node.name)
+                methods[method_node.name] = method_text
+
+    print(methods)
+
+    instructions = list()
+    count = 0
+    for key, value in methods.items():
+        print(key)
+        print(value)
+        instructions.append( { "prompt": key, "completion": value } );
+
+    json_data = json.dumps(instructions)
+    print(json_data)
 
