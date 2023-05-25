@@ -23,7 +23,7 @@ APPLICATIONS=" pandoc poppler-utils python3-pandas python3-javalang \
 $RUN sudo dnf install -y $APPLICATIONS;
 
 ## Install Python packages
-$RUN sudo pip install -r requirements.txt
+$RUN sudo pip install --upgrade -r requirements.txt
 
 ## Install FAISS
 $RUN bash -c 'cd /tmp; \
