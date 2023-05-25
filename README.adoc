@@ -1,16 +1,47 @@
-= Build a GPT3 Chatbot for your Company
+= Creating Apache Fineract unit tests using OpenAI
 
-_Build your own AI virtual assistant using your company documentation and GPT3_
+_Using the existing set of Apache Fineract unit tests, fine tune an OpenAI model using the OpenAI API to generate additional and replacement unit tests._
+
+:toc:
 
 == Set Up
 
-1. Get your OpenAI API key and add it Secrets as OPENAI_API_KEY
-1. Make up and API_KEY for the JSON API, this can just be something like a password if you'd like
-1. Fill the training/facts folder with as many text documents as you can containing information about the company you're training it on. Top tips would be handbooks, websites, how-to guides, and anything public facing.
-1. Please don't put anything top secret in there, no one wants their company financials leaked by an AI chatbot!
-1. Edit the master.txt file to represent how you want the bot to behave when interacting with the users
-1. Click Run, select option 1
-1. To chat with the bot, once you've one the training, select option 2
+Note that the following set up instructions use a Fedora Linux instance. They may need to be adjusted depending on your operating system.
+
+1. Download the code from this repository. Note this includes the test files under `training/facts`.
+1. Get your OpenAI API key and add it to your environment.
+
+    $ export OPENAI_API_KEY=<YOUR_KEY>
+
+1. Enter the code repo directory and run the `toolbox` script. Note the requirement to add both your OPEN API key as well as an API secret.
+
+    $ cd fineract-unit-tests-openai
+    $ build_fineract-unit-tests-openai_toolbox.sh
+    $ toolbox enter fineract-unit-tests-openai
+
+== Converse with OpenAI API Chat using *.java files _contextually_
+
+Note that this approach does not use a fine-tuned model but prompt engineering instead.
+
+1. Train the model using the following command, followed by selecting `1` at the prompt.
+
+    $ python3 main.py
+
+1. Run the chat interfact using the same command, this time followed by selecting `2` at the prompt.
+
+== Extracting unit test methods from Java test files
+
+To extract unit tests run the following script:
+
+    $ python3 export-method-names-bodies.py
+
+This will extract the unit tests into a file called `output.json` in JSONL format. Each entry consists of a generated prompt/question and the expected response. 
+
+== TODO
+
+== Previous README
+
+Additional information that may be useful in the future. Original README is [located here].
 
 == JSON API (Advanced Users)
 
