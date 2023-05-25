@@ -51,7 +51,7 @@ def get_method_text(startpos, endpos, startline, endline, last_endline_index):
 
 if __name__ == "__main__":
 
-    trainingData = list(Path("training/facts/client/").glob("**/*.java"))
+    trainingData = list(Path("training/facts/").glob("**/*.java"))
     methods = {}
 
     if len(trainingData) < 1:
@@ -83,7 +83,7 @@ if __name__ == "__main__":
         prompt = "Create a test that tests " + str(split_key)
         instructions.append( { "prompt": prompt, "completion": value } );
 
-    with open('output.json', 'w') as f:
+    with open('unit-tests-only.json', 'w') as f:
         for instruction in instructions:
             json.dump(instruction, f)
             f.write('\n')
