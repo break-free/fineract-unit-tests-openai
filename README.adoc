@@ -1,8 +1,7 @@
 = Creating Apache Fineract unit tests using OpenAI
+:toc:
 
 _Using the existing set of Apache Fineract unit tests, fine tune an OpenAI model using the OpenAI API to generate additional and replacement unit tests._
-
-:toc:
 
 == Set Up
 
