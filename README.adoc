@@ -40,9 +40,9 @@ This will extract the unit tests into a file called `output.json` in JSONL forma
 
 == Previous README
 
-Additional information that may be useful in the future. Original README is [located here].
+Additional information that may be useful in the future. Original README is https://replit.com/@DavidAtReplit/Custom-Company-Chatbot?v=1#README.md[located here].
 
-== JSON API (Advanced Users)
+=== JSON API (Advanced Users)
 
 Option 3, or stating automatically after five seconds on the menu, is the JSON API. You can use POST requests to this Repl's repl.co address to take the chat to a different location or app.
 
@@ -66,6 +66,6 @@ printing response
 
     print(response_data)
 
-== Credit
+=== Credit
 
 All based on the Amjad Masad Chat bot by IronCladDev on Replit For more information on how this works, check out Zahid Khawaja's Tutorial.
