@@ -80,10 +80,11 @@ if __name__ == "__main__":
     for key, value in methods.items():
         split_key = re.sub(pattern, ' ', key)
         split_key = split_key.replace('_', ' ')
-        prompt = "Create a test that tests " + str(split_key)
-        instructions.append( { "prompt": prompt, "completion": value } );
+        prompt = "Create a test that tests " + str(split_key) + "\n\n###\n\n"
+        completion = str(value) + " END"
+        instructions.append( { "prompt": prompt, "completion": completion } );
 
-    with open('unit-tests-only.json', 'w') as f:
+    with open('unit-tests-only.jsonl', 'w') as f:
         for instruction in instructions:
             json.dump(instruction, f)
             f.write('\n')
