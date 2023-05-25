@@ -1,5 +1,6 @@
 import javalang
 import json
+import re
 from pathlib import Path
 
 def get_method_start_end(method_node):
@@ -50,7 +51,7 @@ def get_method_text(startpos, endpos, startline, endline, last_endline_index):
 
 if __name__ == "__main__":
 
-    trainingData = list(Path("training/facts/client/").glob("**/*.java"))
+    trainingData = list(Path("training/facts/accounting/").glob("**/*.java"))
     methods = {}
 
     if len(trainingData) < 1:
@@ -71,18 +72,25 @@ if __name__ == "__main__":
             startpos, endpos, startline, endline = get_method_start_end(method_node)
             method_text, startline, endline, lex = get_method_text(startpos, endpos, startline, endline, lex)
             if "@Test" in method_text:
-                # print(method_node.name)
+                # print("Method Node Name: "+str(method_node.name))
                 methods[method_node.name] = method_text
 
-    print(methods)
+    # print(methods)
 
     instructions = list()
     count = 0
-    for key, value in methods.items():
-        print(key)
-        print(value)
-        instructions.append( { "prompt": key, "completion": value } );
+    pattern = r'(?<=[a-z])(?=[A-Z])'
+    json_data = ""
 
-    json_data = json.dumps(instructions)
+    for key, value in methods.items():
+        # print("Key: "+str(key))
+        split_key = re.sub(pattern, ' ', key)
+        split_key = split_key.replace('_', ' ')
+        prompt = "Create a test that tests " + str(split_key)
+        # print(prompt)
+        instructions.append( { "prompt": split_key, "completion": value } );
+        #json_data = json_data + "{ \"prompt\": \""+str(prompt)+"\", "+"\"completion\": \""+str(value)+"\" } \n"
+
+    json_data = json.dumps(instructions[0])
     print(json_data)
 
