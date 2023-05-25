@@ -51,7 +51,7 @@ def get_method_text(startpos, endpos, startline, endline, last_endline_index):
 
 if __name__ == "__main__":
 
-    trainingData = list(Path("training/facts/accounting/").glob("**/*.java"))
+    trainingData = list(Path("training/facts/client/").glob("**/*.java"))
     methods = {}
 
     if len(trainingData) < 1:
@@ -72,25 +72,19 @@ if __name__ == "__main__":
             startpos, endpos, startline, endline = get_method_start_end(method_node)
             method_text, startline, endline, lex = get_method_text(startpos, endpos, startline, endline, lex)
             if "@Test" in method_text:
-                # print("Method Node Name: "+str(method_node.name))
                 methods[method_node.name] = method_text
 
-    # print(methods)
-
     instructions = list()
-    count = 0
     pattern = r'(?<=[a-z])(?=[A-Z])'
-    json_data = ""
 
     for key, value in methods.items():
-        # print("Key: "+str(key))
         split_key = re.sub(pattern, ' ', key)
         split_key = split_key.replace('_', ' ')
         prompt = "Create a test that tests " + str(split_key)
-        # print(prompt)
-        instructions.append( { "prompt": split_key, "completion": value } );
-        #json_data = json_data + "{ \"prompt\": \""+str(prompt)+"\", "+"\"completion\": \""+str(value)+"\" } \n"
+        instructions.append( { "prompt": prompt, "completion": value } );
 
-    json_data = json.dumps(instructions[0])
-    print(json_data)
+    with open('output.json', 'w') as f:
+        for instruction in instructions:
+            json.dump(instruction, f)
+            f.write('\n')
 
