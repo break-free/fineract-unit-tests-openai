@@ -44,7 +44,7 @@ def runPrompt():
 
   store.index = index
 
-  with open("training/master.txt", "r") as f:
+  with open("training/unit-test_prompt.txt", "r") as f:
     promptTemplate = f.read()
 
   prompt = Prompt(template=promptTemplate, input_variables=["history", "context", "question"])
