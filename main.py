@@ -12,7 +12,7 @@ else:
   print("== OPENAI + REPLIT CUSTOM BOT==")
   print ("You have five seconds to select an option")
   print()
-  print("1: Train Model\n2: Talk to your Bot\n3: Run API server (Default)\n> ", end="")
+  print("1: Train Model\n2: Talk to your Bot\n3: Exit (default)\n> ", end="")
   
   i, o, e = select.select( [sys.stdin], [], [], 10 )
   print()
@@ -30,27 +30,29 @@ else:
       import process
       process.runPrompt()
     else:
-      print("Booting into API Server…")
-      time.sleep(1)
-      os.system('clear')
-      print("BOT API SERVER RUNNING")
-      p = subprocess.Popen([sys.executable, 'server.py'], 
-                                      stdout=subprocess.PIPE, 
-                                      stderr=subprocess.STDOUT)
-      while True:
-        line = p.stdout.readline()
-        if not line: break
+      sys.exit(0)
+#     print("Booting into API Server…")
+#     time.sleep(1)
+#     os.system('clear')
+#     print("BOT API SERVER RUNNING")
+#     p = subprocess.Popen([sys.executable, 'server.py'], 
+#                                     stdout=subprocess.PIPE, 
+#                                     stderr=subprocess.STDOUT)
+#     while True:
+#       line = p.stdout.readline()
+#       if not line: break
     
   else:
-    time.sleep(0.5)
-    os.system('clear')
-    print("Booting into API Server…")
-    time.sleep(1)
-    os.system('clear')
-    print("BOT API SERVER RUNNING")
-    p = subprocess.Popen([sys.executable, 'server.py'], 
-                                      stdout=subprocess.PIPE, 
-                                      stderr=subprocess.STDOUT)
-    while True:
-        line = p.stdout.readline()
-        if not line: break
+    sys.exit(0)
+#   time.sleep(0.5)
+#   os.system('clear')
+#   print("Booting into API Server…")
+#   time.sleep(1)
+#   os.system('clear')
+#   print("BOT API SERVER RUNNING")
+#   p = subprocess.Popen([sys.executable, 'server.py'], 
+#                                     stdout=subprocess.PIPE, 
+#                                     stderr=subprocess.STDOUT)
+#   while True:
+#       line = p.stdout.readline()
+#       if not line: break

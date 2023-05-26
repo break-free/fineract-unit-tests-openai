@@ -3,6 +3,10 @@
 
 _Using the existing set of Apache Fineract unit tests, fine tune an OpenAI model using the OpenAI API to generate additional and replacement unit tests._
 
+== Contributing
+
+Note that the `main` branch is locked down but does allow merge requests (without approvals). Therefore, to make changes and update create a feature or fix branch (prepended with `feature_` or `fix_` respectively). Make your changes there and then when ready, merge your branch into `main` then delete the branch (please we don't need lots of left-over branches!).
+
 == Set Up
 
 Note that the following set up instructions use a Fedora Linux instance. They may need to be adjusted depending on your operating system.
@@ -35,6 +39,14 @@ To extract unit tests run the following script:
     $ python3 export-method-names-bodies.py
 
 This will extract the unit tests into a file called `output.json` in JSONL format. Each entry consists of a generated prompt/question and the expected response. 
+
+== Folders
+
+Note that:
+
+* `training/``: contains all training files (i.e., *.java test files), any prompts, and trained model lists (i.e., `model-list.txt`).
+* `results/`: contains results of tests.
+* `archive/`: contains any files not used from previous iterations but kept around just in case.
 
 == TODO
 
