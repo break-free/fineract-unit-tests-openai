@@ -36,6 +36,14 @@ To extract unit tests run the following script:
 
 This will extract the unit tests into a file called `output.json` in JSONL format. Each entry consists of a generated prompt/question and the expected response. 
 
+== Folders
+
+Note that:
+
+* `training/``: contains all training files (i.e., *.java test files), any prompts, and trained model lists (i.e., `model-list.txt`).
+* `results/`: contains results of tests.
+* `archive/`: contains any files not used from previous iterations but kept around just in case.
+
 == TODO
 
 == Previous README
