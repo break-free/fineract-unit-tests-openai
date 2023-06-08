@@ -1,76 +1,14 @@
-from java_code_chunker import chunker as JCC
+import json
 import os
 import sys
 import tiktoken
 
 # Check that environment variables are set up.
-if "API_SECRET" not in os.environ:
-    print("You must set an API_SECRET using the Secrets tool", file=sys.stderr)
-elif "OPENAI_API_KEY" not in os.environ:
+if "OPENAI_API_KEY" not in os.environ:
     print("You must set an OPENAI_API_KEY using the Secrets tool", file=sys.stderr)
-# Retrieve file list
-training_data = list()
-if len(sys.argv) != 2 :
-    print("Enter one and only one absolute or relative path to ")
-    print("a directory containing the Java code to be chunked.")
-else:
-    training_data = JCC.get_file_list(sys.argv[1], "*.java")
+# Load lists
+with open('chunks.pkl', 'r') as f:
+    chunks_str = f.read()
+chunks = ast.literal_eval(chunks_str)
 
-chunks = []
-failed_files = []
-# Chunk data using the files in the training data
-for file in training_data:
-    codelines = JCC.get_code_lines(file)
-    try:
-        tree = JCC.parse_code(file, codelines)
-    except JCC.ParseError as e:
-        failed_files.append(str(file) + ": " + str(e))
-    if tree != None:
-        # The `try` statements could be amalgamated but using them 
-        # separately for now to get as many chunks as possible.
-        try:
-            chunks = chunks + JCC.chunk_constants(tree)
-            chunks = chunks + JCC.chunk_constructors(tree, codelines)
-            chunks = chunks + JCC.chunk_fields(tree, codelines)
-            chunks = chunks + JCC.chunk_methods(tree, codelines)
-        except JCC.ChunkingError as e:
-            failed_files.append(str(file) + ": " + str(e))
-    else:
-        failed_files.append(str(file) + ", has no tree!")
-# Print statistics
-attempts = len(training_data)
-failures = len(failed_files)
-print("Number of files attempted to be parsed = " + str(attempts))
-print("Number of failed files = " + str(failures) +
-      ". Failure rate = " + "{:.2f}".format(failures/attempts*100) + "%")
-if failures:
-    print("\nFiles that were not processed ("+str(failures)+"):")
-    for file in failed_files:
-        print("\t- "+file)
-
-encoding = tiktoken.get_encoding("cl100k_base")
-encoding = tiktoken.encoding_for_model("gpt-3.5-turbo")
-num_member_tokens = 0
-num_method_tokens = 0
-max_tokens = 0
-num_member_chunks = len(chunks)
-num_method_chunks = 0
-for chunk in chunks:
-    num_member_tokens = num_member_tokens + len(encoding.encode(str(chunk)))
-    if chunk['member'] == "method":
-        num_method_tokens = num_method_tokens + len(encoding.encode(str(chunk)))
-        num_method_chunks = num_method_chunks + 1
-print("Number of chunks generated = " + str(num_member_chunks))
-print("Average number of tokens per chunk = " + 
-      "{:.2f}".format(num_member_tokens/num_member_chunks))
-print("Average number of tokens per method chunk = " +
-      "{:.2f}".format(num_method_tokens/num_method_chunks))
-print("Maximum token size = " + str(max_tokens))
-print("Chunks sample")
-print("-------------")
-for chunk in chunks[:10]:
-    print(str(chunk))
-print("...")
-
-
-
+print(chunks)
