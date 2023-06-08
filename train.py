@@ -7,8 +7,17 @@ import tiktoken
 if "OPENAI_API_KEY" not in os.environ:
     print("You must set an OPENAI_API_KEY using the Secrets tool", file=sys.stderr)
 # Load lists
-with open('chunks.pkl', 'r') as f:
-    chunks_str = f.read()
-chunks = ast.literal_eval(chunks_str)
+with open('chunks.json', 'r') as f:
+    chunks = json.load(f)
 
-print(chunks)
+str_chunks = []
+for chunk in chunks:
+#    s = ("; ").join([chunk['package'],
+#                     chunk['type'],
+#                     chunk['typename'],
+#                     chunk['member'],
+#                     chunk['membername'],
+#                     chunk['code']])
+    str_chunks.append(str(chunk))
+
+print(str_chunks)
