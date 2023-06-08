@@ -1,3 +1,4 @@
+java-code-chunker
 langchain
 openai
 tiktoken

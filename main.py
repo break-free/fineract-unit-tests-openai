@@ -9,7 +9,7 @@ elif "OPENAI_API_KEY" not in os.environ:
 else:
   
 
-  print("== OPENAI + REPLIT CUSTOM BOT==")
+  print("== OPENAI CUSTOM BOT==")
   print ("You have five seconds to select an option")
   print()
   print("1: Train Model\n2: Talk to your Bot\n3: Exit (default)\n> ", end="")
