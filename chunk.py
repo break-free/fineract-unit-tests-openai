@@ -1,5 +1,4 @@
 from java_code_chunker import chunker as JCC
-from pathlib import Path
 import json, os, sys
 
 # Check that environment variables are set up.
