@@ -3,6 +3,10 @@
 
 _Using the existing set of Apache Fineract unit tests, fine tune an OpenAI model using the OpenAI API to generate additional and replacement unit tests._
 
+== Introduction
+
+Note that this repository is more "playground" than anything. In other words, there is a bunch or related and somewhat unrelated files. The instructions contained in this README are kept up to date as much as possible.
+
 == Contributing
 
 Note that the `main` branch is locked down but does allow merge requests (without approvals). Therefore, to make changes and update create a feature or fix branch (prepended with `feature_` or `fix_` respectively). Make your changes there and then when ready, merge your branch into `main` then delete the branch (please we don't need lots of left-over branches!).

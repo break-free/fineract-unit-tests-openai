@@ -1,4 +1,6 @@
 __pycache__/
 *.pkl
 *.index
-output.json
+*.json
+training/all/*
+training.index

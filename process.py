@@ -1,4 +1,3 @@
-from pathlib import Path
 from langchain.text_splitter import CharacterTextSplitter
 import faiss
 from langchain.vectorstores import FAISS
@@ -6,8 +5,12 @@ from langchain.embeddings import OpenAIEmbeddings
 import pickle
 from langchain import OpenAI, LLMChain
 from langchain.prompts import Prompt
+from pathlib import Path
 
-def train():
+
+training_data = list()
+
+
 
   trainingData = list(Path("training/facts/").glob("**/*.java"))
 
