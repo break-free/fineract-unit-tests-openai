@@ -15,7 +15,7 @@ Note that the `main` branch is locked down but does allow merge requests (withou
 
 Note that the following set up instructions use a Fedora Linux instance. They may need to be adjusted depending on your operating system.
 
-1. Download the code from this repository. Note this includes the test files under `training/facts`.
+1. Download the code from this repository. Note this includes the test files under `training/tests`.
 1. Get your OpenAI API key and add it to your environment.
 
     $ export OPENAI_API_KEY=<YOUR_KEY>
@@ -30,35 +30,42 @@ Note that the following set up instructions use a Fedora Linux instance. They ma
 
 Note that this approach does not use a fine-tuned model but prompt engineering instead.
 
-1. Train the model using the following command, followed by selecting `1` at the prompt.
+1. Parse the code files in `training/test` then chunk them into a list. The code files are used to generate "chunks" by Java package, type, and member. Each chunk also contains useful metadata to describe how the code relates to the application. Three JSON files are created: `chunks.json`, `training_data.json`, and `failed_files.json`. Use the following command:
 
-    $ python3 main.py
+    $ python3 chunk.py training/test
 
-1. Run the chat interfact using the same command, this time followed by selecting `2` at the prompt.
+1. The next step is to "train" a vectorstore using OpenAI embeddings, which creates an embedding (i.e., vector) for each chunk. This allows for similarity searching and to quickly find relevant chunks based on a question. The files created are `faiss.pkl` and `training.index`. Note that the three files outputed in the previous step are required.
 
-== Extracting unit test methods from Java test files
+    $ python3 train.py
 
-To extract unit tests run the following script:
+1. The final step is to interact with a chat prompt to generate unit tests. A set of standard, consistent questions are available in `results/basic_questions.adoc` however, other questions may be asked about the application code. Note that the master prompt from `training/unit-tests.prompt` is also used and can be updated to refine results. To start the prompt use the following command:
 
-    $ python3 export-method-names-bodies.py
+    $ python3 prompt.py
 
-This will extract the unit tests into a file called `output.json` in JSONL format. Each entry consists of a generated prompt/question and the expected response. 
+Following the steps above should yield a similar response to the below image.
+
+image::results/202306091608_fix_readme-and-misc-org.jpeg[]
 
 == Folders
 
 Note that:
 
-* `training/``: contains all training files (i.e., *.java test files), any prompts, and trained model lists (i.e., `model-list.txt`).
-* `results/`: contains results of tests.
-* `archive/`: contains any files not used from previous iterations but kept around just in case.
+* `training/``: contains all training files (i.e., *.java test files) and any prompts.
+* `results/`: contains results of tests and questions that generated those results.
+* `archive/`: contains any files not used from previous iterations but kept around just in case. Note that these may be used as is however, likely require some modification.
 
 == TODO
+
+* [ ] Refactoring across the board, particularly to reduce the number of called Python scripts.
+* [ ] Establish a standard way of calculating token limits.
+* [ ] Use token limits to dynamically adjust the amount of context and therefore the number of tokens used during a prompt/completion instance with OpenAI.
+* [ ] Containerize this solution so we can deploy it; one for parsing and chunking, another for creating a vector-store and prompting (or something like it).
 
 == Previous README
 
 Additional information that may be useful in the future. Original README is https://replit.com/@DavidAtReplit/Custom-Company-Chatbot?v=1#README.md[located here].
 
-=== JSON API (Advanced Users)
+=== JSON API (Advanced Users and not used here)
 
 Option 3, or stating automatically after five seconds on the menu, is the JSON API. You can use POST requests to this Repl's repl.co address to take the chat to a different location or app.
 
@@ -81,7 +88,3 @@ extracting response json
 printing response
 
     print(response_data)
-
-=== Credit
-
-All based on the Amjad Masad Chat bot by IronCladDev on Replit For more information on how this works, check out Zahid Khawaja's Tutorial.
