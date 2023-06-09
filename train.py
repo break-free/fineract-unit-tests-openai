@@ -1,7 +1,10 @@
+import faiss
 import json
+from langchain.embeddings import OpenAIEmbeddings
+from langchain.vectorstores import FAISS
 import os
+import pickle
 import sys
-import tiktoken
 
 # Check that environment variables are set up.
 if "OPENAI_API_KEY" not in os.environ:
@@ -12,12 +15,11 @@ with open('chunks.json', 'r') as f:
 
 str_chunks = []
 for chunk in chunks:
-#    s = ("; ").join([chunk['package'],
-#                     chunk['type'],
-#                     chunk['typename'],
-#                     chunk['member'],
-#                     chunk['membername'],
-#                     chunk['code']])
     str_chunks.append(str(chunk))
 
-print(str_chunks)
+store = FAISS.from_texts(str_chunks, OpenAIEmbeddings())
+faiss.write_index(store.index, "training.index")
+store.index = None
+
+with open("faiss.pkl", "wb") as f:
+    pickle.dump(store, f)
