@@ -14,7 +14,7 @@ with open("training/unit-test.prompt", "r") as f:
 prompt = Prompt(template=promptTemplate, input_variables=["context", "question", "history"])
 llmChain = LLMChain(prompt=prompt, llm=OpenAI(temperature=0.1))
 
-def onMessage(question):
+def onMessage(question, history):
     chunks = store.similarity_search(question)
     contexts = []
     for i, chunk in enumerate(chunks):
@@ -25,12 +25,14 @@ def onMessage(question):
     
     return llmChain.predict(question=question, 
                             context="\n\n".join(contexts),
-                            history="")
+                            history=history)
 
+history = ""
 while True:
     question = input("Ask a question > ")
     if question == 'exit':
         break
     else:
-        answer = onMessage(question)
+        answer = onMessage(question, history)
+        history = history + answer +"\n\n###\n\n"
         print(f"Bot: {answer}")
