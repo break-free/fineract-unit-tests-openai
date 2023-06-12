@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Check that two parameters are passed.
-if [ $# -ne 2 ] 
+if [ $# -ne 1 ] 
   then
     echo "This script requires one argument: <OPENAI_API_KEY>. A key can be"
     echo "from the OpenAI website, https://openai.com/"
@@ -36,6 +36,5 @@ $RUN bash -c 'cd /tmp; \
 
 ## Add API secrets to profile.d directory
 $RUN sudo bash -c 'echo -e "\
-export OPENAI_API_KEY='$1' \n\
-export API_SECRET='$2' "\
-> /etc/profile.d/api_secrets.sh'
+export OPENAI_API_KEY='$1' "\
+> /etc/profile.d/openai_api_key.sh
