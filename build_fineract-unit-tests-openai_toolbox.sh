@@ -3,9 +3,8 @@
 # Check that two parameters are passed.
 if [ $# -ne 2 ] 
   then
-    echo "This script requires two arguments: <OPENAI_API_KEY> and <API_SECRET>."
-    echo "The first is available from the OpenAI website and the latter is your"
-    echo "own value to be used as an API password."
+    echo "This script requires one argument: <OPENAI_API_KEY>. A key can be"
+    echo "from the OpenAI website, https://openai.com/"
     exit 1
 fi
 

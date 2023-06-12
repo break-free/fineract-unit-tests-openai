@@ -4,6 +4,10 @@ from langchain import OpenAI, LLMChain
 from langchain.prompts import Prompt
 import pickle
 
+# Check that environment variables are set up.
+if "OPENAI_API_KEY" not in os.environ:
+    print("You must set an OPENAI_API_KEY using the Secrets tool", file=sys.stderr)
+# Load the store.
 index = faiss.read_index("training.index")
 with open("faiss.pkl", "rb") as f:
     store = pickle.load(f)

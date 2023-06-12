@@ -1,11 +1,11 @@
 from java_code_chunker import chunker as JCC
-import json, os, sys
+import json
+import os
+import sys
 
 if __name__ == '__main__':
     # Check that environment variables are set up.
-    if "API_SECRET" not in os.environ:
-        print("You must set an API_SECRET using the Secrets tool", file=sys.stderr)
-    elif "OPENAI_API_KEY" not in os.environ:
+    if "OPENAI_API_KEY" not in os.environ:
         print("You must set an OPENAI_API_KEY using the Secrets tool", file=sys.stderr)
     # Retrieve file list
     training_data = list()
