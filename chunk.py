@@ -24,8 +24,6 @@ if __name__ == '__main__':
         except JCC.ParseError as e:
             failed_files.append(str(file) + ": " + str(e))
         if tree != None:
-            # The `try` statements could be amalgamated but using them 
-            # separately for now to get as many chunks as possible.
             try:
                 chunks = chunks + JCC.chunk_constants(tree)
                 chunks = chunks + JCC.chunk_constructors(tree, codelines)
@@ -35,10 +33,11 @@ if __name__ == '__main__':
                 failed_files.append(str(file) + ": " + str(e))
         else:
             failed_files.append(str(file) + ", has no tree!")
-    # Save each used list as a file for other operations.
+    # Convert training_data paths into strings for serialization.
     training_data_str = list()
-    for data in training_data: # since Paths are not serializable
+    for data in training_data: 
         training_data_str.append(str(data))
+    # Save each used list as a file for other operations.
     with open('training_data.json', 'w') as f:
         json.dump(training_data_str, f)
     with open('chunks.json', 'w') as f:

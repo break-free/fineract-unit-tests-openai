@@ -37,4 +37,4 @@ $RUN bash -c 'cd /tmp; \
 ## Add API secrets to profile.d directory
 $RUN sudo bash -c 'echo -e "\
 export OPENAI_API_KEY='$1' "\
-> /etc/profile.d/openai_api_key.sh
+> /etc/profile.d/api_secrets.sh'

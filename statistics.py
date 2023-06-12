@@ -15,11 +15,8 @@ def print_token_statistics(chunks: list):
     # Print token statistics
     encoding = tiktoken.get_encoding("cl100k_base")
     encoding = tiktoken.encoding_for_model("gpt-3.5-turbo")
-    num_member_tokens = 0
-    num_method_tokens = 0
-    max_tokens = 0
+    num_member_tokens = num_method_tokens = max_tokens = num_method_chunks = 0
     num_member_chunks = len(chunks)
-    num_method_chunks = 0
     max_chunk = None
     max_chunks = []
     token_limit = 1600
