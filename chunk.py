@@ -1,11 +1,11 @@
 from java_code_chunker import chunker as JCC
-import json, os, sys
+import json
+import os
+import sys
 
 if __name__ == '__main__':
     # Check that environment variables are set up.
-    if "API_SECRET" not in os.environ:
-        print("You must set an API_SECRET using the Secrets tool", file=sys.stderr)
-    elif "OPENAI_API_KEY" not in os.environ:
+    if "OPENAI_API_KEY" not in os.environ:
         print("You must set an OPENAI_API_KEY using the Secrets tool", file=sys.stderr)
     # Retrieve file list
     training_data = list()
@@ -24,8 +24,6 @@ if __name__ == '__main__':
         except JCC.ParseError as e:
             failed_files.append(str(file) + ": " + str(e))
         if tree != None:
-            # The `try` statements could be amalgamated but using them 
-            # separately for now to get as many chunks as possible.
             try:
                 chunks = chunks + JCC.chunk_constants(tree)
                 chunks = chunks + JCC.chunk_constructors(tree, codelines)
@@ -35,10 +33,11 @@ if __name__ == '__main__':
                 failed_files.append(str(file) + ": " + str(e))
         else:
             failed_files.append(str(file) + ", has no tree!")
-    # Save each used list as a file for other operations.
+    # Convert training_data paths into strings for serialization.
     training_data_str = list()
-    for data in training_data: # since Paths are not serializable
+    for data in training_data: 
         training_data_str.append(str(data))
+    # Save each used list as a file for other operations.
     with open('training_data.json', 'w') as f:
         json.dump(training_data_str, f)
     with open('chunks.json', 'w') as f:

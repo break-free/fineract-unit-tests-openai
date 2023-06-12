@@ -1,0 +1,16 @@
+Refer to the master https://github.com/break-free/fineract-unit-tests-openai/blob/fix_use-token-counters/README.adoc[`README.adoc`] file for additional details.
+
+== Set Up
+
+Note that the following set up instructions use a Fedora Linux instance. They may need to be adjusted depending on your operating system.
+
+1. Download the code from this repository. Note this includes the test files under `training/tests`.
+1. Get your OpenAI API key and add it to your environment.
+
+    $ export OPENAI_API_KEY=<YOUR_KEY>
+
+1. Enter the code repo directory and run the `toolbox` script. Note the requirement to add both your OPEN API key as well as an API secret.
+
+    $ cd fineract-unit-tests-openai
+    $ build_fineract-unit-tests-openai_toolbox.sh
+    $ toolbox enter fineract-unit-tests-openai
