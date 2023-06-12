@@ -13,7 +13,7 @@ Note that the `main` branch is locked down but does allow merge requests (withou
 
 == Set Up
 
-Refer to the ./setup/README.adoc[setup README] for details.
+Refer to the https://github.com/break-free/fineract-unit-tests-openai/blob/fix_use-token-counters/setup/README.adoc[setup README] for details.
 
 == Converse with OpenAI API Chat using *.java files _contextually_
 

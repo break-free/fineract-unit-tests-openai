@@ -1,4 +1,4 @@
-Refer to the master ../README.adoc[`README.adoc`] file for additional details.
+Refer to the master https://github.com/break-free/fineract-unit-tests-openai/blob/fix_use-token-counters/README.adoc[`README.adoc`] file for additional details.
 
 == Set Up
 
