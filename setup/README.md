@@ -47,4 +47,20 @@ Refer to the master https://github.com/break-free/fineract-unit-tests-openai/blo
 
     f. FAISS [per their instructions](https://github.com/bitsun/faiss/blob/master/INSTALL.md)
 
+4. Git clone the java_code_chunker from breakfree's github repo
+> **Warning**
+> Be sure to git clone to a separate parent repo to avoid nested git repos.
+
+    ```
+    cd ..\; git clone https://github.com/facebookresearch/faiss.git
+    ```
+
+5. Install prerequisite Python modules
+
+    ```
+    pip install langchain `
+    pickle `
+    java_code_chunker
+    ```
+
          
