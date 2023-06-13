@@ -21,7 +21,7 @@ Refer to the master https://github.com/break-free/fineract-unit-tests-openai/blo
     ```
 
 ## Windows 
-> Note
+> **Note**
 > All Powershell terminal isntructions below should be used from an elevated prompt
 
 1. Download the code from this repository. Note this includes the test files under `training/tests`.
