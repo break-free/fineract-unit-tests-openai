@@ -1,3 +1,4 @@
+import sys
 import faiss
 import json
 from langchain import OpenAI, LLMChain
