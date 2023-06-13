@@ -17,7 +17,7 @@ store.index = index
 with open("training/unit-test.prompt", "r") as f:
     promptTemplate = f.read()
 prompt = Prompt(template=promptTemplate, input_variables=["context", "question", "history"])
-llmChain = LLMChain(prompt=prompt, llm=OpenAI(temperature=0.1))
+llmChain = LLMChain(prompt=prompt, llm=OpenAI(temperature=0.1, max_tokens=-1))
 
 def onMessage(question, history):
     # Retrieve chunks based on the question and assemble them into a 
