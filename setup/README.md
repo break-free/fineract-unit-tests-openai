@@ -6,8 +6,9 @@ Refer to the master https://github.com/break-free/fineract-unit-tests-openai/blo
 
 ## Fedora OS
 
-
-1. Download the code from this repository. Note this includes the test files under `training/tests`.
+> **Warning**
+> The toolbox build script in its current state will attempt to find files from the `/root/` directory and match them. If you do not git clone into this directory the container will be misconfigured and unfit for use.
+1. Download the code from this repository from your root directory. Note this includes the test files under `training/tests`.
 2. Get your OpenAI API key and add it to your environment.
 
     $ export OPENAI_API_KEY=<YOUR_KEY>
@@ -20,7 +21,10 @@ Refer to the master https://github.com/break-free/fineract-unit-tests-openai/blo
     $ toolbox enter fineract-unit-tests-openai
     ```
 
-## Windows 
+> **Warning**
+> The windows portion of the documentation is not complete! Do not rely on it in its current state!
+
+## Windows
 > **Note**
 > All Powershell terminal isntructions below should be used from an elevated prompt
 
@@ -60,9 +64,7 @@ Refer to the master https://github.com/break-free/fineract-unit-tests-openai/blo
 5. Install prerequisite Python modules
 
     ```
-    pip install langchain `
-    pickle `
-    java_code_chunker
+    pip install --upgrade -r setup/requirements.txt
     ```
 
          
