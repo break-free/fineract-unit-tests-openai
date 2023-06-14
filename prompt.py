@@ -2,6 +2,7 @@ import sys
 import faiss
 import json
 from langchain import OpenAI, LLMChain
+from langchain.chat_models import ChatOpenAI
 from langchain.prompts import Prompt
 import os
 import pickle
@@ -18,7 +19,7 @@ store.index = index
 with open("training/unit-test.prompt", "r") as f:
     promptTemplate = f.read()
 prompt = Prompt(template=promptTemplate, input_variables=["context", "question", "history"])
-llmChain = LLMChain(prompt=prompt, llm=OpenAI(temperature=0.1))
+llmChain = LLMChain(prompt=prompt, llm=ChatOpenAI(model="gpt-3.5-turbo",temperature=0.1))
 
 def onMessage(question, history, show_context=False):
     # Retrieve chunks based on the question and assemble them into a 
