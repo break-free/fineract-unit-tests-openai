@@ -21,6 +21,8 @@ Refer to the master https://github.com/break-free/fineract-unit-tests-openai/blo
     $ toolbox enter fineract-unit-tests-openai
     ```
 
+---
+
 > **Warning**
 > The windows portion of the documentation is not complete! Do not rely on it in its current state!
 
