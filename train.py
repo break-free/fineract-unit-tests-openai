@@ -22,3 +22,5 @@ store = Chroma(collection_name="langchain_store",
                persist_directory="db")
 store.add_texts(str_chunks)
 
+print(f"The store count is: {store._collection.count}")
+
