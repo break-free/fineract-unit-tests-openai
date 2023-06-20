@@ -1,9 +1,10 @@
 import sys
-import faiss
 import json
 from langchain import OpenAI, LLMChain
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import Prompt
+from langchain.embeddings import OpenAIEmbeddings
+from langchain.vectorstores import Chroma
 import os
 import pickle
 
@@ -11,10 +12,8 @@ import pickle
 if "OPENAI_API_KEY" not in os.environ:
     print("You must set an OPENAI_API_KEY using the Secrets tool", file=sys.stderr)
 # Load the store.
-index = faiss.read_index("training.index")
-with open("faiss.pkl", "rb") as f:
-    store = pickle.load(f)
-store.index = index
+store = Chroma(persist_directory="db",
+               embedding_function=OpenAIEmbeddings())
 
 with open("training/unit-test.prompt", "r") as f:
     promptTemplate = f.read()

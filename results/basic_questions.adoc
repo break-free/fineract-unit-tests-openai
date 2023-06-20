@@ -5,3 +5,9 @@
 Please explain the method "fromInt" in the enumeration "AccountType". Review what each element of the function is doing precisely and what the author's intentions may have been. Organize your explanation as a markdown-formatted, bulleted list.
 
 Using Java and the junit package, write a suite of unit tests for the method "fromInt" in the enumeration "AccountType". Include helpful comments to explain each line. Reply only with code and code comments.
+
+== `mediaType` method from `Parts` class
+
+Please explain the method "mediaType" in the class "Parts". Review what each element of the function is doing precisely and what the author's intentions may have been. Organize your explanation as a markdown-formatted, bulleted list.
+
+Using Java and Google's Truth package, write a suite of unit tests for the method "mediaType" in the class "Parts". Include helpful comments to explain each line. Reply only with code and code comments.
