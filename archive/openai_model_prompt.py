@@ -39,7 +39,7 @@ if __name__ == "__main__":
     
     # Import models from the models list   
     models = list()
-    with open('training/model-list.txt', 'r') as file:
+    with open('model-list.txt', 'r') as file:
         for line in file:
             models.append( line.rstrip() )
     
