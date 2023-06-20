@@ -52,7 +52,11 @@ Refer to the master https://github.com/break-free/fineract-unit-tests-openai/blo
 
    e. [CMake for Windows](https://cmake.org/download/)
 
-   f. FAISS [per their instructions](https://github.com/bitsun/faiss/blob/master/INSTALL.md)
+   f. FAISS [per their instructions](https://github.com/bitsun/faiss/blob/master/INSTALL.md), which will also need:
+      
+      1. [a GCC compiler](https://jmeubank.github.io/tdm-gcc/) (*probably* want [this one?](https://github.com/jmeubank/tdm-gcc/releases/download/v10.3.0-tdm64-2/tdm64-gcc-10.3.0-2.exe))
+
+      2. a BLAS implementation (recommend [this one?](https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl-download.html?operatingsystem=window&distributions=offline))
 
 > **Warning**
 > Be sure to git clone to a separate parent repo to avoid nested git repos.
