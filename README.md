@@ -1,21 +1,21 @@
-= Creating Apache Fineract unit tests using OpenAI
+# Creating Apache Fineract unit tests using OpenAI
 :toc:
 
 _Using the existing set of Apache Fineract unit tests, fine tune an OpenAI model using the OpenAI API to generate additional and replacement unit tests._
 
-== Introduction
+## Introduction
 
 Note that this repository is more "playground" than anything. In other words, there is a bunch or related and somewhat unrelated files. The instructions contained in this README are kept up to date as much as possible.
 
-== Contributing
+## Contributing
 
 Note that the `main` branch is locked down but does allow merge requests (without approvals). Therefore, to make changes and update create a feature or fix branch (prepended with `feature_` or `fix_` respectively). Make your changes there and then when ready, merge your branch into `main` then delete the branch (please we don't need lots of left-over branches!).
 
-== Set Up
+## Set Up
 
 Refer to the https://github.com/break-free/fineract-unit-tests-openai/blob/fix_use-token-counters/setup/README.adoc[setup README] for details.
 
-== Converse with OpenAI API Chat using *.java files _contextually_
+## Converse with OpenAI API Chat using *.java files _contextually_
 
 Note that this approach does not use a fine-tuned model but prompt engineering instead.
 
@@ -35,7 +35,7 @@ Following the steps above should yield a similar response to the below image.
 
 image::results/202306091608_fix_readme-and-misc-org.jpeg[]
 
-== Folders
+## Folders
 
 Note that:
 
@@ -43,18 +43,18 @@ Note that:
 * `results/`: contains results of tests and questions that generated those results.
 * `archive/`: contains any files not used from previous iterations but kept around just in case. Note that these may be used as is however, likely require some modification.
 
-== TODO
+## TODO
 
-* [ ] Refactoring across the board, particularly to reduce the number of called Python scripts.
-* [ ] Establish a standard way of calculating token limits.
-* [ ] Use token limits to dynamically adjust the amount of context and therefore the number of tokens used during a prompt/completion instance with OpenAI.
-* [ ] Containerize this solution so we can deploy it; one for parsing and chunking, another for creating a vector-store and prompting (or something like it).
+- [ ] Refactoring across the board, particularly to reduce the number of called Python scripts.
+- [ ] Establish a standard way of calculating token limits.
+- [ ] Use token limits to dynamically adjust the amount of context and therefore the number of tokens used during a prompt/completion instance with OpenAI.
+- [ ] Containerize this solution so we can deploy it; one for parsing and chunking, another for creating a vector-store and prompting (or something like it).
 
-== Previous README
+## Previous README
 
-Additional information that may be useful in the future. Original README is https://replit.com/@DavidAtReplit/Custom-Company-Chatbot?v=1#README.md[located here].
+Additional information that may be useful in the future. Original README is [located here](https://replit.com/@DavidAtReplit/Custom-Company-Chatbot?v=1#README.md).
 
-=== JSON API (Advanced Users and not used here)
+### JSON API (Advanced Users and not used here)
 
 Option 3, or stating automatically after five seconds on the menu, is the JSON API. You can use POST requests to this Repl's repl.co address to take the chat to a different location or app.
 

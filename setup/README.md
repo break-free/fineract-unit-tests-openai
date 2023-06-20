@@ -46,9 +46,10 @@ Refer to the master https://github.com/break-free/fineract-unit-tests-openai/blo
 
    c. Chocolatey [per their instructions](https://chocolatey.org/install) -- this is a package manager that will make (ha!) it easier to install Make for Windows
 
-   d. Make (from an elevated Powershell temerinam):
+   d. Make: 
+   
+         choco install make
 
-   choco install make
    e. [CMake for Windows](https://cmake.org/download/)
 
    f. FAISS [per their instructions](https://github.com/bitsun/faiss/blob/master/INSTALL.md)
