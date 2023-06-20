@@ -1,3 +1,4 @@
+chromadb
 java-code-chunker
 langchain
 openai
