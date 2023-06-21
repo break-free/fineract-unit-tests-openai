@@ -1,11 +1,11 @@
 # Creating Apache Fineract unit tests using OpenAI
-:toc:
+
 
 _Using the existing set of Apache Fineract unit tests, fine tune an OpenAI model using the OpenAI API to generate additional and replacement unit tests._
 
 ## Introduction
 
-Note that this repository is more "playground" than anything. In other words, there is a bunch or related and somewhat unrelated files. The instructions contained in this README are kept up to date as much as possible.
+Note that this repository is more "playground" than anything. In other words, there is a bunch of related and somewhat unrelated files. The instructions contained in this README are kept up to date as much as possible.
 
 ## Contributing
 
