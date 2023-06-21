@@ -1,29 +1,24 @@
 import sys
 import json
-from langchain import OpenAI, LLMChain
+from langchain import LLMChain
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import Prompt
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import Chroma
 import os
 
+# Where to store/load the context chunks:
 persist_dir = "db"
 
 # Check that environment variables are set up.
 if "OPENAI_API_KEY" not in os.environ:
     print("You must set an OPENAI_API_KEY using the Secrets tool", file=sys.stderr)
 
-# Load the store.
-store_files = []
-for root, dirs, files in os.walk(persist_dir):
-    for file in files:
-        store_files.append(os.path.join(root, file))
 
-for file in store_files:
-    with open(file, "rb") as f:
-        store_text = f.read()
-
-store = Chroma.from_texts(embedding=OpenAIEmbeddings(), texts=store_text)
+# Load the store:
+store = Chroma(collection_name="langchain_store",
+               embedding_function=OpenAIEmbeddings(model="gpt-3.5-turbo"),
+               persist_directory=persist_dir)
 
 with open("training/unit-test.prompt", "r") as f:
     promptTemplate = f.read()
@@ -34,10 +29,8 @@ def onMessage(question, history, show_context=False):
     # Retrieve chunks based on the question and assemble them into a 
     # joined context.
     chunks = store.similarity_search(question)
-    print(f"Here are all the chunks: {chunks}")
     contexts = []
     for i, chunk in enumerate(chunks):
-        print(f"Here's a chunk: {chunk}")
         contexts.append(f"Context {i}:\n{chunk.page_content}")
     with open('contexts.json', 'w') as f:
         json.dump(contexts, f)
@@ -54,7 +47,8 @@ def onMessage(question, history, show_context=False):
           "History tokens: " + str(history_tokens) + ", " +
           "TOTAL: " + str(question_tokens+contexts_tokens+history_tokens))
     # Return the prediction.
-    return llmChain.predict(question=question, 
+    return llmChain.predict(prompt=prompt,
+                            question=question, 
                             context=joined_contexts,
                             history=history)
 

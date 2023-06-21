@@ -18,9 +18,7 @@ for chunk in chunks:
     str_chunks.append(str(chunk))
 
 store = Chroma(collection_name="langchain_store",
-               embedding_function=OpenAIEmbeddings(),
+               embedding_function=OpenAIEmbeddings(model="gpt-3.5-turbo"),
                persist_directory="db")
 store.add_texts(str_chunks)
-
-print(f"The store count is: {store._collection.count}")
 
