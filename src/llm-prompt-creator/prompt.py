@@ -7,13 +7,17 @@ from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import Chroma
 import os
 
-# Where to store/load the context chunks:
-persist_dir = "db"
+"""
+The overall prompter that reaches out to the 
+"""
 
 # Check that environment variables are set up.
 if "OPENAI_API_KEY" not in os.environ:
     print("You must set an OPENAI_API_KEY using the Secrets tool", file=sys.stderr)
 
+
+# Where to store/load the context chunks:
+persist_dir = "db"
 
 # Load the store:
 store = Chroma(collection_name="langchain_store",
@@ -55,7 +59,7 @@ def onMessage(question, history, show_context=False):
 history = ""
 show_context=False
 while True:
-    if (len(sys.argv) > 1):
+    if (len(sys.argv) > 1): 
         if (sys.argv[1] == "Show_Context"):
             show_context=True
     question = input("Ask a question > ")

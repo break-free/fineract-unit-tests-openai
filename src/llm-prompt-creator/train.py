@@ -1,9 +1,7 @@
-import chromadb
 import json
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import Chroma
 import os
-import pickle
 import sys
 
 # Check that environment variables are set up.
