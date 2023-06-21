@@ -42,9 +42,9 @@ def onMessage(question, history, show_context=False):
     question_tokens = llmChain.llm.get_num_tokens(question)
     contexts_tokens = llmChain.llm.get_num_tokens(joined_contexts)
     history_tokens = llmChain.llm.get_num_tokens(history)
-    print("Question tokens: " + str(question_tokens) + ", " +
-          "Contexts' tokens: " + str(contexts_tokens) + ", " +
-          "History tokens: " + str(history_tokens) + ", " +
+    print("Question tokens: " + str(question_tokens) + "\n" +
+          "Contexts' tokens: " + str(contexts_tokens) + "\n" +
+          "History tokens: " + str(history_tokens) + "\n\n" +
           "TOTAL: " + str(question_tokens+contexts_tokens+history_tokens))
     # Return the prediction.
     return llmChain.predict(prompt=prompt,
@@ -53,9 +53,11 @@ def onMessage(question, history, show_context=False):
                             history=history)
 
 history = ""
+show_context=False
 while True:
-    if (sys.argv[1] == "Show_Context"):
-        show_context=True
+    if (len(sys.argv) > 1):
+        if (sys.argv[1] == "Show_Context"):
+            show_context=True
     question = input("Ask a question > ")
     if question == 'exit':
         break
