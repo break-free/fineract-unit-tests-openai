@@ -7,38 +7,61 @@ from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import Chroma
 import os
 
+
 """
-The overall prompter that reaches out to the 
+Create the vector store to utilize for other commands (currently limited to OpenAI)
 """
+def create_store(directory):
+    # Where to store/load the context chunks:
+    if directory == None:
+        persist_dir = "db"
+    else:
+        persist_dir = directory
 
-# Check that environment variables are set up.
-if "OPENAI_API_KEY" not in os.environ:
-    print("You must set an OPENAI_API_KEY using the Secrets tool", file=sys.stderr)
+    store = Chroma(collection_name="langchain_store",
+                embedding_function=OpenAIEmbeddings(model="gpt-3.5-turbo"),
+                persist_directory=persist_dir)
+    
+    return store
+    
+"""
+Perform a Chroma similarity search against the vector store based on the text provided
+"""
+def search_store(store: Chroma, text: str):
+    store_chunks = store.similarity_search(text)
 
+    return store_chunks
 
-# Where to store/load the context chunks:
-persist_dir = "db"
+"""
+Setup the chat session with the LLM (currently limited to OpenAI)
+"""
+def prompt(question, show_context=False, template=None):
+    # Check that environment variables are set up.
+    if "OPENAI_API_KEY" not in os.environ:
+        print("You must set an OPENAI_API_KEY environment variable value", file=sys.stderr)
 
-# Load the store:
-store = Chroma(collection_name="langchain_store",
-               embedding_function=OpenAIEmbeddings(model="gpt-3.5-turbo"),
-               persist_directory=persist_dir)
+    history = ""
 
-with open("training/unit-test.prompt", "r") as f:
-    promptTemplate = f.read()
-prompt = Prompt(template=promptTemplate, input_variables=["context", "question", "history"])
-llmChain = LLMChain(prompt=prompt, llm=ChatOpenAI(model="gpt-3.5-turbo",temperature=0))
-
-def onMessage(question, history, show_context=False):
-    # Retrieve chunks based on the question and assemble them into a 
-    # joined context.
-    chunks = store.similarity_search(question)
+    # Load the promptTemplate for model context:
+    if template != None:
+        with open(template, "r") as f:
+            promptTemplate = f.read()
+    else:
+        with open("training/unit-test.prompt", "r") as f:
+            promptTemplate = f.read()
+    prompt = Prompt(template=promptTemplate, input_variables=["context", "question", "history"])
+    llmChain = LLMChain(prompt=prompt, llm=ChatOpenAI(model="gpt-3.5-turbo",temperature=0))
+    
+    # Retrieve chunks based on the question and assemble them into a joined context:
+    chunks = search_store(question)
     contexts = []
     for i, chunk in enumerate(chunks):
         contexts.append(f"Context {i}:\n{chunk.page_content}")
     with open('contexts.json', 'w') as f:
         json.dump(contexts, f)
     joined_contexts = "\n\n".join(contexts)
+    
+    # If user's asked to show the context, provide it to them (chunks of text from their vector store):
     if (show_context):
         print(f"Context Provided: {joined_contexts}")
 
@@ -50,23 +73,21 @@ def onMessage(question, history, show_context=False):
           "Contexts' tokens: " + str(contexts_tokens) + "\n" +
           "History tokens: " + str(history_tokens) + "\n\n" +
           "TOTAL: " + str(question_tokens+contexts_tokens+history_tokens))
-    # Return the prediction.
-    return llmChain.predict(prompt=prompt,
+    
+    """
+    Lock the user in a loop to keep asking questions until they type 'exit'
+    Add the LLM's answer to the chat history to keep the feedback more conversational
+    """
+    while True:
+        question = input("Ask a question > ")
+        if question == 'exit':
+            break
+        else:
+            # Return the prediction.
+            answer = llmChain.predict(prompt=prompt,
                             question=question, 
                             context=joined_contexts,
                             history=history)
-
-history = ""
-show_context=False
-while True:
-    if (len(sys.argv) > 1): 
-        if (sys.argv[1] == "Show_Context"):
-            show_context=True
-    question = input("Ask a question > ")
-    if question == 'exit':
-        break
-    else:
-        answer = onMessage(question, history, show_context=show_context)
-        history = history + answer +"\n\n###\n\n"
-        print(f"Bot: {answer}")
-        print("Answer tokens: " + str(llmChain.llm.get_num_tokens(answer)))
+            history = history + answer +"\n\n###\n\n"
+            print(f"Bot: {answer}")
+            print("Answer tokens: " + str(llmChain.llm.get_num_tokens(answer)))
