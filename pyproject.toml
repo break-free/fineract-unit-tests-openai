@@ -15,7 +15,7 @@ exclude = [
 
 [project]
 name = "llm_prompt_creator"
-version = "0.2.5"
+version = "0.2.6"
 authors = [
     { name="Chris Mills", email="cmills@breakfreesolutions.com"}
 ]
@@ -28,7 +28,11 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
+    "langchain",
     "java-code-chunker",
+    "bs4",
+    "openai",
+    "chromadb",
 ]
 
 [project.urls]

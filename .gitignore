@@ -7,3 +7,4 @@ training/all/*
 training.index
 dist/*
 venv/*
+test.py
