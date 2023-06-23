@@ -4,17 +4,18 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build]
 exclude = [
-    "setup/",
     "training/",
+    "setup/",
     "results/",
     "db/",
     "archive/",
-    "statistics.py"
+    "statistics.py",
+    "venv/",
 ]
 
 [project]
-name = "llm-prompt-creator"
-version = "0.2.0"
+name = "llm_prompt_creator"
+version = "0.2.5"
 authors = [
     { name="Chris Mills", email="cmills@breakfreesolutions.com"}
 ]
@@ -27,15 +28,9 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
-    "chromadb",
     "java-code-chunker",
-    "data-chunker",
-    "langchain",
-    "openai"
-    "javalang",
 ]
 
 [project.urls]
 "Homepage" = "https://github.com/break-free/fineract-unit-tests-openai"
 "Issues" = "https://github.com/break-free/fineract-unit-tests-openai/issues"
-
