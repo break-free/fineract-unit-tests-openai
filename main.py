@@ -19,26 +19,27 @@ def dump_files(data:list, chunks:list, failed_files:list):
         json.dump(failed_files, f)
 
 if __name__ == "__main__":
-
     # Check that environment variables are set up.
     if "OPENAI_API_KEY" not in os.environ:
         print("You must set an OPENAI_API_KEY using the Secrets tool", file=sys.stderr)
-
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--training-data', dest='training_data_path', default=None)
-    parser.add_argument('--file-extension', dest='file_extension', default=None)
+    # Create positional and optional command arguments
+    parser = argparse.ArgumentParser(description='Create a vector store to pass contextual data to an LLM prompt')
+    parser.add_argument('data_path', 
+                        help='the location of the training data', 
+                        default=None)
+    parser.add_argument('file_extension', 
+                        help='the file extension to be searched for and then parsed, e.g., *.java', 
+                        default=None)
+    parser.add_argument('--show-context', 
+                        action='store_true', 
+                        dest='show_context', 
+                        help='show the context passed to the LLM', 
+                        default=False)
     args = parser.parse_args()
-    # Check that environment variables are set up.
-    if args.training_data_path == None or args.file_extension == None:
-        print("2 command parameters required: (1) Enter one and only one absolute or relative path")
-        print("to a directory containing the code to be chunked. (2) Enter the file extension for ")
-        print("the files that need to be chunked. (e.g. python3 main.py training/test *.java)")
-        exit()
-    data, chunks, failed_files = p.chunk(args.training_data_path, 
-                                                         args.file_extension)
 
+    data, chunks, failed_files = p.chunk(args.data_path, args.file_extension)
     p.print_parsing_statistics(data, failed_files)
     p.print_token_statistics(chunks)
     store = p.train(chunks)
-    p.prompter(store)
+    p.prompter(store, "training/unit-test.prompt", args.show_context)
 

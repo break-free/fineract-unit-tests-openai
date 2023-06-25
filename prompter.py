@@ -8,7 +8,6 @@ from langchain.embeddings import OpenAIEmbeddings
 from langchain.prompts import Prompt
 from langchain.vectorstores import FAISS
 import os
-import pickle
 import sys
 import tiktoken
 
@@ -64,20 +63,12 @@ def train(chunks:list):
 
     return FAISS.from_texts(str_chunks, OpenAIEmbeddings())
 
-#    store = FAISS.from_texts(str_chunks, OpenAIEmbeddings())
-#    faiss.write_index(store.index, "training.index")
-#    store.index = None
-#
-#    with open("faiss.pkl", "wb") as f:
-#        pickle.dump(store, f)
-
 def chunk(file_path:str, fileExtension:str):
-    # Retrieve file list
+    # Retrieve file list and initialize lists
     data = parser.get_file_list(file_path, fileExtension)
-    # Chunk data using the files in the training data
     chunks = []
     failed_files = []
-
+    # Chunk data using the files in the training data
     if fileExtension == "*.java":
         for file in data:
             codelines = parser.get_code_lines(file)
@@ -95,24 +86,20 @@ def chunk(file_path:str, fileExtension:str):
                     failed_files.append(str(file) + ": " + str(e))
             else:
                 failed_files.append(str(file) + ", has no tree!")
-    
     else:
         print(f'''File extension type "{fileExtension}" is currently not supported.''')
         exit()
 
     return data, chunks, failed_files
 
-def prompter(store):
-    # Load the store.
-#    index = faiss.read_index("training.index")
-#    with open("faiss.pkl", "rb") as f:
-#        store = pickle.load(f)
-#    store.index = index
+def prompter(store, master_prompt_path:str, show_context:bool=False):
 
-    with open("training/unit-test.prompt", "r") as f:
+    with open(master_prompt_path, "r") as f:
         promptTemplate = f.read()
-    prompt = Prompt(template=promptTemplate, input_variables=["context", "question", "history"])
-    llmChain = LLMChain(prompt=prompt, llm=ChatOpenAI(model="gpt-3.5-turbo",temperature=0))
+    prompt = Prompt(template=promptTemplate, 
+                    input_variables=["context", "question", "history"])
+    llmChain = LLMChain(prompt=prompt, 
+                        llm=ChatOpenAI(model="gpt-3.5-turbo",temperature=0))
 
     def onMessage(question, history):
         # Retrieve chunks based on the question and assemble them into a 
@@ -121,8 +108,9 @@ def prompter(store):
         contexts = []
         for i, chunk in enumerate(chunks):
             contexts.append(f"Context {i}:\n{chunk.page_content}")
-        with open('contexts.json', 'w') as f:
-            json.dump(contexts, f)
+        if show_context:
+            joined_contexts = "\n\n".join(contexts)
+            print(f"Context Provided:\n {joined_contexts}")
         joined_contexts = "\n\n".join(contexts)
         # For each message to OpenAI, print tokens used for each part and in total
         question_tokens = llmChain.llm.get_num_tokens(question)
@@ -139,11 +127,11 @@ def prompter(store):
 
     history = ""
     while True:
-        question = input("Ask a question: ")
+        question = input("\nAsk a question: ")
         if question == 'exit':
             break
         else:
             answer = onMessage(question, history)
             history = history + answer +"\n\n###\n\n"
-            print(f"Bot: {answer}")
+            print(f"\nBot: {answer}")
             print("Answer tokens: " + str(llmChain.llm.get_num_tokens(answer)))
