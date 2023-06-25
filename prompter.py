@@ -1,25 +1,23 @@
 from data_chunker import parser
 from data_chunker import java_code as JCC
 import faiss
-import json
 from langchain import OpenAI, LLMChain
 from langchain.chat_models import ChatOpenAI
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.prompts import Prompt
 from langchain.vectorstores import FAISS
-import os
-import sys
 import tiktoken
 
 # Print parsing statistics
 def print_parsing_statistics(t: list, f: list):
     attempts = len(t)
     failures = len(f)
+    print("\n## Parsing Statistics ##")
     print("Number of files attempted to be parsed = " + str(attempts))
     print("Number of failed files = " + str(failures) +
           ", Failure rate = " + "{:.2f}".format(failures/attempts*100) + "%")
 
-def print_token_statistics(chunks: list):
+def print_token_statistics(chunks: list, token_limit:int=1600):
     # Print token statistics
     encoding = tiktoken.get_encoding("cl100k_base")
     encoding = tiktoken.encoding_for_model("gpt-3.5-turbo")
@@ -27,7 +25,6 @@ def print_token_statistics(chunks: list):
     num_member_chunks = len(chunks)
     max_chunk = None
     max_chunks = []
-    token_limit = 1600
     for chunk in chunks:
         tokens = len(encoding.encode(str(chunk)))
         num_member_tokens = num_member_tokens + tokens
@@ -39,13 +36,15 @@ def print_token_statistics(chunks: list):
             max_chunk = chunk
         if tokens > token_limit:
             max_chunks.append({chunk['typename'], chunk['membername'], tokens})
+    print("\n## Token Statistics ##")
     print("Number of chunks generated = " + str(num_member_chunks))
     print("Average number of tokens per chunk = " + 
           "{:.2f}".format(num_member_tokens/num_member_chunks))
     print("Average number of tokens per method chunk = " +
           "{:.2f}".format(num_method_tokens/num_method_chunks))
     print("Maximum token size = " + str(max_tokens))
-    print("Number of chunks over " + str(token_limit) + " is " + str(len(max_chunks)))
+    print("Number of chunks over " + str(token_limit) + 
+          " is " + str(len(max_chunks)))
     #for chunk in max_chunks:
     #    print(chunk)
 
@@ -108,10 +107,9 @@ def prompter(store, master_prompt_path:str, show_context:bool=False):
         contexts = []
         for i, chunk in enumerate(chunks):
             contexts.append(f"Context {i}:\n{chunk.page_content}")
-        if show_context:
-            joined_contexts = "\n\n".join(contexts)
-            print(f"Context Provided:\n {joined_contexts}")
         joined_contexts = "\n\n".join(contexts)
+        if show_context:
+            print(f"Context Provided:\n {joined_contexts}")
         # For each message to OpenAI, print tokens used for each part and in total
         question_tokens = llmChain.llm.get_num_tokens(question)
         contexts_tokens = llmChain.llm.get_num_tokens(joined_contexts)

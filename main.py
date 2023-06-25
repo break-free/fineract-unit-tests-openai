@@ -24,22 +24,17 @@ if __name__ == "__main__":
         print("You must set an OPENAI_API_KEY using the Secrets tool", file=sys.stderr)
     # Create positional and optional command arguments
     parser = argparse.ArgumentParser(description='Create a vector store to pass contextual data to an LLM prompt')
-    parser.add_argument('data_path', 
-                        help='the location of the training data', 
-                        default=None)
-    parser.add_argument('file_extension', 
-                        help='the file extension to be searched for and then parsed, e.g., *.java', 
-                        default=None)
-    parser.add_argument('--show-context', 
-                        action='store_true', 
-                        dest='show_context', 
-                        help='show the context passed to the LLM', 
-                        default=False)
+    parser.add_argument('data_path', help='the location of the training data', default=None)
+    parser.add_argument('file_extension', help='the file extension to be searched for and then parsed, e.g., *.java', default=None)
+    parser.add_argument('--master-prompt', action='store', dest='master_prompt', help='master prompt path', default='training/master.prompt')
+    parser.add_argument('--show-context', action='store_true', dest='show_context', help='show the context passed to the LLM', default=False)
+    parser.add_argument('--show-statistics', action='store_true', dest='show_statistics', help='show the parsing and chunking statistics', default=False)
     args = parser.parse_args()
 
     data, chunks, failed_files = p.chunk(args.data_path, args.file_extension)
-    p.print_parsing_statistics(data, failed_files)
-    p.print_token_statistics(chunks)
+    if args.show_statistics:
+        p.print_parsing_statistics(data, failed_files)
+        p.print_token_statistics(chunks)
     store = p.train(chunks)
-    p.prompter(store, "training/unit-test.prompt", args.show_context)
+    p.prompter(store, args.master_prompt, args.show_context)
 
