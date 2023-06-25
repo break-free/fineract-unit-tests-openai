@@ -91,45 +91,51 @@ def chunk(file_path:str, fileExtension:str):
 
     return data, chunks, failed_files
 
-def prompter(store, master_prompt_path:str, show_context:bool=False):
+def on_message(question, history, store, llmchain, show_context:bool=False):
+    # Retrieve chunks based on the question and assemble them into a 
+    # joined context.
+    chunks = store.similarity_search(question)
+    contexts = []
+    for i, chunk in enumerate(chunks):
+        contexts.append(f"Context {i}:\n{chunk.page_content}")
+    joined_contexts = "\n\n".join(contexts)
+    if show_context:
+        print(f"Context Provided:\n {joined_contexts}")
+    # For each message to OpenAI, print tokens used for each part and in total
+    question_tokens = llmchain.llm.get_num_tokens(question)
+    contexts_tokens = llmchain.llm.get_num_tokens(joined_contexts)
+    history_tokens = llmchain.llm.get_num_tokens(history)
+    print("Question tokens: " + str(question_tokens) + ", " +
+          "Contexts' tokens: " + str(contexts_tokens) + ", " +
+          "History tokens: " + str(history_tokens) + ", " +
+          "TOTAL: " + str(question_tokens+contexts_tokens+history_tokens))
+    # Return the prediction.
+    return llmchain.predict(question=question, 
+                            context=joined_contexts,
+                            history=history)
 
+def open_master_prompt(master_prompt_path:str):
     with open(master_prompt_path, "r") as f:
         promptTemplate = f.read()
-    prompt = Prompt(template=promptTemplate, 
-                    input_variables=["context", "question", "history"])
-    llmChain = LLMChain(prompt=prompt, 
-                        llm=ChatOpenAI(model="gpt-3.5-turbo",temperature=0))
+    return Prompt(template=promptTemplate, input_variables=["context", "question", "history"])
 
-    def onMessage(question, history):
-        # Retrieve chunks based on the question and assemble them into a 
-        # joined context.
-        chunks = store.similarity_search(question)
-        contexts = []
-        for i, chunk in enumerate(chunks):
-            contexts.append(f"Context {i}:\n{chunk.page_content}")
-        joined_contexts = "\n\n".join(contexts)
-        if show_context:
-            print(f"Context Provided:\n {joined_contexts}")
-        # For each message to OpenAI, print tokens used for each part and in total
-        question_tokens = llmChain.llm.get_num_tokens(question)
-        contexts_tokens = llmChain.llm.get_num_tokens(joined_contexts)
-        history_tokens = llmChain.llm.get_num_tokens(history)
-        print("Question tokens: " + str(question_tokens) + ", " +
-              "Contexts' tokens: " + str(contexts_tokens) + ", " +
-              "History tokens: " + str(history_tokens) + ", " +
-              "TOTAL: " + str(question_tokens+contexts_tokens+history_tokens))
-        # Return the prediction.
-        return llmChain.predict(question=question, 
-                                context=joined_contexts,
-                                history=history)
+def files_prompter(store, master_prompt_path:str, show_context=False):
+    prompt = open_master_prompt(master_prompt_path)
+    llmchain = LLMChain(prompt=prompt, llm=ChatOpenAI(model="gpt-3.5-turbo",temperature=0))
+    print("attempted file prompt")
 
+def prompter(store, master_prompt_path:str, show_context:bool=False):
+    prompt = open_master_prompt(master_prompt_path)
+    llmchain = LLMChain(prompt=prompt, llm=ChatOpenAI(model="gpt-3.5-turbo",temperature=0))
     history = ""
     while True:
         question = input("\nAsk a question: ")
         if question == 'exit':
             break
         else:
-            answer = onMessage(question, history)
+            answer = on_message(question, history, store, llmchain, show_context)
             history = history + answer +"\n\n###\n\n"
             print(f"\nBot: {answer}")
-            print("Answer tokens: " + str(llmChain.llm.get_num_tokens(answer)))
+            print("Answer tokens: " + str(llmchain.llm.get_num_tokens(answer)))
+
+
