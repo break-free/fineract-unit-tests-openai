@@ -28,15 +28,18 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Create a vector store to pass contextual data to an LLM prompt')
     parser.add_argument('data_path', help='the location of the training data', default=None)
     parser.add_argument('file_extension', help='the file extension to be searched for and then parsed, e.g., *.java', default=None)
-    parser.add_argument('--master-prompt', action='store', dest='master_prompt', help='master prompt path', default='training/master.prompt')
-    parser.add_argument('--show-context', action='store_true', dest='show_context', help='show the context passed to the LLM', default=False)
-    parser.add_argument('--show-statistics', action='store_true', dest='show_statistics', help='show the parsing and chunking statistics', default=False)
+    parser.add_argument('-d', '--dump-files', action='store_true', dest='dump_key_files', help='dump key info into files', default=False)
+    parser.add_argument('-p', '--master-prompt', action='store', dest='master_prompt', help='master prompt path', default='training/master.prompt')
+    parser.add_argument('-c', '--show-context', action='store_true', dest='show_context', help='show the context passed to the LLM', default=False)
+    parser.add_argument('-s', '--show-statistics', action='store_true', dest='show_statistics', help='show the parsing and chunking statistics', default=False)
     args = parser.parse_args()
 
     data, chunks, failed_files = p.chunk(args.data_path, args.file_extension)
     if args.show_statistics:
         p.print_parsing_statistics(data, failed_files)
         p.print_token_statistics(chunks)
+    if args.dump_files:
+        dump_key_files(data, chunks, failes_files)
     store = p.train(chunks)
     p.prompter(store, args.master_prompt, args.show_context)
 
