@@ -120,10 +120,13 @@ def open_master_prompt(master_prompt_path:str):
     return Prompt(template=promptTemplate, input_variables=["context", "question", "history"])
 
 def files_prompter(store, master_prompt_path:str, parse_files:str, show_context=False):
+    count = 0
     prompt = open_master_prompt(master_prompt_path)
     llmchain = LLMChain(prompt=prompt, llm=ChatOpenAI(model="gpt-3.5-turbo",temperature=0))
-    history = ""
     for file in parse_files:
+        count += 1
+        history = ""
+        print("\n### Question File " + str(count) + ": " + file)
         with open(file, 'r') as f:
             questions = f.readlines()
         for question in questions:
@@ -146,5 +149,3 @@ def prompter(store, master_prompt_path:str, show_context:bool=False):
             history = history + answer +"\n\n###\n\n"
             print(f"\nBot: {answer}")
             print("Answer tokens: " + str(llmchain.llm.get_num_tokens(answer)))
-
-
