@@ -1,11 +1,8 @@
-import sys
 import json
 from langchain import LLMChain
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import Prompt
 from langchain.embeddings import OpenAIEmbeddings
-from langchain.document_loaders import TextLoader
-from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores import Chroma
 import os
 
@@ -14,49 +11,47 @@ import os
 if "OPENAI_API_KEY" not in os.environ:
     raise ValueError("You must set an OPENAI_API_KEY environment variable value")
 
-def create_store(directory):
-    """Create the vector store to utilize for other commands (currently limited to OpenAI). Returns a Chroma store."""
+def create_store(filepath:str="chunks.json", persistdir:str="db", model:str="gpt-3.5-turbo"):
+    """Create the vector store to utilize for other commands (currently limited to OpenAI). Consumes filepath (JSON format) that defaults to a local 
+    'chunks.json' to match default behavior of data-chunker module. 
     
-    # Where to store/load the context chunks:
-    if directory == None:
-        persist_dir = "db"
-    else:
-        persist_dir = directory
-
-    file = "chunks.json"
+    Returns a Chroma store."""
+    
+    #TODO: make an ephemeral option
+    #TODO: make a for loop to iterate over a potential suite of JSON files
 
     str_chunks = []
 
-    with open(file, 'r') as f:
+    with open(filepath, 'r') as f:
         chunks = json.load(f)
 
     for chunk in chunks:
         str_chunks.append(str(chunk))
 
     store = Chroma(collection_name="langchain_store",
-                embedding_function=OpenAIEmbeddings(model="gpt-3.5-turbo"),
-                persist_directory=persist_dir).from_texts(str_chunks, OpenAIEmbeddings(model="gpt-3.5-turbo"))
+                embedding_function=OpenAIEmbeddings(model=model),
+                persist_directory=persistdir).from_texts(str_chunks, OpenAIEmbeddings(model=model))
         
     return store
     
 def search_store(store: Chroma, text: str):
-    """Perform a Chroma similarity search against the vector store based on the text provided."""
+    """Perform a similarity search against the Chroma vector store based on the text provided."""
     store_chunks = store.similarity_search(text)
 
     return store_chunks
 
-def prompt(store: Chroma, show_context=False, template=None):
+def prompt(store: Chroma, show_context=False, templateDir:str=None):
     """Setup a chat session with the LLM (currently limited to OpenAI). The session maintains history by storing the
     previous answers into a history list and appending them to each future prompt, meaning there is a limit for number of 
     questions per individual session (you will eventually reach the token limit per model).
     
-    Will continue the chat session until provided 'exit'."""
+    Will continue the chat session until the user types 'exit' as their prompt."""
 
     history = ""
 
     # Load the promptTemplate for model context :
-    if template != None:
-        with open(template, "r") as f:
+    if templateDir != None:
+        with open(templateDir, "r") as f:
             promptTemplate = f.read()
     else:
         promptTemplate = """You are a world-class Java developer with an eagle eye for unintended bugs and edge cases. You carefully explain code with great detail and accuracy. You organize your explanations in markdown-formatted, bulleted lists.

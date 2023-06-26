@@ -11,8 +11,12 @@ Pulls out constants, constructors, fields, and methods and stores them as a Py d
 if "OPENAI_API_KEY" not in os.environ:
     raise ValueError("You must set an OPENAI_API_KEY environment variable value")
     
-def chunker(directory, file_extension="*.java"):
+def chunker(directory, file_extension:str="*.java", outdir:str="."):
     """Leverages data-chunker package to parse & chunk text-based code files into LLM-consumable tokens. Currently only supports java (*.java)"""
+    
+    if file_extension != "*.java":
+        raise ValueError("This file type is not supported yet.")
+
     training_data = list()
     
     training_data = JCParser.get_file_list(directory, file_extension=file_extension)
@@ -41,10 +45,10 @@ def chunker(directory, file_extension="*.java"):
     for data in training_data: 
         training_data_str.append(str(data))
     # Save each used list as a file for other operations.
-    with open('training_data.json', 'w') as f:
+    with open(f"{outdir}/training_data.json", 'w') as f:
         json.dump(training_data_str, f)
-    with open('chunks.json', 'w') as f:
+    with open(f"{outdir}/chunks.json", 'w') as f:
         json.dump(chunks, f)
-    with open('failed_files.json', 'w') as f:
+    with open(f"{outdir}/failed_files.json", 'w') as f:
         json.dump(failed_files, f)
 
