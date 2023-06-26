@@ -29,10 +29,11 @@ classifiers = [
 ]
 dependencies = [
     "langchain",
-    "java-code-chunker",
+    "data-chunker",
     "bs4",
     "openai",
     "chromadb",
+    "tiktoken",
 ]
 
 [project.urls]

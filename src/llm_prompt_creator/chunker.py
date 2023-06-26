@@ -1,4 +1,5 @@
-from java_code_chunker import chunker as JCC
+from data_chunker import parser as JCParser
+from data_chunker import java_code as JCChunker
 import json
 import os
 import sys
@@ -8,30 +9,29 @@ Comb for specified file types. Currently only works for java files (*.java)
 Pulls out constants, constructors, fields, and methods and stores them as a Py dict in JSON file
 """
 if "OPENAI_API_KEY" not in os.environ:
-    print("You must set an OPENAI_API_KEY environment variable value", file=sys.stderr)
+    raise ValueError("You must set an OPENAI_API_KEY environment variable value")
     
 def chunker(directory, file_extension="*.java"):
+    """Leverages data-chunker package to parse & chunk text-based code files into LLM-consumable tokens. Currently only supports java (*.java)"""
     training_data = list()
-    # if directory == None:
-    #     print("Must provide an input directory to chunk into tokens")
     
-    training_data = JCC.get_file_list(directory, file_extension=file_extension)
+    training_data = JCParser.get_file_list(directory, file_extension=file_extension)
     # Chunk data using the files in the training data
     chunks = []
     failed_files = []
     for file in training_data:
-        codelines = JCC.get_code_lines(file)
+        codelines = JCParser.get_code_lines(file)
         try:
-            tree = JCC.parse_code(file, codelines)
-        except JCC.ParseError as e:
+            tree = JCChunker.parse_code(file, codelines)
+        except JCChunker.ParseError as e:
             failed_files.append(str(file) + ": " + str(e))
         if tree != None:
             try:
-                chunks = chunks + JCC.chunk_constants(tree)
-                chunks = chunks + JCC.chunk_constructors(tree, codelines)
-                chunks = chunks + JCC.chunk_fields(tree, codelines)
-                chunks = chunks + JCC.chunk_methods(tree, codelines)
-            except JCC.ChunkingError as e:
+                chunks = chunks + JCChunker.chunk_constants(tree)
+                chunks = chunks + JCChunker.chunk_constructors(tree, codelines)
+                chunks = chunks + JCChunker.chunk_fields(tree, codelines)
+                chunks = chunks + JCChunker.chunk_methods(tree, codelines)
+            except JCChunker.ChunkingError as e:
                 failed_files.append(str(file) + ": " + str(e))
         else:
             failed_files.append(str(file) + ", has no tree!")
