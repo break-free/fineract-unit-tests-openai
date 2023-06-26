@@ -8,10 +8,14 @@ from langchain.vectorstores import Chroma
 import os
 
 
-"""
-Create the vector store to utilize for other commands (currently limited to OpenAI)
-"""
+# Check that environment variables are set up.
+if "OPENAI_API_KEY" not in os.environ:
+    print("You've got nothin' here chief.")
+    raise ValueError("You must set an OPENAI_API_KEY environment variable value")
+
 def create_store(directory):
+    """Create the vector store to utilize for other commands (currently limited to OpenAI)"""
+    
     # Where to store/load the context chunks:
     if directory == None:
         persist_dir = "db"
@@ -24,21 +28,14 @@ def create_store(directory):
     
     return store
     
-"""
-Perform a Chroma similarity search against the vector store based on the text provided
-"""
 def search_store(store: Chroma, text: str):
+    """Perform a Chroma similarity search against the vector store based on the text provided"""
     store_chunks = store.similarity_search(text)
 
     return store_chunks
 
-"""
-Setup the chat session with the LLM (currently limited to OpenAI)
-"""
 def prompt(question, show_context=False, template=None):
-    # Check that environment variables are set up.
-    if "OPENAI_API_KEY" not in os.environ:
-        print("You must set an OPENAI_API_KEY environment variable value", file=sys.stderr)
+    """Setup the chat session with the LLM (currently limited to OpenAI)"""
 
     history = ""
 
