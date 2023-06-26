@@ -4,6 +4,8 @@ from langchain import LLMChain
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import Prompt
 from langchain.embeddings import OpenAIEmbeddings
+from langchain.document_loaders import TextLoader
+from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores import Chroma
 import os
 
@@ -21,10 +23,20 @@ def create_store(directory):
     else:
         persist_dir = directory
 
+    file = "chunks.json"
+
+    str_chunks = []
+
+    with open(file, 'r') as f:
+        chunks = json.load(f)
+
+    for chunk in chunks:
+        str_chunks.append(str(chunk))
+
     store = Chroma(collection_name="langchain_store",
                 embedding_function=OpenAIEmbeddings(model="gpt-3.5-turbo"),
-                persist_directory=persist_dir)
-    
+                persist_directory=persist_dir).from_texts(str_chunks, OpenAIEmbeddings(model="gpt-3.5-turbo"))
+        
     return store
     
 def search_store(store: Chroma, text: str):
@@ -75,10 +87,8 @@ def prompt(store: Chroma, show_context=False, template=None):
             break
         else:
             chunks = search_store(store, question)
-            print(chunks)
             contexts = []
             for i, chunk in enumerate(chunks):
-                print(f"i: {i}, Chunk: {chunk}")
                 contexts.append(f"Context {i}:\n{chunk.page_content}")
             with open('contexts.json', 'w') as f:
                 json.dump(contexts, f)
@@ -99,11 +109,11 @@ def prompt(store: Chroma, show_context=False, template=None):
                 "History tokens: " + str(history_tokens) + "\n\n" +
                 "TOTAL: " + str(question_tokens+contexts_tokens+history_tokens))
             
-            # # Return the prediction.
-            # answer = llmChain.predict(prompt=prompt,
-            #                 question=question, 
-            #                 context=joined_contexts,
-            #                 history=history)
-            # history = history + answer +"\n\n###\n\n"
-            # print(f"Bot: {answer}")
-            # print("Answer tokens: " + str(llmChain.llm.get_num_tokens(answer)))
+            # Return the prediction.
+            answer = llmChain.predict(prompt=prompt,
+                            question=question, 
+                            context=joined_contexts,
+                            history=history)
+            history = history + answer +"\n\n###\n\n"
+            print(f"Bot: {answer}")
+            print("Answer tokens: " + str(llmChain.llm.get_num_tokens(answer)))
