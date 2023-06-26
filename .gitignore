@@ -8,3 +8,4 @@ training.index
 dist/*
 venv/*
 test.py
+*.ps1
