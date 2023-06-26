@@ -18,7 +18,8 @@ exclude = [
 name = "llm_prompt_creator"
 version = "0.2.6"
 authors = [
-    { name="Chris Mills", email="cmills@breakfreesolutions.com"}
+    {name="Chris Mills", email="cmills@breakfreesolutions.com"}
+    {name="Zak Alford", email="zalford@breakfreesolutions.com"}
 ]
 description = "Takes a given directory and parses its contents to create a text vectorstore to be consumed into a prompt for various LLM models."
 readme = "README.md"
