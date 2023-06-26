@@ -45,4 +45,4 @@ if __name__ == "__main__":
     if args.parse_files == None:
         p.prompter(store, args.master_prompt, args.show_context)
     else:
-        p.files_prompter(store, args.master_prompt, args.show_context)
+        p.files_prompter(store, args.master_prompt, args.parse_files, args.show_context)

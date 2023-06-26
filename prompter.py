@@ -119,10 +119,19 @@ def open_master_prompt(master_prompt_path:str):
         promptTemplate = f.read()
     return Prompt(template=promptTemplate, input_variables=["context", "question", "history"])
 
-def files_prompter(store, master_prompt_path:str, show_context=False):
+def files_prompter(store, master_prompt_path:str, parse_files:str, show_context=False):
     prompt = open_master_prompt(master_prompt_path)
     llmchain = LLMChain(prompt=prompt, llm=ChatOpenAI(model="gpt-3.5-turbo",temperature=0))
-    print("attempted file prompt")
+    history = ""
+    for file in parse_files:
+        with open(file, 'r') as f:
+            questions = f.readlines()
+        for question in questions:
+            print("\nQuestion: " + question)
+            answer = on_message(question, history, store, llmchain, show_context)
+            history = history + answer + "\n\n###\n\n"
+            print(f"\nAnswer: {answer}")
+            print("Answer tokens: " + str(llmchain.llm.get_num_tokens(answer)))
 
 def prompter(store, master_prompt_path:str, show_context:bool=False):
     prompt = open_master_prompt(master_prompt_path)
