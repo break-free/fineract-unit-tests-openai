@@ -5,11 +5,54 @@ from langchain.prompts import Prompt
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import Chroma
 import os
+from data_chunker import parser as JCParser
+from data_chunker import java_code as JCChunker
 
 
 # Check that environment variables are set up.
 if "OPENAI_API_KEY" not in os.environ:
     raise ValueError("You must set an OPENAI_API_KEY environment variable value")
+
+def chunker(directory, file_extension:str="*.java", outdir:str="."):
+    """Leverages data-chunker package to parse & chunk text-based code files into LLM-consumable tokens. Currently only supports java (*.java)"""
+    
+    if file_extension != "*.java":
+        raise ValueError("This file type is not supported yet.")
+
+    training_data = list()
+    
+    training_data = JCParser.get_file_list(directory, file_extension=file_extension)
+    # Chunk data using the files in the training data
+    chunks = []
+    failed_files = []
+    for file in training_data:
+        codelines = JCParser.get_code_lines(file)
+        try:
+            tree = JCChunker.parse_code(file, codelines)
+        except JCChunker.ParseError as e:
+            failed_files.append(str(file) + ": " + str(e))
+        if tree != None:
+            try:
+                chunks = chunks + JCChunker.chunk_constants(tree)
+                chunks = chunks + JCChunker.chunk_constructors(tree, codelines)
+                chunks = chunks + JCChunker.chunk_fields(tree, codelines)
+                chunks = chunks + JCChunker.chunk_methods(tree, codelines)
+            except JCChunker.ChunkingError as e:
+                failed_files.append(str(file) + ": " + str(e))
+        else:
+            failed_files.append(str(file) + ", has no tree!")
+    
+    # Convert training_data paths into strings for serialization.
+    training_data_str = list()
+    for data in training_data: 
+        training_data_str.append(str(data))
+    # Save each used list as a file for other operations.
+    with open(f"{outdir}/training_data.json", 'w') as f:
+        json.dump(training_data_str, f)
+    with open(f"{outdir}/chunks.json", 'w') as f:
+        json.dump(chunks, f)
+    with open(f"{outdir}/failed_files.json", 'w') as f:
+        json.dump(failed_files, f)
 
 def create_store(filepath:str="chunks.json", persistdir:str="db", model:str="gpt-3.5-turbo"):
     """Create the vector store to utilize for other commands (currently limited to OpenAI). Consumes filepath (JSON format) that defaults to a local 
