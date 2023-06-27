@@ -1,6 +1,11 @@
+db/
 __pycache__/
 *.pkl
 *.index
 *.json
 training/all/*
 training.index
+dist/*
+venv/*
+test.py
+*.ps1

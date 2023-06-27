@@ -32,7 +32,7 @@ def ask():
   reqData = request.get_json()
   if reqData['secret'] == os.environ["API_SECRET"]:
     try:
-      llmChain = LLMChain(prompt=prompt, llm=OpenAI(temperature=0.25, model_name="text-davinci-003", openai_api_key=os.environ["OPENAI_API_KEY"]))
+      llmChain = LLMChain(prompt=prompt, llm=OpenAI(temperature=0.25, model_name="gpt-3.5-turbo", openai_api_key=os.environ["OPENAI_API_KEY"]))
 
       def onMessage(question, history):
         docs = store.similarity_search(question)

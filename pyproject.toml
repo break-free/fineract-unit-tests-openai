@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+exclude = [
+    "training/",
+    "setup/",
+    "results/",
+    "db1/",
+    "db2/",
+    "archive/",
+    "venv/",
+    "*.json",
+]
+
+[project]
+name = "llm_prompt_creator"
+version = "0.2.14"
+authors = [
+    {name="Chris Mills", email="cmills@breakfreesolutions.com"},
+    {name="Zak Alford", email="zalford@breakfreesolutions.com"}
+]
+description = "Takes a given directory and parses its contents to create a text vectorstore to be consumed in prompts for various LLM models."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "langchain",
+    "data-chunker",
+    "bs4",
+    "openai",
+    "chromadb",
+    "tiktoken",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/break-free/fineract-unit-tests-openai"
+"Issues" = "https://github.com/break-free/fineract-unit-tests-openai/issues"

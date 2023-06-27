@@ -1,9 +1,7 @@
-import faiss
 import json
 from langchain.embeddings import OpenAIEmbeddings
-from langchain.vectorstores import FAISS
+from langchain.vectorstores import Chroma
 import os
-import pickle
 import sys
 
 # Check that environment variables are set up.
@@ -17,9 +15,8 @@ str_chunks = []
 for chunk in chunks:
     str_chunks.append(str(chunk))
 
-store = FAISS.from_texts(str_chunks, OpenAIEmbeddings())
-faiss.write_index(store.index, "training.index")
-store.index = None
+store = Chroma(collection_name="langchain_store",
+               embedding_function=OpenAIEmbeddings(model="gpt-3.5-turbo"),
+               persist_directory="db")
+store.add_texts(str_chunks)
 
-with open("faiss.pkl", "wb") as f:
-    pickle.dump(store, f)

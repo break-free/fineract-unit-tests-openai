@@ -1,4 +1,5 @@
-data-chunker
+chromadb
+java-code-chunker
 langchain
 openai
 tiktoken
