@@ -50,6 +50,7 @@ Following the example should yield a similar response to the below image
 ## TODO
 
 - [x] Refactoring across the board, particularly to reduce the number of called Python scripts.
+- [ ] Optimize chunker to allow larger codebase directories
 - [ ] Establish a standard way of calculating token limits.
 - [ ] Use token limits to dynamically adjust the amount of context and therefore the number of tokens used during a prompt/completion instance with OpenAI.
 - [ ] Containerize this solution so we can deploy it; one for parsing and chunking, another for creating a vector-store and prompting (or something like it).
