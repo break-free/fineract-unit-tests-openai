@@ -21,7 +21,7 @@ authors = [
     {name="Chris Mills", email="cmills@breakfreesolutions.com"},
     {name="Zak Alford", email="zalford@breakfreesolutions.com"}
 ]
-description = "Takes a given directory and parses its contents to create a text vectorstore to be consumed into a prompt for various LLM models."
+description = "Takes a given directory and parses its contents to create a text vectorstore to be consumed in prompts for various LLM models."
 readme = "README.md"
 requires-python = ">=3.7"
 classifiers = [
