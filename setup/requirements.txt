@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 chromadb
 java-code-chunker
+=======
+data-chunker
+>>>>>>> @{-1}
 langchain
 openai
 tiktoken
