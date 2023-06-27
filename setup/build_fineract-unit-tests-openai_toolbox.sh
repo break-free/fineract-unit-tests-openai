@@ -15,7 +15,7 @@ toolbox rm --force $NAME || true
 toolbox create --container $NAME
 
 # Install applications
-APPLICATIONS=" python3-pandas python3-javalang \
+APPLICATIONS=" jq python3-pandas python3-javalang \
                cmake gcc-c++ blas-devel lapack-devel swig "
 
 ## Install applications

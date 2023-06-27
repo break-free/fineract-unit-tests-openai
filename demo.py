@@ -6,7 +6,7 @@ import os
 import prompter as p
 import sys
 
-def dump_files(data:list, chunks:list, failed_files:list):
+def dump_key_files(data:list, chunks:list, failed_files:list):
 
     # Convert training_data paths into strings for serialization.
     data_str = list()
@@ -40,7 +40,7 @@ if __name__ == "__main__":
         p.print_parsing_statistics(data, failed_files)
         p.print_token_statistics(chunks)
     if args.dump_key_files:
-        dump_key_files(data, chunks, failes_files)
+        dump_key_files(data, chunks, failed_files)
     store = p.train(chunks)
     if args.parse_files == None:
         p.prompter(store, args.master_prompt, args.show_context)
