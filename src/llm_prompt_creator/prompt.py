@@ -83,7 +83,7 @@ def search_store(store: Chroma, text: str):
 
     return store_chunks
 
-def prompt(store: Chroma, show_context=False, templateDir:str=None):
+def prompt(store: Chroma, show_context=False, templateFilePath:str=None):
     """Setup a chat session with the LLM (currently limited to OpenAI). The session maintains history by storing the
     previous answers into a history list and appending them to each future prompt, meaning there is a limit for number of 
     questions per individual session (you will eventually reach the token limit per model).
@@ -93,8 +93,8 @@ def prompt(store: Chroma, show_context=False, templateDir:str=None):
     history = ""
 
     # Load the promptTemplate for model context :
-    if templateDir != None:
-        with open(templateDir, "r") as f:
+    if templateFilePath != None:
+        with open(templateFilePath, "r") as f:
             promptTemplate = f.read()
     else:
         promptTemplate = """You are a world-class Java developer with an eagle eye for unintended bugs and edge cases. You carefully explain code with great detail and accuracy. You organize your explanations in markdown-formatted, bulleted lists.
