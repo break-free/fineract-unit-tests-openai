@@ -43,7 +43,7 @@ uncomment the below:
 ```
 
 Following the example should yield a similar response to the below image 
-(subject to LLM model used and codebase ):
+(subject to LLM model used and codebase):
 
 ![](results/202306091608_fix_readme-and-misc-org.jpeg)]
 
