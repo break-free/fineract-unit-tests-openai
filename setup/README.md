@@ -2,8 +2,8 @@ Refer to the master https://github.com/break-free/fineract-unit-tests-openai/blo
 
 # Set Up
 
-**Warning**
-> This is no longer relevant and refers to setup utilizing FAISS. Please refer to the ![readme](/README.md) file instead
+> **Warning**
+> This is no longer relevant and refers to setup utilizing FAISS. Please refer to the [root readme file](/README.md) instead
 
 * Fedora (TODO: put in an anchor for Fedora portion of document)
 * Windows (TODO: put in an anchor for Windows portion of document)
