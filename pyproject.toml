@@ -23,7 +23,7 @@ authors = [
 ]
 description = "Takes a given directory and parses its contents to create a text vectorstore to be consumed in prompts for various LLM models."
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.10"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
