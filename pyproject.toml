@@ -16,7 +16,7 @@ exclude = [
 
 [project]
 name = "llm_prompt_creator"
-version = "0.2.14"
+version = "0.2.15"
 authors = [
     {name="Chris Mills", email="cmills@breakfreesolutions.com"},
     {name="Zak Alford", email="zalford@breakfreesolutions.com"}
