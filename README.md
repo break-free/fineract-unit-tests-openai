@@ -17,6 +17,9 @@ We will review & (after approval) merge your git branch and then delete the remo
 
 ## Set Up
 
+> **Note**
+> Windows users may need to install the Visual Studio C++ Compiler to use this package
+
 Simple example usage:
 ```
 from llm_prompt_creator import prompt as PR
@@ -45,7 +48,7 @@ uncomment the below:
 Following the example should yield a similar response to the below image 
 (subject to LLM model used and codebase):
 
-![](results/202306091608_fix_readme-and-misc-org.jpeg)]
+![](results/202306091608_fix_readme-and-misc-org.jpeg)
 
 ## TODO
 
