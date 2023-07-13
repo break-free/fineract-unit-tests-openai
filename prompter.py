@@ -55,14 +55,20 @@ def print_chunks_sample(chunks: list):
         print(str(chunk))
     print("...")
 
-def train(chunks:list):
+def train(chunks:list, max_chunk_size:int=1600):
+    encoding = tiktoken.get_encoding("cl100k_base")
+    encoding = tiktoken.encoding_for_model("gpt-3.5-turbo")
+    
     str_chunks = []
     for chunk in chunks:
-        str_chunks.append(str(chunk))
+        if len(encoding.encode(str(chunk))) < max_chunk_size:
+            str_chunks.append(str(chunk))
+        else:
+            print("chunk is chunky")
 
-    return FAISS.from_texts(str_chunks, OpenAIEmbeddings())
+    return FAISS.from_texts(str_chunks, OpenAIEmbeddings(request_timeout=61.0))
 
-def chunk(file_path:str, fileExtension:str):
+def chunk(file_path:str, fileExtension:str, verbose:bool=False):
     # Retrieve file list and initialize lists
     data = parser.get_file_list(file_path, fileExtension)
     chunks = []
@@ -70,6 +76,8 @@ def chunk(file_path:str, fileExtension:str):
     # Chunk data using the files in the training data
     if fileExtension == "*.java":
         for file in data:
+            if verbose:
+                print("File to be parsed: " + str(file))
             codelines = parser.get_code_lines(file)
             try:
                 tree = JCC.parse_code(file, codelines)
@@ -119,7 +127,7 @@ def open_master_prompt(master_prompt_path:str):
         promptTemplate = f.read()
     return Prompt(template=promptTemplate, input_variables=["context", "question", "history"])
 
-def files_prompter(store, master_prompt_path:str, parse_files:str, show_context=False):
+def files_prompter(store, master_prompt_path:str, parse_files:list, show_context=False):
     count = 0
     prompt = open_master_prompt(master_prompt_path)
     llmchain = LLMChain(prompt=prompt, llm=ChatOpenAI(model="gpt-3.5-turbo",temperature=0))
