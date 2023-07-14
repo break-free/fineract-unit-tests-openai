@@ -56,7 +56,7 @@ def chunker(directory, file_extension:str="*.java", outdir:str="."):
 
 def create_store(filepath:str="chunks.json", persistdir:str="db", model:str="text-embedding-ada-002"):
     """Create the vector store to utilize for other commands (currently limited to OpenAI). Consumes filepath (JSON format) that defaults to a local 
-    'chunks.json' to match default behavior of data-chunker module. 
+    'chunks.json' to match default behavior of data-chunker module. Utilizes an API call to OpenAI embedders; defaults to using the text-embedding-ada-002 model
     
     Returns a Chroma store."""
     
