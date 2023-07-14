@@ -83,10 +83,12 @@ def search_store(store: Chroma, text: str):
 
     return store_chunks
 
-def prompt(store: Chroma, show_context=False, templateFilePath:str=None):
+def prompt(store: Chroma, show_context=False, templateFilePath:str=None, model:str="gpt-3.5-turbo"):
     """Setup a chat session with the LLM (currently limited to OpenAI). The session maintains history by storing the
     previous answers into a history list and appending them to each future prompt, meaning there is a limit for number of 
     questions per individual session (you will eventually reach the token limit per model).
+
+    Defaults to using OpenAI's GPT-3.5-Turbo
     
     Will continue the chat session until the user types 'exit' as their prompt."""
 
@@ -133,7 +135,7 @@ def prompt(store: Chroma, show_context=False, templateFilePath:str=None):
             joined_contexts = "\n\n".join(contexts)
             
             prompt = Prompt(template=promptTemplate, input_variables=["context", "question", "history"])
-            llmChain = LLMChain(prompt=prompt, llm=ChatOpenAI(model="gpt-3.5-turbo",temperature=0))
+            llmChain = LLMChain(prompt=prompt, llm=ChatOpenAI(model=model,temperature=0))
             # If user's asked to show the context, provide it to them (chunks of text from their vector store):
             if (show_context):
                 print(f"Context Provided: {joined_contexts}")
