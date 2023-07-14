@@ -54,7 +54,7 @@ def chunker(directory, file_extension:str="*.java", outdir:str="."):
     with open(f"{outdir}/failed_files.json", 'w') as f:
         json.dump(failed_files, f)
 
-def create_store(filepath:str="chunks.json", persistdir:str="db", model:str="gpt-3.5-turbo"):
+def create_store(filepath:str="chunks.json", persistdir:str="db", model:str="text-embedding-ada-002"):
     """Create the vector store to utilize for other commands (currently limited to OpenAI). Consumes filepath (JSON format) that defaults to a local 
     'chunks.json' to match default behavior of data-chunker module. 
     
@@ -138,7 +138,7 @@ def prompt(store: Chroma, show_context=False, templateFilePath:str=None, model:s
             llmChain = LLMChain(prompt=prompt, llm=ChatOpenAI(model=model,temperature=0))
             # If user's asked to show the context, provide it to them (chunks of text from their vector store):
             if (show_context):
-                print(f"Context Provided: {joined_contexts}")
+                print(f"Context Provided: \n{joined_contexts}")
 
             # For each message to OpenAI, print tokens used for each part and in total
             question_tokens = llmChain.llm.get_num_tokens(question)
